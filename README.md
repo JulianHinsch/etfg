@@ -3,7 +3,7 @@ A sample PHP-Laravel setup for Angular 4
 
 Steps to Setup:
 
-Database Setup: 
+Database Setup:
 
 1. Open SQL command Shell.
 2. Create a database in SQL using command "create database <name of the database>"
@@ -72,5 +72,3 @@ Laravel Setup:
 12. Start the Laravel server using php artisan serve
 13. Access the URL by URL: localhost:8000/api/<name of the URL created in step: 9
 14 You should see the Json format of the data you put in the tables.
-# php-laravel
-# laravel-etfg
