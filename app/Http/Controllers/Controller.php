@@ -17,8 +17,7 @@ class Controller extends BaseController {
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected function formatValidationErrors(\Illuminate\Contracts\Validation\Validator $validator)
-    {
+    protected function formatValidationErrors(\Illuminate\Contracts\Validation\Validator $validator) {
         $status = 422;
         return [
             "message" => $status . " error",
@@ -73,8 +72,15 @@ class PostsController extends Controller {
 
 class FirmsController extends Controller {
     public function index() {
-        $firms = DB::select('select * from firms order by view_count desc');
+        $firms = DB::select('select * from firms where name != "Guest" and name != "Demo User" order by view_count desc');
         return response()->json($firms);
+    }
+}
+
+class FirmController extends Controller {
+    public function index($id) {
+        $firmInfo = DB::table('firms')->where('id',$id)->first();
+        return response()->json($firmInfo);
     }
 }
 
@@ -82,6 +88,13 @@ class ProductsController extends Controller {
     public function index() {
         $products = DB::select('select * from products order by view_count desc');
         return response()->json($products);
+    }
+}
+
+class ProductController extends Controller {
+    public function index($ticker) {
+        $productInfo = DB::table('products')->where('ticker', $ticker)->first();
+        return response()->json($productInfo);
     }
 }
 
@@ -93,8 +106,13 @@ class ActionTypesController extends Controller {
 }
 
 class ActionsController extends Controller {
-    public function index() {
-        $actions = DB::select('select * from actions');
+    public function index($ticker) {
+        $actions = DB::table('actions')
+            ->select('ACTIONDATE as date','IP','TYPE as type','TICKERPERCENTHASH as portfolio')
+            ->where('TICKERPERCENTHASH','like',"%$ticker%")
+            ->orderBy('ACTIONDATE','desc')
+            ->limit(100)
+            ->get();
         return response()->json($actions);
     }
 }
@@ -108,8 +126,15 @@ class IpCitiesController extends Controller {
 
 class IpCountriesController extends Controller {
     public function index() {
-        $countries = DB::select('select * from countries');
+        $countries = DB::table('countries')->get();
         return response()->json($countries);
+    }
+}
+
+class IpCountryController extends Controller {
+    public function index($countryCode) {
+        $countryInfo = DB::table('countries')->where('code',$countryCode)->first();
+        return response()->json($countryInfo);
     }
 }
 
