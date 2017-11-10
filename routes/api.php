@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/posts', array('uses' => 'PostsController@index'));
-Route::get('/views', array('uses' => 'ViewsController@index'));
+Route::get('/views/{firmId}', array('uses' => 'ViewsController@index'));
 Route::get('/action-types', array('uses' => 'ActionTypesController@index'));
 Route::get('/actions/{ticker}', array('uses' => 'ActionsController@index'));
 Route::get('/firms', array('uses' => 'FirmsController@index'));
