@@ -14,20 +14,26 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/posts', array('uses' => 'PostsController@index'));
-Route::get('/views/{firmId}', array('uses' => 'ViewsController@index'));
-Route::get('/action-types', array('uses' => 'ActionTypesController@index'));
-Route::get('/actions/{ticker}', array('uses' => 'ActionsController@index'));
-Route::get('/firms', array('uses' => 'FirmsController@index'));
-Route::get('/firms/{id}', array('uses' => 'FirmController@index'));
-Route::get('/ip-cities', array('uses' => 'IpCitiesController@index'));
-Route::get('/products', array('uses' => 'ProductsController@index'));
-Route::get('/products/{ticker}', array('uses' => 'ProductController@index'));
-Route::get('/ip-countries', array('uses' => 'IpCountriesController@index'));
-Route::get('/ip-countries/{countryCode}', array('uses' => 'IpCountryController@index'));
-/*Route::get('/ip-states', array('uses' => 'IpStatesController@index'));
-Route::get('/ip-addresses', array('uses' => 'IpAddressesController@index'));
-Route::get('/migrations', array('uses' => 'MigrationsController@index'));*/
-Route::get('/user-actions', array('uses' => 'UserActionsController@index'));
-Route::get('/users', array('uses' => 'UsersController@index'));
-Route::get('/example', array('uses' => 'ExampleController@index'));
+//firms
+Route::get('/firms', array('uses' => 'FirmsController@getAll'));
+Route::get('/firms/{id}', array('uses' => 'FirmsController@getInfoById'));
+Route::get('/firms/views/{id}', array('uses' => 'FirmsController@getViewsById'));
+Route::get('/firms/actions/{id}', array('uses' => 'FirmsController@getActionsById'));
+
+//products
+Route::get('/products', array('uses' => 'ProductsController@getAll'));
+Route::get('/products/{ticker}', array('uses' => 'ProductsController@getInfoByTicker'));
+Route::get('/products/actions/{ticker}', array('uses' => 'ProductsController@getActionsByTicker'));
+
+//countries
+Route::get('/ip-countries', array('uses' => 'IpCountriesController@getAll'));
+Route::get('/ip-countries/{countryCode}', array('uses' => 'IpCountriesController@getInfoByCode'));
+
+//Route::get('/ip-states', array('uses' => 'IpStatesController@index'));
+//Route::get('/ip-addresses', array('uses' => 'IpAddressesController@index'));
+//Route::get('/migrations', array('uses' => 'MigrationsController@index'));*/
+//Route::get('/ip-cities', array('uses' => 'IpCitiesController@index'));
+//Route::get('/user-actions', array('uses' => 'UserActionsController@index'));
+//Route::get('/users', array('uses' => 'UsersController@index'));
+//Route::get('/action-types', array('uses' => 'ActionTypesController@index'));
+//Route::get('/posts', array('uses' => 'PostsController@index'));

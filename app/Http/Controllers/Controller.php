@@ -63,93 +63,96 @@ class Controller extends BaseController {
     }      
 }
 
+/*
 class PostsController extends Controller {
     public function index() {
         $posts = DB::select('select * from users');
         return response()->json($posts);
     }
 }
+*/
 
 class FirmsController extends Controller {
-    public function index() {
-        $firms = DB::select('select * from firms where name != "Guest" and name != "Demo User" order by view_count desc');
+    public function getAll() {
+        $firms = DB::table('firms')
+            ->select(DB::raw('firms.id, firms.name, count(users.id) as users, firms.view_count'))
+            ->where('firms.name','!=','Guest')
+            ->where('firms.name','!=','Demo User')
+            ->groupBy('firms.id')
+            ->join('users','users.firm_id', '=', 'firms.id')
+            ->orderBy('firms.view_count','desc')
+            ->limit(20)
+            ->get();
         return response()->json($firms);
     }
-}
-
-class FirmController extends Controller {
-    public function index($id) {
+    public function getInfoById($id) {
         $firmInfo = DB::table('firms')->where('id',$id)->first();
         return response()->json($firmInfo);
     }
-}
-
-class ViewsController extends Controller {
-    public function index($firmId) {
+    public function getViewsById($firmId) {
         $viewedProducts = DB::table('products')
-            ->select(DB::raw('DISTINCT products.ticker, products.name, products.issuer_id, products.view_count'))
+            ->select(DB::raw('DISTINCT products.ticker, products.name, issuers.issuer_name, count(views.id) as view_count'))
             ->join('views', 'views.product_id', '=', 'products.id')
             ->join('users', 'users.id', '=', 'views.user_id')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
-            ->limit('2000')
+            ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
+            ->groupBy('products.id','issuers.issuer_name')
+            ->limit('20')
             ->where('firm_id',$firmId)
-            ->orderBy('products.view_count','desc')
+            ->orderBy('view_count','desc')
             ->get();
         return response()->json($viewedProducts);
     }
-}
-
-class ProductsController extends Controller {
-    public function index() {
-        $products = DB::select('select * from products order by view_count desc');
-        return response()->json($products);
-    }
-}
-
-class ProductController extends Controller {
-    public function index($ticker) {
-        $productInfo = DB::table('products')->where('ticker', $ticker)->first();
-        return response()->json($productInfo);
-    }
-}
-
-class ActionTypesController extends Controller {
-    public function index() {
-        $actionTypes = DB::select('select * from action_types');
-        return response()->json($actionTypes);
-    }
-}
-
-class ActionsController extends Controller {
-    public function index($ticker) {
+    public function getActionsById($firmId) {
         $actions = DB::table('actions')
-            ->select('ACTIONDATE as date','IP','TYPE as type','TICKERPERCENTHASH as portfolio')
-            ->where('TICKERPERCENTHASH','like',"%$ticker%")
-            ->orderBy('ACTIONDATE','desc')
-            ->limit(100)
+            ->select('ACTIONDATE as date','type','portfolio')
             ->get();
         return response()->json($actions);
     }
 }
 
-class IpCitiesController extends Controller {
-    public function index() {
-        $cities = DB::select('select * from ip_cities');
-        return response()->json($cities);
+class ProductsController extends Controller {
+    public function getAll() {
+        $products = DB::table('products')
+            ->select(DB::raw('DISTINCT products.ticker, products.name, issuers.issuer_name, products.view_count'))
+            ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
+            ->orderBy('view_count', 'desc')
+            ->get();
+        return response()->json($products);
+    }
+    public function getInfoByTicker($ticker) {
+        $productInfo = DB::table('products')->where('ticker', $ticker)->first();
+        return response()->json($productInfo);
+    }
+    public function getActionsByTicker($ticker) {
+        $actions = DB::table('actions')
+            ->select('ACTIONDATE as date','firms.name as firm','type','portfolio')
+            ->where('portfolio','like',"%$ticker%")
+            ->join('users', 'users.email', '=', 'actions.email')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->orderBy('ACTIONDATE','desc')
+            ->limit(20)
+            ->get();
+        return response()->json($actions);
     }
 }
 
 class IpCountriesController extends Controller {
-    public function index() {
+    public function getAllCountries() {
         $countries = DB::table('countries')->get();
         return response()->json($countries);
     }
-}
-
-class IpCountryController extends Controller {
-    public function index($countryCode) {
+    public function getCountryInfoByCountryCode($countryCode) {
         $countryInfo = DB::table('countries')->where('code',$countryCode)->first();
         return response()->json($countryInfo);
+    }
+}
+
+/*
+class IpCitiesController extends Controller {
+    public function index() {
+        $cities = DB::select('select * from ip_cities');
+        return response()->json($cities);
     }
 }
 
@@ -187,3 +190,4 @@ class UsersController extends Controller {
         return response()->json($users);
     }
 }
+*/
