@@ -84,44 +84,20 @@ class FirmController extends Controller {
     }
 }
 
-// class ViewsController extends Controller {
-//     public function index($firmId) {
-//         $viewedProducts = DB::table('products')
-//             ->join('views', 'products.id', '=', 'views.product_id')
-//             ->join('users', 'views.user_id', '=', 'users.id')
-//             ->join('firms', 'firms.id', '=', 'users.firm_id')
-//             //->select('products.*')
-//             ->limit('2000')
-//             ->get();
-//         return response()->json($viewedProducts);
-//     }
-// }
-
-
-
-// $userIds = DB::table('users')
-// ->select('id')
-// ->where('firm_id',$firmId)
-// ->get();
-// $views = array();
-// for ($i = 0; $i < count($userIds); $i++) {
-// $idObj = $userIds[$i];
-// $id = $idObj->id;
-// $Ids = DB::table('views')
-//     ->select('product_id')
-//     ->where('user_id',$id)
-//     ->get();
-// array_push($views, $Ids);
-// }
-
-// $products = array();
-// foreach($views as $id) {
-// $Ids = DB::table('products')
-//     ->where('id',$id)
-//     ->get();
-// array_push($products, $Ids);
-// }
-// return response()->json($products);
+class ViewsController extends Controller {
+    public function index($firmId) {
+        $viewedProducts = DB::table('products')
+            ->select(DB::raw('DISTINCT products.ticker, products.name, products.issuer_id, products.view_count'))
+            ->join('views', 'views.product_id', '=', 'products.id')
+            ->join('users', 'users.id', '=', 'views.user_id')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->limit('2000')
+            ->where('firm_id',$firmId)
+            ->orderBy('products.view_count','desc')
+            ->get();
+        return response()->json($viewedProducts);
+    }
+}
 
 class ProductsController extends Controller {
     public function index() {
