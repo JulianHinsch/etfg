@@ -63,15 +63,6 @@ class Controller extends BaseController {
     }      
 }
 
-/*
-class PostsController extends Controller {
-    public function index() {
-        $posts = DB::select('select * from users');
-        return response()->json($posts);
-    }
-}
-*/
-
 class FirmsController extends Controller {
     public function getAll() {
         $firms = DB::table('firms')
@@ -98,14 +89,20 @@ class FirmsController extends Controller {
             ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
             ->groupBy('products.id','issuers.issuer_name')
             ->limit('20')
-            ->where('firm_id',$firmId)
+            ->where('users.firm_id',$firmId)
             ->orderBy('view_count','desc')
             ->get();
         return response()->json($viewedProducts);
     }
     public function getActionsById($firmId) {
         $actions = DB::table('actions')
-            ->select('ACTIONDATE as date','type','portfolio')
+            ->select('date','type','portfolio')
+            ->join('users', 'users.email', '=', 'actions.email')
+            ->where('users.firm_id',$firmId)
+            ->where('actions.type','!=','n/a')
+            ->where('portfolio', '!=','n/a')
+            ->limit('20')
+            ->orderBy('date','desc')
             ->get();
         return response()->json($actions);
     }
@@ -117,6 +114,7 @@ class ProductsController extends Controller {
             ->select(DB::raw('DISTINCT products.ticker, products.name, issuers.issuer_name, products.view_count'))
             ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
             ->orderBy('view_count', 'desc')
+            ->limit(20)
             ->get();
         return response()->json($products);
     }
@@ -126,11 +124,11 @@ class ProductsController extends Controller {
     }
     public function getActionsByTicker($ticker) {
         $actions = DB::table('actions')
-            ->select('ACTIONDATE as date','firms.name as firm','type','portfolio')
+            ->select('date','firms.name as firm','type','portfolio')
             ->where('portfolio','like',"%$ticker%")
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
-            ->orderBy('ACTIONDATE','desc')
+            ->orderBy('date','desc')
             ->limit(20)
             ->get();
         return response()->json($actions);
@@ -149,6 +147,12 @@ class IpCountriesController extends Controller {
 }
 
 /*
+class PostsController extends Controller {
+    public function index() {
+        $posts = DB::select('select * from users');
+        return response()->json($posts);
+    }
+}
 class IpCitiesController extends Controller {
     public function index() {
         $cities = DB::select('select * from ip_cities');
