@@ -124,14 +124,31 @@ class ProductsController extends Controller {
     }
     public function getActionsByTicker($ticker) {
         $actions = DB::table('actions')
-            ->select('date','firms.name as firm','type','portfolio')
+            ->select('date','firms.name as firm','firms.id as firmId','type','portfolio')
             ->where('portfolio','like',"%$ticker%")
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->where('firms.name','!=','ETF Global')
+            ->where('firms.name','!=', 'Track One Capital')
             ->orderBy('date','desc')
             ->limit(20)
             ->get();
         return response()->json($actions);
+    }
+    public function getFirmsByTicker($ticker) {
+        $firms = DB::table('products')
+            ->select(DB::raw('DISTINCT firms.name as firm, count(users.id) as users, count(views.id) as view_count'))
+            ->join('views', 'views.product_id', '=', 'products.id')
+            ->join('users', 'users.id', '=', 'views.user_id')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->groupBy('firms.id')
+            ->where('firms.name','!=','ETF Global')
+            ->where('firms.name','!=', 'Track One Capital')
+            ->where('products.ticker',$ticker)
+            ->orderBy('view_count', 'desc')
+            ->limit(20)
+            ->get();
+        return response()->json($firms);
     }
 }
 

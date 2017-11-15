@@ -24,6 +24,7 @@ Route::get('/firms/actions/{id}', array('uses' => 'FirmsController@getActionsByI
 Route::get('/products', array('uses' => 'ProductsController@getAll'));
 Route::get('/products/{ticker}', array('uses' => 'ProductsController@getInfoByTicker'));
 Route::get('/products/actions/{ticker}', array('uses' => 'ProductsController@getActionsByTicker'));
+Route::get('/products/firms/{ticker}', array('uses' => 'ProductsController@getFirmsByTicker'));
 
 //countries
 Route::get('/ip-countries', array('uses' => 'IpCountriesController@getAll'));
