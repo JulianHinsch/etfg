@@ -25,10 +25,11 @@ Route::get('/products', array('uses' => 'ProductsController@getAll'));
 Route::get('/products/{ticker}', array('uses' => 'ProductsController@getInfoByTicker'));
 Route::get('/products/actions/{ticker}', array('uses' => 'ProductsController@getActionsByTicker'));
 Route::get('/products/firms/{ticker}', array('uses' => 'ProductsController@getFirmsByTicker'));
+Route::get('/products/{ticker}/firms/{id}', array('uses' => 'ProductsController@getViewsByFirm'));
 
 //countries
-Route::get('/ip-countries', array('uses' => 'IpCountriesController@getAll'));
-Route::get('/ip-countries/{countryCode}', array('uses' => 'IpCountriesController@getInfoByCode'));
+//Route::get('/ip-countries', array('uses' => 'IpCountriesController@getAll'));
+//Route::get('/ip-countries/{countryCode}', array('uses' => 'IpCountriesController@getInfoByCode'));
 
 //Route::get('/ip-states', array('uses' => 'IpStatesController@index'));
 //Route::get('/ip-addresses', array('uses' => 'IpAddressesController@index'));
