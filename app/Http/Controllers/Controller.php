@@ -119,7 +119,13 @@ class ProductsController extends Controller {
         return response()->json($products);
     }
     public function getInfoByTicker($ticker) {
-        $productInfo = DB::table('products')->where('ticker', $ticker)->first();
+        $productInfo = DB::table('products')
+            ->select(DB::raw('products.ticker, products.name, products.region, products.sub_region, products.view_count, products.updated_at, asset_classes.name as asset_class, issuers.issuer_name as issuer, categories.category_name as category'))
+            ->where('ticker', $ticker)
+            ->join('asset_classes', 'asset_classes.id','=','products.asset_class_id')
+            ->join('issuers', 'issuers.issuer_id','=','products.issuer_id')
+            ->join('categories', 'categories.category_id','=','products.category_id')
+            ->first();
         return response()->json($productInfo);
     }
     public function getActionsByTicker($ticker) {
