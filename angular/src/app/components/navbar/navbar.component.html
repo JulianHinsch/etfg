@@ -1,0 +1,51 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button mat-mini-fab color="warn" *ngIf="auth.isAuthenticated()" class="navbar-toggler navbar-toggler-right float-right orange-background" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div *ngIf="!auth.isAuthenticated()">
+    <a class="navbar-brand" href="/">
+      <img src="../../../assets/logos/logo.png" alt="ETF Global">                  
+      <br>
+      <span class="logoText">Business Intelligence Beta</span>
+    </a>
+  </div>
+  <div *ngIf="auth.isAuthenticated()">                
+    <a class="navbar-brand" href="/dashboard">
+      <img src="../../../assets/logos/logo.png" alt="ETF Global logo">                  
+      <br>
+      <span class="logoText">Business Intelligence Beta</span>
+    </a>
+  </div>
+  <div *ngIf="auth.isAuthenticated()" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/products']">Products</a>
+      </li>
+      <!--
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/assetclasses']">Asset Classes</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/issuers']">Issuers</a>
+      </li> -->
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/firms']">Firms</a>
+      </li>
+      <!--
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" [routerLink]="['/countries']">Countries</a>
+      </li>
+    -->
+    </ul>
+    <form class="form-inline my-2 my-lg-0 float-left" [formGroup]="searchForm" (ngSubmit)="handleSearch($event)">
+      <input formControlName="term" class="form-control mr-sm-2" type="text" placeholder="Enter a ticker...">
+      <button class="btn btn-primary fa fa-search orange-background" type="submit"></button>
+    </form>
+    <div class="button-row float-right">
+      <button mat-raised-button class="auth-button" *ngIf="auth.isAuthenticated()" (click)="auth.logout()">Log Out</button>
+    </div>
+  </div>
+</nav>

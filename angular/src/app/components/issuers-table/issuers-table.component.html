@@ -1,0 +1,40 @@
+<div class="mat-elevation-z4">
+  <div class="header">
+      <h6>Issuers</h6>   
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.rowNumber}}</mat-cell>
+    </ng-container>
+
+    <!-- Ticker Column -->
+    <ng-container matColumnDef="ticker">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>
+      <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.ticker}}</a></mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.name}}</a></mat-cell>
+    </ng-container>
+
+    <!-- Issuer Column -->
+    <ng-container matColumnDef="issuer">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>
+      <mat-cell *matCellDef="let row"><a href="">{{row.issuer_id}}</a></mat-cell>
+    </ng-container>
+
+    <!-- ViewCount Column -->
+    <ng-container matColumnDef="views">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.view_count}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

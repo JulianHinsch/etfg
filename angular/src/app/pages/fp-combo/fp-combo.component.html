@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <page-title [title]="pageTitle"></page-title>
+  <div *ngIf="!isLoaded">
+    <div class="text-center" style="position: absolute; top: 48vh; left: 50vw; margin-right: -50%;
+    transform: translate(-50%, -50%);">
+      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    </div>
+  </div>
+  <div *ngIf="isLoaded" class="row justify-content-around tables-container">
+    <div class="col-md-12">
+      <div class="mat-elevation-z4 info">
+        <div>
+            <h6>Product Issuer: <span>{{productData.issuer}}</span></h6>
+            <h6>Product Asset Class: <span>{{productData.asset_class}}</span></h6>
+            <h6>Product Development Class: <span>{{productData.development_class}}</span></h6>
+            <h6>Product Category: <span>{{productData.category}}</span></h6>
+        </div> 
+        <div>
+            <h6>Product Region: <span>{{productData.region}}</span></h6>              
+            <h6>Product Sub-Region: <span>{{productData.sub_region}}</span></h6>
+            <h6>Product Total Views: <span>{{productData.view_count}}</span></h6>
+            <h6>Product Last Updated: <span>{{productData.updated_at}}</span></h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <fp-combo-table [firmId]="firmId" [ticker]="ticker"></fp-combo-table>
+    </div>
+  </div>
+</div>

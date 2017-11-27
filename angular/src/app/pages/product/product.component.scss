@@ -1,0 +1,41 @@
+.row.bg-primary {
+  margin-bottom: 3.125em;
+}
+.text-center.title {
+  color:#fff;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  width: 100%;
+}
+.tables-container {
+  margin-top: -20px;
+}
+
+.col-md-6,.col-md-12 {
+  margin-bottom: 2em;
+}
+.info {
+  padding-top: 10px;
+  & div {
+    height: 120px;
+    font-family: inherit;
+    padding-left: 24px;
+    box-sizing: border-box;
+    & h6 {
+      height: 30px;
+      margin: 0px;
+      & span {
+        font-weight: normal;
+        color: #777;
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .info div {
+    display: inline-block;
+    width: 49%;
+  }
+}
+

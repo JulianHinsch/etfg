@@ -1,0 +1,21 @@
+.header {
+    min-height: 2em;
+    line-height: 2em;
+    display: flex;
+    padding-left:  24px;
+    padding-right: 24px;
+    font-size: 20px;
+    justify-content: space-between;
+    & h6 {
+        height: inherit;
+        line-height: inherit;
+        margin: 0px;
+    }
+}
+.mat-table {
+    overflow: auto;
+    max-height: 34em;
+}
+.mat-header-cell .mat-sort-header-sorted {
+    color: black;
+}

@@ -1,0 +1,80 @@
+button {
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+}
+form {
+  & input {
+    border-radius: 2px;
+    padding-left: 5px !important;
+    font-family: inherit;
+    font-weight: lighter;
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+  & button {
+    height: 36px;
+    margin-top: -2px;
+    border-radius: 2px;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    &:hover {
+      box-shadow: 0px 0px 5px 1px #777 !important;
+    }
+  }
+}
+a.navbar-brand {
+  margin-left: 2em;
+}
+a.navbar-brand > img {
+  height: 1.5em;
+}
+.logoText {
+  font-size: .8em;
+}
+nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  padding-right: 20px;
+}
+.button-row.float-right {
+  margin-left: auto !important;
+}
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+}
+@media (min-width: 991px) {
+    form.form-inline.my-2.my-lg-0.ng-untouched.ng-pristine.ng-valid {
+      padding-right: 4em;
+    }
+}
+@media (max-width: 991px) {
+  .navbar-toggleable-md .navbar-nav .dropdown-menu {
+    position: absolute;
+    float: none;
+  }
+  div#navbarSupportedContent {
+    margin-top: 1.3em;
+  }
+  a.navbar-brand {
+    width: 50%;
+  }
+  button.navbar-toggler.navbar-toggler-right.float-right.mat-mini-fab.mat-warn {
+    float: right;
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    color: white;
+  }
+  form.form-inline.my-2.my-lg-0.float-right.ng-untouched.ng-pristine.ng-valid {
+    position: relative;
+    float: left !important;
+    flex-wrap: nowrap;
+  }
+  button.btn.btn-primary.fa.fa-search {
+    margin-left: .5em;
+  }
+}

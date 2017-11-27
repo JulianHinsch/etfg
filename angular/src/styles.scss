@@ -1,0 +1,59 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$etfg-orange: #EF6430;
+
+.orange-background {
+  background-color: $etfg-orange !important;
+}
+
+.auth-button {
+  background-color: $etfg-orange !important;
+  color: white !important;
+  &:hover {
+    box-shadow: 0px 0px 5px 1px #777 !important;
+  }
+}
+
+button, .btn {
+  cursor: pointer;
+}
+
+body {
+  padding-bottom: 40px;
+}
+
+//table cell padding
+mat-cell, mat-header-cell {
+  padding: 3px 5px 3px 5px;
+}
+
+//sticky table headers
+mat-header-row {
+  top: 0px;
+  background-color: white;
+  position: sticky;
+}
+
+//table cell widths
+mat-cell.mat-cell.cdk-column-id.mat-column-id {flex: .3;}
+mat-cell.mat-cell.cdk-column-num.mat-column-num {flex: .3;}
+mat-cell.mat-cell.cdk-column-ticker.mat-column-ticker {flex: .4;}
+mat-cell.mat-cell.cdk-column-name.mat-column-name {flex: 2;}
+mat-cell.mat-cell.cdk-column-issuer.mat-column-issuer {flex: 1;}
+mat-cell.mat-cell.cdk-column-views.mat-column-views {flex: .1;}
+
+//table header cell widths
+mat-header-cell.mat-header-cell.cdk-column-id.mat-column-id {flex: .3;}
+mat-header-cell.mat-header-cell.cdk-column-num.mat-column-num {flex: .3;}
+mat-header-cell.mat-header-cell.cdk-column-ticker.mat-column-ticker {flex: .4;}
+mat-header-cell.mat-header-cell.cdk-column-name.mat-column-name {flex: 2;}
+mat-header-cell.mat-header-cell.cdk-column-issuer.mat-column-issuer {flex: 1;}
+mat-header-cell.mat-header-cell.cdk-column-views.mat-column-views {flex: .1;}
+
+.container-fluid {
+  padding-top: 5.3em;
+}
+
+.fixed-width{
+  flex: 0 0 100px;
+}

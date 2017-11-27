@@ -1,0 +1,42 @@
+<div class="mat-elevation-z4 raise">
+    <div class="header">
+        <h6> Viewed Products </h6>
+    </div>
+    <mat-table [dataSource]="dataSource">
+
+        <!-- Row Number Column -->
+        <ng-container matColumnDef="num">
+        <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.rowNumber}} </mat-cell>
+        </ng-container>
+
+        <!-- Ticker Column -->
+        <ng-container matColumnDef="ticker">
+        <mat-header-cell *matHeaderCellDef> Ticker </mat-header-cell>
+        <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.ticker}}</a></mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.name}}</a></mat-cell>
+        </ng-container>
+
+        <!--Issuer Column -->
+        <ng-container matColumnDef="issuer">
+        <mat-header-cell *matHeaderCellDef> Issuer </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.issuer_name}} </mat-cell>
+        </ng-container>
+
+        <!-- Views Column -->
+        <ng-container matColumnDef="views">
+        <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>
+        <mat-cell *matCellDef="let row"><a [routerLink]="['./products/', row.ticker]">{{row.view_count}}</a></mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
+      
+          
