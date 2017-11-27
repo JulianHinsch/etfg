@@ -15,7 +15,9 @@ return [
 
     'paths' => [
         resource_path('views'),
-    ],
+    ],  
+    //put angular files in public dir
+    //'paths' => array(__DIR__.'/../../public/views'),
 
     /*
     |--------------------------------------------------------------------------

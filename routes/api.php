@@ -33,9 +33,12 @@ Route::get('/products/{ticker}/firms/{id}', array('uses' => 'ProductsController@
 
 //Route::get('/ip-states', array('uses' => 'IpStatesController@index'));
 //Route::get('/ip-addresses', array('uses' => 'IpAddressesController@index'));
-//Route::get('/migrations', array('uses' => 'MigrationsController@index'));*/
+//Route::get('/migrations', array('uses' => 'MigrationsController@index'));
 //Route::get('/ip-cities', array('uses' => 'IpCitiesController@index'));
 //Route::get('/user-actions', array('uses' => 'UserActionsController@index'));
 //Route::get('/users', array('uses' => 'UsersController@index'));
 //Route::get('/action-types', array('uses' => 'ActionTypesController@index'));
 //Route::get('/posts', array('uses' => 'PostsController@index'));
+
+//search
+Route::get('/search/{term}', array('uses' => 'SearchProductsFirmsController@getProductsFirmsSearchResults'));

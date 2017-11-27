@@ -69,7 +69,7 @@ class FirmsController extends Controller {
             ->select(DB::raw('firms.id, firms.name, count(users.id) as users, firms.view_count'))
             ->where('firms.name','!=','Guest')
             ->where('firms.name','!=','Demo User')
-            ->groupBy('firms.id')
+            ->groupBy('firms.id','firms.name','firms.view_count')
             ->join('users','users.firm_id', '=', 'firms.id')
             ->orderBy('firms.view_count','desc')
             ->limit(20)
@@ -96,8 +96,9 @@ class FirmsController extends Controller {
     }
     public function getActionsById($firmId) {
         $actions = DB::table('actions')
-            ->select('date','type','portfolio')
+            ->select('date','type','portfolio','users.address as address','users.city as city','users.state as state','users.zip as zip','countries.name as country')
             ->join('users', 'users.email', '=', 'actions.email')
+            ->join('countries','countries.id', '=', 'users.country_id')
             ->where('users.firm_id',$firmId)
             ->where('actions.type','!=','n/a')
             ->where('portfolio', '!=','n/a')
@@ -130,10 +131,19 @@ class ProductsController extends Controller {
     }
     public function getActionsByTicker($ticker) {
         $actions = DB::table('actions')
-            ->select('date','firms.name as firm','firms.id as firmId','type','portfolio')
+            //->select('date','firms.name as firm','firms.id as firmId','users.address as userAddress','users.city as userCity','users.state as userState','users.zip as userZip','countries.name as country','ip_addresses.postal_code as ipZip','ip_cities.name as ipCity','ip_states.name as ipState','actions.type as type','portfolio')
+            ->select('date','firms.name as firm','firms.id as firmId','users.address as address','users.city as city','users.state as state','users.zip as zip','countries.name as country','actions.type as type','portfolio')
             ->where('portfolio','like',"%$ticker%")
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
+            // slow
+            // ->join('ip_addresses','ip_addresses.ip_address','=','actions.ip')
+            // ->join('ip_cities','ip_cities.id','=','ip_addresses.city_id')
+            // ->join('ip_states','ip_states.id','=','ip_addresses.state_id')
+            // ->join('ip_countries','ip_countries.id','=','ip_addresses.country_id')
+            // ->join('countries','countries.code','=','ip_countries.code')
+            // fast
+            ->join('countries','countries.id', '=', 'users.country_id')
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
             ->orderBy('date','desc')
@@ -147,7 +157,7 @@ class ProductsController extends Controller {
             ->join('views', 'views.product_id', '=', 'products.id')
             ->join('users', 'users.id', '=', 'views.user_id')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
-            ->groupBy('firms.id')
+            ->groupBy('firms.id','firms.name')
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
             ->where('products.ticker',$ticker)
@@ -158,10 +168,11 @@ class ProductsController extends Controller {
     }
     public function getViewsByFirm($ticker,$firmId) {
         $actions = DB::table('actions')
-            ->select('date','type','portfolio')
+            ->select('actions.date','actions.type','actions.portfolio','users.address as address','users.city as city','users.state as state','users.zip as zip','countries.name as country')            
             ->where('portfolio','like',"%$ticker%")
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->join('countries','countries.id', '=', 'users.country_id')
             ->where('firms.id',$firmId)
             ->orderBy('date','desc')
             ->limit(20)
@@ -170,6 +181,26 @@ class ProductsController extends Controller {
     }
 }
 
+class SearchProductsFirmsController extends Controller {
+    public function getProductsFirmsSearchResults($term) {
+        $results = DB::table('products')
+            ->select('products.ticker','products.name')
+            ->where('products.ticker','like',"%$term%")
+            ->orWhere('products.name','like',"%$term%")
+            ->get();
+            /*
+        $results = DB::table('firms')
+            ->select('firms.id as firmId','firms.name')
+            ->where('firms.name','like',"%$term%")
+            ->union($productResults)
+            ->get();*/
+        return response()->json($results);
+    }
+}
+
+
+
+/*
 class IpCountriesController extends Controller {
     public function getAllCountries() {
         $countries = DB::table('countries')->get();
@@ -180,6 +211,8 @@ class IpCountriesController extends Controller {
         return response()->json($countryInfo);
     }
 }
+*/
+
 
 /*
 class PostsController extends Controller {
