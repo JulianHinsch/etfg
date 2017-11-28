@@ -16,7 +16,6 @@ export class ProductActionsSource extends DataSource<any> {
             this.service.getActionsByTicker(this.ticker).subscribe(response => {
                 let data = response.json();
                 let count = 1;
-                console.log(data);
                 data.map(row => {
                     row.rowNumber = (count+'.');
                     count++;

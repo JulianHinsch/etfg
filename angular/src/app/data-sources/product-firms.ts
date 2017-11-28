@@ -21,7 +21,6 @@ export class ProductFirmsSource extends DataSource<any> {
                     count++;
                     return row;
                 });
-                console.log('finished');
                 this.complete.emit(true);
                 subscriber.next(data);
             });

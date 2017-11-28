@@ -24,7 +24,7 @@ export class NavBarComponent implements OnInit {
     this.router.navigateByUrl(`/search/${this.searchForm.controls.term.value}`);
     this.searchForm.reset();
     //this is a hack, angular should reload page content on route change...
-    //location.reload();
+    location.reload();
   }
 
   ngOnInit() {}

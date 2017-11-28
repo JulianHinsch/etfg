@@ -29,6 +29,7 @@ class Controller extends BaseController {
         ];
     }
 
+    /*
     public function edit($user_id) {
         try{
             //Find the user object from model if it exists
@@ -60,7 +61,8 @@ class Controller extends BaseController {
         catch(ModelNotFoundException $err){
             //Show error page
         }       
-    }      
+    }
+    */ 
 }
 
 class FirmsController extends Controller {
@@ -182,23 +184,38 @@ class ProductsController extends Controller {
 }
 
 class SearchProductsFirmsController extends Controller {
-    public function getProductsFirmsSearchResults($term) {
-        $results = DB::table('products')
-            ->select('products.ticker','products.name')
-            ->where('products.ticker','like',"%$term%")
-            ->orWhere('products.name','like',"%$term%")
-            ->get();
-            /*
-        $results = DB::table('firms')
-            ->select('firms.id as firmId','firms.name')
-            ->where('firms.name','like',"%$term%")
-            ->union($productResults)
-            ->get();*/
+    public function getProductsFirmsSearchResults($terms) {
+        $termArray = explode(" ",$terms);
+        $productResults = [];
+        foreach($termArray as &$value) {
+            $results = DB::table('products')
+            //raw here may need to be protected against injections, although input is exploded
+                ->select(DB::raw("products.ticker, products.name, MATCH (products.ticker,products.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
+                ->where('products.name','LIKE',"%$value%")
+                ->orderBy('relevance','DESC')
+                ->limit(20)
+                ->get()
+                ->toArray();
+            $productResults = array_merge($results, $productResults);
+        }
+        $firmResults = [];
+        foreach($termArray as &$value) {
+            $results = DB::table('firms')
+                ->select(DB::raw("firms.name,firms.id, MATCH (firms.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
+                ->where('firms.name','LIKE',"%$value%")
+                ->orderBy('relevance','DESC')
+                ->limit(20)
+                ->get()
+                ->toArray();
+            $firmResults = array_merge($results, $firmResults);
+        }
+        $results = array_merge($productResults,$firmResults);
+        usort($results, function($a, $b) {
+            return ($b->relevance) - ($a->relevance);
+        });
         return response()->json($results);
     }
 }
-
-
 
 /*
 class IpCountriesController extends Controller {
@@ -211,10 +228,7 @@ class IpCountriesController extends Controller {
         return response()->json($countryInfo);
     }
 }
-*/
 
-
-/*
 class PostsController extends Controller {
     public function index() {
         $posts = DB::select('select * from users');

@@ -23,7 +23,6 @@ export class ProductComponent implements OnInit {
     this.route.params.subscribe(params => this.ticker = params.ticker);
     this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(response => {
       const data = response.json();
-      console.log(data);
       this.data = data;
       this.pageTitle = `${data.ticker} - ${data.name}`;
       document.title = `ETFG | ${data.ticker}`;

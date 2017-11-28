@@ -12,7 +12,6 @@ export class FirmActionsSource extends DataSource<any> {
         return Observable.create(subscriber => {
             this.service.getActionsById(this.firmId).subscribe(response => {
             let data = response.json();
-            console.log(data);
             let count = 1;
             data.map(row => {
                 row.rowNumber = (count+'.');

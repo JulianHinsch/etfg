@@ -29,7 +29,6 @@ export class FpComboComponent implements OnInit {
     });
     this.productSubscription = this.productService.getInfoByTicker(this.ticker).subscribe(response => {
       const data = response.json();
-      console.log(data);
       this.productData = data;
       if(this.pageTitle) {
         this.pageTitle = this.pageTitle.concat("\n\n"+` ${data.ticker} ${data.name}`);              
@@ -39,7 +38,6 @@ export class FpComboComponent implements OnInit {
     });
     this.firmSubscription = this.firmService.getInfoById(this.firmId).subscribe(response => {
       const data = response.json();
-      console.log(data);
       this.firmData = data;
       if(this.pageTitle) {
         this.pageTitle = this.pageTitle.concat("\n\n"+` ${data.name}`);              

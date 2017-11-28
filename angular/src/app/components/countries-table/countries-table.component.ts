@@ -11,7 +11,6 @@ import { CountriesService } from '../../services/countries/countries.service';
 })
 export class CountriesTableComponent implements OnInit {
 
-  //todo change this
   displayedColumns = ['id', 'name', 'views'];  
   public dataSource: CountriesDataSource;
   constructor(private countriesService: CountriesService) {}
@@ -47,7 +46,6 @@ export class CountriesDataSource extends DataSource<any> {
         } else if (data.data && data.data.countries) {
           data = data.data.countries;
         }
-        console.log(data);
         let count = 1;
         data.map(row => {
           row.rowNumber = (count+'.');

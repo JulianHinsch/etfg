@@ -13,7 +13,7 @@ export class SearchResultsTableComponent implements OnInit {
   @Input() term: string;
   private dataSource: SearchResultsSource;
 
-  displayedColumns = ['num','name','link'];
+  displayedColumns = ['num','link'];
 
   constructor(private service: GetSearchResultsService) {}
 

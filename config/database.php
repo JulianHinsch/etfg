@@ -1,5 +1,8 @@
 <?php
 
+
+//these are AWS server environment variables
+
 define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
 define('RDS_DB_USERNAME', $_SERVER['RDS_USERNAME']);
 define('RDS_DB_PASSWORD', $_SERVER['RDS_DB_PASSWORD']);
@@ -62,7 +65,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
-*/
+        */
     ],
 
     /*
@@ -74,7 +77,7 @@ return [
     | your application. Using this information, we can determine which of
     | the migrations on disk haven't actually been run in the database.
     |
-    */
+    
 
     'migrations' => 'migrations',
 
@@ -87,7 +90,7 @@ return [
     | provides a richer set of commands than a typical key-value systems
     | such as APC or Memcached. Laravel makes it easy to dig right in.
     |
-    */
+    
 
     'redis' => [
 
@@ -101,5 +104,5 @@ return [
         ],
 
     ],
-
+    */
 ];

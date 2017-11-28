@@ -1,6 +1,6 @@
 <div class="mat-elevation-z4 raise">
   <div class="header">
-    <h6>Results</h6>  
+    <h6>Results for "{{term}}"</h6>  
   </div>
   <mat-table [dataSource]="dataSource">
       
@@ -10,16 +10,13 @@
       <mat-cell *matCellDef="let row"> {{row.rowNumber}} </mat-cell>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="firm">
-      <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>
-      <mat-cell *matCellDef="let row"><a [routerLink]="['/firms/', row.firmId]">{{row.firm}}</a></mat-cell>
-    </ng-container>
-
     <!-- Link Column -->
-    <ng-container matColumnDef="location">
-      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
-      <mat-cell *matCellDef="let row"></mat-cell>
+    <ng-container matColumnDef="link">
+      <mat-header-cell *matHeaderCellDef> Link </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <a *ngIf="row.id" [routerLink]="['/firms/', row.id]">{{row.link}}</a>      
+          <a *ngIf="row.ticker" [routerLink]="['/products/', row.ticker]">{{row.link}}</a>
+        </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -21,7 +21,6 @@ export class FirmComponent implements OnInit {
     this.route.params.subscribe(params => this.firmId = params.id);
     this.subscription = this.service.getInfoById(this.firmId).subscribe(response => {
       const data = response.json();
-      console.log(data);
       this.data = data;
       this.pageTitle = data.name;
       document.title = `ETFG | ${data.name}`;

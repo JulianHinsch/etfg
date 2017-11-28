@@ -3,9 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { GetSearchResultsService } from '../services/search/get-search-results.service';
 
 export class SearchResultsSource extends DataSource<any> {
-    
-    filterChange = new BehaviorSubject<string>('');
-    
+        
     constructor(private service: GetSearchResultsService, private term: string) {
         super();
     }
@@ -17,6 +15,11 @@ export class SearchResultsSource extends DataSource<any> {
                 let count = 1;
                 data.map(row => {
                     row.rowNumber = (count+'.');
+                    if(row.ticker) {
+                        row.link = `${row.ticker} | ${row.name}`
+                    } else {
+                        row.link = `${row.name}`
+                    }
                     count++;
                     return row;
                 });
