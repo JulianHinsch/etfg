@@ -33,3 +33,15 @@ Then, add the angular dist folder's contents to the the php public folder.
 2. Add the angular dist folder's contents to the php public folder
 2. Compress the root directory's contents.
 3. Upload and deploy
+
+##To-Do
+- Add API endpoint authentication with Access Tokens
+- Add Auth Roles - Student, Professional, SuperUser, Admin
+- Add Pie Charts
+- Fix Pagination/Sort on tables
+- Fix 'isLoading' system on tables so that the spinner shows until the data is ready.
+- Configure HTTPS and a real domain name
+- Fix decimal percentages coming out with commas i.e. 7,5% -> 7.5%
+- Fix formatting error in tables with large portfolios
+- Discuss payment system
+
