@@ -610,7 +610,6 @@ export class AuthService {
 var AUTH_CONFIG = {
     clientID: 'bDXcVu8YVfQtC3YvmskMLhKOwmTe8b5K',
     domain: 'etfg.auth0.com',
-    //callbackURL: 'http://localhost:4200/callback'
     callbackURL: __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].baseUrl + "/callback"
 };
 //# sourceMappingURL=auth0-variables.js.map
@@ -860,7 +859,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var CountriesTableComponent = (function () {
     function CountriesTableComponent(countriesService) {
         this.countriesService = countriesService;
-        //todo change this
         this.displayedColumns = ['id', 'name', 'views'];
     }
     CountriesTableComponent.prototype.ngOnInit = function () {
@@ -902,7 +900,6 @@ var CountriesDataSource = (function (_super) {
                 else if (data.data && data.data.countries) {
                     data = data.data.countries;
                 }
-                console.log(data);
                 var count = 1;
                 data.map(function (row) {
                     row.rowNumber = (count + '.');
@@ -1631,7 +1628,7 @@ var NavBarComponent = (function () {
             _this.router.navigateByUrl("/search/" + _this.searchForm.controls.term.value);
             _this.searchForm.reset();
             //this is a hack, angular should reload page content on route change...
-            //location.reload();
+            location.reload();
         };
         auth.handleAuthentication();
     }
@@ -1944,7 +1941,7 @@ var _a;
 /***/ "../../../../../src/app/components/search-results-table/search-results-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4 raise\">\n  <div class=\"header\">\n    <h6>Results</h6>  \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"firm\">\n      <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.firmId]\">{{row.firm}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Link Column -->\n    <ng-container matColumnDef=\"location\">\n      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"></mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n  \n    \n      \n"
+module.exports = "<div class=\"mat-elevation-z4 raise\">\n  <div class=\"header\">\n    <h6>Results for \"{{term}}\"</h6>  \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n\n    <!-- Link Column -->\n    <ng-container matColumnDef=\"link\">\n      <mat-header-cell *matHeaderCellDef> Link </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">\n          <a *ngIf=\"row.id\" [routerLink]=\"['/firms/', row.id]\">{{row.link}}</a>      \n          <a *ngIf=\"row.ticker\" [routerLink]=\"['/products/', row.ticker]\">{{row.link}}</a>\n        </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n  \n    \n      \n"
 
 /***/ }),
 
@@ -1989,7 +1986,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SearchResultsTableComponent = (function () {
     function SearchResultsTableComponent(service) {
         this.service = service;
-        this.displayedColumns = ['num', 'name', 'link'];
+        this.displayedColumns = ['num', 'link'];
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
         this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_search_results__["a" /* SearchResultsSource */](this.service, this.term);
@@ -2047,7 +2044,6 @@ var FirmActionsSource = (function (_super) {
         return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
             _this.service.getActionsById(_this.firmId).subscribe(function (response) {
                 var data = response.json();
-                console.log(data);
                 var count = 1;
                 data.map(function (row) {
                     row.rowNumber = (count + '.');
@@ -2114,7 +2110,6 @@ var FirmViewsSource = (function (_super) {
         return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
             _this.service.getViewsById(_this.firmId).subscribe(function (response) {
                 var data = response.json();
-                console.log(data);
                 var count = 1;
                 data.map(function (row) {
                     row.rowNumber = (count + '.');
@@ -2165,7 +2160,6 @@ var FirmsSource = (function (_super) {
         return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
             _this.service.getAll().subscribe(function (data) {
                 var firmsData = JSON.parse(data.text());
-                console.log(firmsData);
                 if (firmsData.data) {
                     firmsData = firmsData.data.firms;
                 }
@@ -2290,7 +2284,6 @@ var ProductActionsSource = (function (_super) {
             _this.service.getActionsByTicker(_this.ticker).subscribe(function (response) {
                 var data = response.json();
                 var count = 1;
-                console.log(data);
                 data.map(function (row) {
                     row.rowNumber = (count + '.');
                     count++;
@@ -2376,7 +2369,6 @@ var ProductFirmsSource = (function (_super) {
                     count++;
                     return row;
                 });
-                console.log('finished');
                 _this.complete.emit(true);
                 subscriber.next(data);
             });
@@ -2501,7 +2493,6 @@ var SearchResultsSource = (function (_super) {
         var _this = _super.call(this) || this;
         _this.service = service;
         _this.term = term;
-        _this.filterChange = new __WEBPACK_IMPORTED_MODULE_1_rxjs__["BehaviorSubject"]('');
         return _this;
     }
     SearchResultsSource.prototype.connect = function () {
@@ -2512,6 +2503,12 @@ var SearchResultsSource = (function (_super) {
                 var count = 1;
                 data.map(function (row) {
                     row.rowNumber = (count + '.');
+                    if (row.ticker) {
+                        row.link = row.ticker + " | " + row.name;
+                    }
+                    else {
+                        row.link = "" + row.name;
+                    }
                     count++;
                     return row;
                 });
@@ -2986,7 +2983,6 @@ var FirmComponent = (function () {
         this.route.params.subscribe(function (params) { return _this.firmId = params.id; });
         this.subscription = this.service.getInfoById(this.firmId).subscribe(function (response) {
             var data = response.json();
-            console.log(data);
             _this.data = data;
             _this.pageTitle = data.name;
             document.title = "ETFG | " + data.name;
@@ -3129,7 +3125,6 @@ var FpComboComponent = (function () {
         });
         this.productSubscription = this.productService.getInfoByTicker(this.ticker).subscribe(function (response) {
             var data = response.json();
-            console.log(data);
             _this.productData = data;
             if (_this.pageTitle) {
                 _this.pageTitle = _this.pageTitle.concat("\n\n" + (" " + data.ticker + " " + data.name));
@@ -3140,7 +3135,6 @@ var FpComboComponent = (function () {
         });
         this.firmSubscription = this.firmService.getInfoById(this.firmId).subscribe(function (response) {
             var data = response.json();
-            console.log(data);
             _this.firmData = data;
             if (_this.pageTitle) {
                 _this.pageTitle = _this.pageTitle.concat("\n\n" + (" " + data.name));
@@ -3423,7 +3417,6 @@ var ProductComponent = (function () {
         this.route.params.subscribe(function (params) { return _this.ticker = params.ticker; });
         this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(function (response) {
             var data = response.json();
-            console.log(data);
             _this.data = data;
             _this.pageTitle = data.ticker + " - " + data.name;
             document.title = "ETFG | " + data.ticker;
@@ -3550,20 +3543,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SearchResultsComponent = (function () {
-    function SearchResultsComponent(route, service) {
+    function SearchResultsComponent(route, service, router) {
         var _this = this;
         this.route = route;
         this.service = service;
-        this.pageTitle = 'Search Results';
+        this.router = router;
+        this.pageTitle = 'Search';
+        this.noResults = false;
         this.isLoaded = false;
-        document.title = 'ETFG';
+        document.title = 'ETFG | Search';
         this.route.params.subscribe(function (params) { return _this.term = params.term; });
         this.subscription = this.service.getSearchResults(this.term).subscribe(function (response) {
-            var data = response.json();
-            console.log(data);
-            _this.data = data;
-            document.title = "ETFG | Search Results for " + _this.term;
+            _this.data = response.json();
+            //route if exact match to ticker
+            // if(this.data && this.data[0].ticker.toLowerCase()===this.term.toLowerCase()) {
+            //   this.router.navigateByUrl(`/products/${this.term}`);
+            // }
         });
     }
     SearchResultsComponent.prototype.ngOnInit = function () {
@@ -3581,10 +3578,10 @@ SearchResultsComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/pages/search-results/search-results.component.html"),
         styles: [__webpack_require__("../../../../../src/app/pages/search-results/search-results.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__["a" /* GetSearchResultsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__["a" /* GetSearchResultsService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__["a" /* GetSearchResultsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__["a" /* GetSearchResultsService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], SearchResultsComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=search-results.component.js.map
 
 /***/ }),

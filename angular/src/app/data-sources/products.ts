@@ -9,12 +9,6 @@ export class ProductsSource extends DataSource<any> {
     constructor(private service: GetAllProductsService) {
         super();
     }
-
-    /*
-    constructor(private service: GetAllProductsService, public onCompleted: any) {
-        super();
-    }
-    */
     
     changeFilter(text: string) {
         this.filterChange.next(text.toUpperCase());

@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <!-- Page Title -->
+    <page-title title="Products"></page-title>
+    <div class="row justify-content-around">
+        <div class="col-md-12">
+            <!-- Spinner -->
+            <div *ngIf="!dataSource.isLoaded">
+                <div class="text-center" style="position: absolute; top: 20vh; left: 50vw; margin-right: -50%;
+                transform: translate(-50%, -50%);">
+                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                </div>
+            </div>
+            <!-- Elevation -->
+            <div *ngIf="dataSource.isLoaded" class="mat-elevation-z4">
+                <!-- Header -->
+                <div class="header">
+                    <h6>Products</h6>
+                    <!-- Filter -->
+                    <mat-form-field>
+                        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                    </mat-form-field>  
+                </div>
+                <!-- Table -->
+                <mat-table #table [dataSource]="dataSource" matSort>
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>
+                        <mat-cell *matCellDef="let row">{{row.rowNumber}}</mat-cell>
+                    </ng-container>
+                    <!-- Ticker Column -->
+                    <ng-container matColumnDef="ticker">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>
+                        <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.ticker}}</a></mat-cell>
+                    </ng-container>
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let row"><a [routerLink]="['/products/', row.ticker]">{{row.name}}</a></mat-cell>
+                    </ng-container>
+                    <!-- Issuer Column -->
+                    <ng-container matColumnDef="issuer">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>
+                        <mat-cell *matCellDef="let row">{{row.issuer_name}}</mat-cell>
+                    </ng-container>
+                    <!-- ViewCount Column -->
+                    <ng-container matColumnDef="views">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.view_count}} </mat-cell>
+                    </ng-container>
+                    <!-- Labels -->
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <!-- Paginator -->
+                <mat-paginator #paginator
+                    [pageSize]="10"
+                    [pageSizeOptions]="[5, 10, 20]">
+                </mat-paginator>
+            </div>
+        </div>
+    </div>
+</div>
