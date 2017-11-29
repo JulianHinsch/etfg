@@ -24,6 +24,7 @@ export class FpComboSource extends DataSource<any> {
                         let percentage = dict[key];
                         percentage = percentage.toString();
                         percentage = percentage.replace(/"/g,"");
+                        percentage = percentage.replace(/,/g,'.')
                         percentage = percentage.concat('%');
                         let pair = {
                             ticker: key.toUpperCase(),

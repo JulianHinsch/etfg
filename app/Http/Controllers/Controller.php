@@ -186,30 +186,34 @@ class ProductsController extends Controller {
 class SearchProductsFirmsController extends Controller {
     public function getProductsFirmsSearchResults($terms) {
         $termArray = explode(" ",$terms);
+
         $productResults = [];
+        $firmResults = [];
+
         foreach($termArray as &$value) {
-            $results = DB::table('products')
+            $productResultsForTerm = DB::table('products')
             //raw here may need to be protected against injections, although input is exploded
                 ->select(DB::raw("products.ticker, products.name, MATCH (products.ticker,products.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
                 ->where('products.name','LIKE',"%$value%")
+                ->orWhere('products.ticker','LIKE',"%$value%")
                 ->orderBy('relevance','DESC')
-                ->limit(20)
                 ->get()
                 ->toArray();
-            $productResults = array_merge($results, $productResults);
+            $productResults = array_merge($productResults, $productResultsForTerm);
         }
-        $firmResults = [];
         foreach($termArray as &$value) {
-            $results = DB::table('firms')
+            $firmResultsForTerm = DB::table('firms')
                 ->select(DB::raw("firms.name,firms.id, MATCH (firms.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
                 ->where('firms.name','LIKE',"%$value%")
                 ->orderBy('relevance','DESC')
                 ->limit(20)
                 ->get()
                 ->toArray();
-            $firmResults = array_merge($results, $firmResults);
+            $firmResults = array_merge($firmResults, $firmResultsForTerm);
         }
+
         $results = array_merge($productResults,$firmResults);
+
         usort($results, function($a, $b) {
             return ($b->relevance) - ($a->relevance);
         });

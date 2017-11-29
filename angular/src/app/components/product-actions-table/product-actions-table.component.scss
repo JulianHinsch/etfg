@@ -17,11 +17,11 @@
   flex-grow: 1;
   margin-left: 32px;
 }
-  
-.mat-table {
-  overflow: auto;
-  max-height: 34em;
+
+.portfolio-width{
+  flex: 0 0 110px;
 }
-.fixed-width{
-  flex: 0 0 100px;
-}
+
+// .mat-cell span {
+//   margin: auto;
+// }

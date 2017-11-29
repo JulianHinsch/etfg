@@ -42,10 +42,10 @@
 
     <!-- Portfolio Column -->
     <ng-container matColumnDef="portfolio">
-      <mat-header-cell *matHeaderCellDef class="fixed-width"> Portfolio </mat-header-cell>
-      <mat-cell *matCellDef="let row" class="fixed-width">
+      <mat-header-cell *matHeaderCellDef class="portfolio-width"> Portfolio </mat-header-cell>
+      <mat-cell *matCellDef="let row" class="portfolio-width">
         <span *ngFor="let item of row.portfolio">
-          <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}
+          <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
         </span>
       </mat-cell>
     </ng-container>

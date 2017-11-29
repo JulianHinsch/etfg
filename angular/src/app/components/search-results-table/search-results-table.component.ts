@@ -11,6 +11,7 @@ import { GetSearchResultsService } from '../../services/search/get-search-result
 })
 export class SearchResultsTableComponent implements OnInit {
   @Input() term: string;
+  @Input() header: string;
   private dataSource: SearchResultsSource;
 
   displayedColumns = ['num','link'];
