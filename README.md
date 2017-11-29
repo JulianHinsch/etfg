@@ -44,4 +44,6 @@ Then, add the angular dist folder's contents to the the php public folder.
 - Fix decimal percentages coming out with commas i.e. 7,5% -> 7.5%
 - Fix formatting error in tables with large portfolios
 - Discuss payment system
+- Test search (IWOO)
+- Add a message for a search that returns no results
 
