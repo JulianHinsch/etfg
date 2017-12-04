@@ -1,42 +1,30 @@
-<div *ngIf="!isLoaded">
-  <div class="text-center" style="position: absolute; top: 20vh; left: 50vw; margin-right: -50%;
-  transform: translate(-50%, -50%);">
-    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-  </div>
+<div class="table-container mat-elevation-z4">
+    <!-- Header -->
+    <div class="header">
+        <h6>All Firms</h6>   
+    </div>
+    <!-- Loading Shade -->
+    <div class="loading-shade" *ngIf="isLoadingResults"></div>
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="views" matSortDisableClear matSortDirection="desc">
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let row"><a [routerLink]="['/firms/', row.id]">{{row.name}}</a></mat-cell>
+        </ng-container>
+        <!-- Users Column -->
+        <ng-container matColumnDef="users">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Users </mat-header-cell>
+        <mat-cell *matCellDef="let row">{{row.users}}</mat-cell>
+        </ng-container>
+        <!-- Views Column -->
+        <ng-container matColumnDef="views">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.views}} </mat-cell>
+        </ng-container>
+        <!-- Row Headers -->
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <!-- Paginator -->
+    <mat-paginator [length]="resultsLength" [pageSize]="20"></mat-paginator>
 </div>
-<div *ngIf="isLoaded">
-  <div class="header">
-    <h6>Firms</h6>   
-  </div>
-  <mat-table [dataSource]="dataSource">
-
-    <!-- ID Column -->
-    <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.rowNumber}} </mat-cell>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let row"><a [routerLink]="['/firms/', row.id]">{{row.name}}</a></mat-cell>
-    </ng-container>
-
-    <!-- Users Column -->
-    <ng-container matColumnDef="users">
-      <mat-header-cell *matHeaderCellDef> Users </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.users}} </mat-cell>
-    </ng-container>
-
-    <!-- Views Column -->
-    <ng-container matColumnDef="views">
-      <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.view_count}} </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-
-  </mat-table>
-</div>
-  

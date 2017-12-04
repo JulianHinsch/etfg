@@ -1,24 +1,104 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FpComboService } from '../../services/fp-combo/fp-combo.service';
-import { FpComboSource } from '../../data-sources/fp-combo';
+import {Component, Input, AfterViewInit, ViewChild} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {Observable} from 'rxjs/Observable';
+import {merge} from 'rxjs/observable/merge';
+import {of as observableOf} from 'rxjs/observable/of';
+import {catchError} from 'rxjs/operators/catchError';
+import {map} from 'rxjs/operators/map';
+import {startWith} from 'rxjs/operators/startWith';
+import {switchMap} from 'rxjs/operators/switchMap';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'fp-combo-table',
   templateUrl: './fp-combo-table.component.html',
   styleUrls: ['./fp-combo-table.component.scss']
 })
-export class FpComboTableComponent implements OnInit {
+export class FpComboTableComponent implements AfterViewInit {
   @Input() firmId: number;
   @Input() ticker: string;
-  public dataSource: FpComboSource;
-  public isLoaded = false;
 
-  displayedColumns = ['num','date','location','type','portfolio'];
+  displayedColumns = ['date','location','type','portfolio'];
+  connection: FPComboConnection | null;
+  dataSource = new MatTableDataSource();
 
-  constructor(private service: FpComboService) { }
+  resultsLength = 0;
+  isLoadingResults = false;
 
-  ngOnInit() {
-    this.dataSource = new FpComboSource(this.service, this.firmId, this.ticker);    
-    setTimeout(()=>{this.isLoaded=true}, 1000);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  constructor(private http: HttpClient) {}
+
+  ngAfterViewInit() {
+    this.connection = new FPComboConnection(this.http);
+
+    // If the user changes the sort order, reset back to the first page.
+    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+
+    merge(this.sort.sortChange, this.paginator.page)
+      .pipe(
+        startWith({}),
+        switchMap(() => {
+            this.isLoadingResults = true;
+            return this.connection!.getActions(this.ticker, this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
+        }),
+        map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.resultsLength = data.total;
+            //modify data here
+            data.items.map(row => {
+                let arr = [];
+                let dict = JSON.parse(row.portfolio);
+                for (let key in dict) {
+                    let percentage = dict[key];
+                    percentage = percentage.toString();
+                    percentage = percentage.replace(/"/g,"");
+                    percentage = percentage.replace(/,/g,'.')
+                    percentage = percentage.concat('%');
+                    let pair = {
+                        ticker: key.toUpperCase(),
+                        percentage: percentage
+                    }
+                    arr.push(pair);
+                }
+                row.portfolio = arr;
+                return row;
+            });
+            return data.items;
+        }),
+        catchError(() => {
+          this.isLoadingResults = false;
+          return observableOf([]);
+        })
+      ).subscribe(data => this.dataSource.data = data);
+  }
+}
+
+export interface ActionsApi {
+  items: Action[];
+  total: number;
+}
+
+export interface Action {
+    date: string;
+    address: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+    type: string;
+    portfolio: any;
+}
+
+export class FPComboConnection {
+  constructor(private http: HttpClient) {}
+
+  //call the api with a page number, sort field, and sort order(asc/desc)
+  getActions(ticker: string, id: number, page: number, sort: string, order: string): Observable<ActionsApi> {
+    const requestUrl = `${environment.apiBaseUrl}/api/products/${ticker}/firms/${id}?page=${page+1}&sort=${sort}&order=${order}`;
+    return this.http.get<ActionsApi>(requestUrl);
   }
 }

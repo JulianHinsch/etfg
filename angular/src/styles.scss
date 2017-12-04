@@ -40,7 +40,7 @@ mat-cell.mat-cell.cdk-column-num.mat-column-num {flex: .3;}
 mat-cell.mat-cell.cdk-column-ticker.mat-column-ticker {flex: .4;}
 mat-cell.mat-cell.cdk-column-name.mat-column-name {flex: 2;}
 mat-cell.mat-cell.cdk-column-issuer.mat-column-issuer {flex: 1;}
-mat-cell.mat-cell.cdk-column-views.mat-column-views {flex: .1;}
+mat-cell.mat-cell.cdk-column-views.mat-column-views {flex: 0 0 50px;}
 
 //table header cell widths
 mat-header-cell.mat-header-cell.cdk-column-id.mat-column-id {flex: .3;}
@@ -48,7 +48,7 @@ mat-header-cell.mat-header-cell.cdk-column-num.mat-column-num {flex: .3;}
 mat-header-cell.mat-header-cell.cdk-column-ticker.mat-column-ticker {flex: .4;}
 mat-header-cell.mat-header-cell.cdk-column-name.mat-column-name {flex: 2;}
 mat-header-cell.mat-header-cell.cdk-column-issuer.mat-column-issuer {flex: 1;}
-mat-header-cell.mat-header-cell.cdk-column-views.mat-column-views {flex: .1;}
+mat-header-cell.mat-header-cell.cdk-column-views.mat-column-views {flex: 0 0 50px;}
 
 .container-fluid {
   padding-top: 5.3em;

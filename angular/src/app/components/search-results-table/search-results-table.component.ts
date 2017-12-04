@@ -14,7 +14,7 @@ export class SearchResultsTableComponent implements OnInit {
   @Input() header: string;
   private dataSource: SearchResultsSource;
 
-  displayedColumns = ['num','link'];
+  displayedColumns = ['num','link','type'];
 
   constructor(private service: GetSearchResultsService) {}
 

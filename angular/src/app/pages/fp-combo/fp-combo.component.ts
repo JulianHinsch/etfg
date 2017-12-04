@@ -3,7 +3,6 @@ import { ActivatedRoute} from '@angular/router';
 import { GetFirmInfoByIdService } from '../../services/firms/get-firm-info-by-id.service';
 import { GetProductInfoByTickerService } from '../../services/products/get-product-info-by-ticker.service';
 
-
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 
 @Component({
@@ -11,8 +10,8 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
   templateUrl: './fp-combo.component.html',
   styleUrls: ['./fp-combo.component.scss']
 })
-export class FpComboComponent implements OnInit {
-  public isLoaded = false;
+export class FpComboComponent {
+  isLoaded = false;
   productSubscription: Subscription;
   firmSubscription: Subscription;
   pageTitle: string;
@@ -46,10 +45,6 @@ export class FpComboComponent implements OnInit {
       }
       document.title = `ETFG | ${data.name}`;
     });
-  }
-
-  ngOnInit() {
-    setTimeout(()=> {this.isLoaded = true}, 1000);    
   }
 
   ngOnDestroy() {

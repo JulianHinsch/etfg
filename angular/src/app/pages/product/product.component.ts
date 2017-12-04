@@ -9,14 +9,12 @@ import { GetProductInfoByTickerService } from '../../services/products/get-produ
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
 
   private subscription: Subscription;
   private pageTitle: string;
   private ticker: string;
   private data: object;
-
-  public isLoaded = false;
 
   constructor(private route: ActivatedRoute, private service: GetProductInfoByTickerService) {
     document.title = 'ETFG';
@@ -27,10 +25,6 @@ export class ProductComponent implements OnInit {
       this.pageTitle = `${data.ticker} - ${data.name}`;
       document.title = `ETFG | ${data.ticker}`;
     });
-  }
-
-  ngOnInit() {
-    setTimeout(()=>{this.isLoaded = true},1000);
   }
 
   ngOnDestroy() {

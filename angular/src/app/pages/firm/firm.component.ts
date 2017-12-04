@@ -9,8 +9,7 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
   templateUrl: './firm.component.html',
   styleUrls: ['./firm.component.scss']
 })
-export class FirmComponent implements OnInit {
-  public isLoaded = false;
+export class FirmComponent {
   subscription: Subscription;
   pageTitle: string;
   firmId: number;
@@ -25,10 +24,6 @@ export class FirmComponent implements OnInit {
       this.pageTitle = data.name;
       document.title = `ETFG | ${data.name}`;
     });
-  }
-
-  ngOnInit() {
-    setTimeout(()=> {this.isLoaded = true}, 1000);
   }
 
   ngOnDestroy() {

@@ -1,7 +1,5 @@
 <div class="container-fluid">
   <page-title title="Dashboard"></page-title>
-  
-  <!-- First Row ( Line Graph & Data Table ) -->
   <div *ngIf="!isLoaded">
     <div class="text-center" style="position: absolute; top: 48vh; left: 50vw; margin-right: -50%;
     transform: translate(-50%, -50%);">
@@ -11,15 +9,13 @@
   <div *ngIf="isLoaded" class="row justify-content-around">
       <div class="col-md-6">
         <div class="mat-elevation-z4">
-          <dashboard-my-products-table></dashboard-my-products-table>
+          <dashboard-top-products-table></dashboard-top-products-table>
         </div>
       </div>
-
       <div class="col-md-6">
         <div class="mat-elevation-z4">
           <dashboard-views-by-firm-table></dashboard-views-by-firm-table>
         </div>
       </div>
   </div>
-  <!-- End of First Row  ( Line Graph & Data Table )    -->
 </div>

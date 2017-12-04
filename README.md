@@ -41,9 +41,7 @@ Then, add the angular dist folder's contents to the the php public folder.
 - Fix Pagination/Sort on tables
 - Fix 'isLoading' system on tables so that the spinner shows until the data is ready.
 - Configure HTTPS and a real domain name
-- Fix decimal percentages coming out with commas i.e. 7,5% -> 7.5%
-- Fix formatting error in tables with large portfolios
+- Protect search against SQL injections (raw query is a bit vulnerable to experienced hacker/bot)
 - Discuss payment system
-- Test search (IWOO)
-- Add a message for a search that returns no results
 
+- Improve ordering of search results
