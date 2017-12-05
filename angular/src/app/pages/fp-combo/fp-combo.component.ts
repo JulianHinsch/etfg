@@ -11,7 +11,6 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
   styleUrls: ['./fp-combo.component.scss']
 })
 export class FpComboComponent {
-  isLoaded = false;
   productSubscription: Subscription;
   firmSubscription: Subscription;
   pageTitle: string;

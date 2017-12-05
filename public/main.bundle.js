@@ -26,20 +26,14 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_landing_landing_component__ = __webpack_require__("../../../../../src/app/pages/landing/landing.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_asset_class_asset_class_component__ = __webpack_require__("../../../../../src/app/pages/asset-class/asset-class.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_asset_classes_asset_classes_component__ = __webpack_require__("../../../../../src/app/pages/asset-classes/asset-classes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_country_country_component__ = __webpack_require__("../../../../../src/app/pages/country/country.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_countries_countries_component__ = __webpack_require__("../../../../../src/app/pages/countries/countries.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/pages/firm/firm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/pages/firms/firms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_issuer_issuer_component__ = __webpack_require__("../../../../../src/app/pages/issuer/issuer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_issuers_issuers_component__ = __webpack_require__("../../../../../src/app/pages/issuers/issuers.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_product_product_component__ = __webpack_require__("../../../../../src/app/pages/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/pages/fp-combo/fp-combo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/pages/search-results/search-results.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/auth/auth-guard.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/pages/firm/firm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/pages/firms/firms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_product_product_component__ = __webpack_require__("../../../../../src/app/pages/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/pages/fp-combo/fp-combo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/pages/search-results/search-results.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/auth/auth-guard.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,30 +52,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-
-
-
 var appRoutes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_2__pages_landing_landing_component__["a" /* LandingComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_3__pages_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'assetclasses', component: __WEBPACK_IMPORTED_MODULE_5__pages_asset_classes_asset_classes_component__["a" /* AssetClassesComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'assetclasses/:id', component: __WEBPACK_IMPORTED_MODULE_4__pages_asset_class_asset_class_component__["a" /* AssetClassComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'countries', component: __WEBPACK_IMPORTED_MODULE_7__pages_countries_countries_component__["a" /* CountriesComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'countries/:id', component: __WEBPACK_IMPORTED_MODULE_6__pages_country_country_component__["a" /* CountryComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'firms', component: __WEBPACK_IMPORTED_MODULE_9__pages_firms_firms_component__["a" /* FirmsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'firms/:id', component: __WEBPACK_IMPORTED_MODULE_8__pages_firm_firm_component__["a" /* FirmComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'firms/:id/products/:ticker', component: __WEBPACK_IMPORTED_MODULE_14__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'issuers', component: __WEBPACK_IMPORTED_MODULE_11__pages_issuers_issuers_component__["a" /* IssuersComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'issuers/:id', component: __WEBPACK_IMPORTED_MODULE_10__pages_issuer_issuer_component__["a" /* IssuerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'products', component: __WEBPACK_IMPORTED_MODULE_13__pages_products_products_component__["a" /* ProductsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'products/:ticker', component: __WEBPACK_IMPORTED_MODULE_12__pages_product_product_component__["a" /* ProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'products/:ticker/firms/:id', component: __WEBPACK_IMPORTED_MODULE_14__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'search/:term', component: __WEBPACK_IMPORTED_MODULE_15__pages_search_results_search_results_component__["a" /* SearchResultsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
-    { path: 'callback', component: __WEBPACK_IMPORTED_MODULE_16__callback_callback_component__["a" /* CallbackComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_3__pages_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'firms', component: __WEBPACK_IMPORTED_MODULE_5__pages_firms_firms_component__["a" /* FirmsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'firms/:id', component: __WEBPACK_IMPORTED_MODULE_4__pages_firm_firm_component__["a" /* FirmComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'firms/:id/products/:ticker', component: __WEBPACK_IMPORTED_MODULE_8__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'products', component: __WEBPACK_IMPORTED_MODULE_7__pages_products_products_component__["a" /* ProductsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'products/:ticker', component: __WEBPACK_IMPORTED_MODULE_6__pages_product_product_component__["a" /* ProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'products/:ticker/firms/:id', component: __WEBPACK_IMPORTED_MODULE_8__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'search/:term', component: __WEBPACK_IMPORTED_MODULE_9__pages_search_results_search_results_component__["a" /* SearchResultsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_11__auth_auth_guard_service__["a" /* AuthGuardService */]], pathMatch: 'full' },
+    { path: 'callback', component: __WEBPACK_IMPORTED_MODULE_10__callback_callback_component__["a" /* CallbackComponent */] },
     { path: '**', redirectTo: 'home' }
 ];
 //canActivate: [AuthGuard,AdminGuard]
@@ -174,58 +156,39 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_material_module__ = __webpack_require__("../../../../../src/app/material/material.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_firms_get_actions_by_firm_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-actions-by-firm-id.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_firms_get_all_firms_service__ = __webpack_require__("../../../../../src/app/services/firms/get-all-firms.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_firms_get_firm_info_by_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-firm-info-by-id.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_firms_get_views_by_firm_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-views-by-firm-id.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_products_get_all_products_service__ = __webpack_require__("../../../../../src/app/services/products/get-all-products.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_products_get_product_info_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-product-info-by-ticker.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_products_get_actions_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-actions-by-ticker.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_products_get_firms_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-firms-by-ticker.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_fp_combo_fp_combo_service__ = __webpack_require__("../../../../../src/app/services/fp-combo/fp-combo.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_issuers_issuers_service__ = __webpack_require__("../../../../../src/app/services/issuers/issuers.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_asset_classes_asset_classes_service__ = __webpack_require__("../../../../../src/app/services/asset-classes/asset-classes.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_countries_countries_service__ = __webpack_require__("../../../../../src/app/services/countries/countries.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_search_get_search_results_service__ = __webpack_require__("../../../../../src/app/services/search/get-search-results.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/auth/auth-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_page_title_page_title_component__ = __webpack_require__("../../../../../src/app/components/page-title/page-title.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_dashboard_tables_dashboard_my_products_table_dashboard_my_products_table_component__ = __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__ = __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_products_table_products_table_component__ = __webpack_require__("../../../../../src/app/components/products-table/products-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_product_actions_table_product_actions_table_component__ = __webpack_require__("../../../../../src/app/components/product-actions-table/product-actions-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_firms_table_firms_table_component__ = __webpack_require__("../../../../../src/app/components/firms-table/firms-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_firm_actions_table_firm_actions_table_component__ = __webpack_require__("../../../../../src/app/components/firm-actions-table/firm-actions-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_firm_views_table_firm_views_table_component__ = __webpack_require__("../../../../../src/app/components/firm-views-table/firm-views-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_fp_combo_table_fp_combo_table_component__ = __webpack_require__("../../../../../src/app/components/fp-combo-table/fp-combo-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_issuer_table_issuer_table_component__ = __webpack_require__("../../../../../src/app/components/issuer-table/issuer-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_issuers_table_issuers_table_component__ = __webpack_require__("../../../../../src/app/components/issuers-table/issuers-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_asset_classes_table_asset_classes_table_component__ = __webpack_require__("../../../../../src/app/components/asset-classes-table/asset-classes-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_asset_class_table_asset_class_table_component__ = __webpack_require__("../../../../../src/app/components/asset-class-table/asset-class-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_countries_table_countries_table_component__ = __webpack_require__("../../../../../src/app/components/countries-table/countries-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_country_table_country_table_component__ = __webpack_require__("../../../../../src/app/components/country-table/country-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_landing_landing_component__ = __webpack_require__("../../../../../src/app/pages/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_asset_class_asset_class_component__ = __webpack_require__("../../../../../src/app/pages/asset-class/asset-class.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_asset_classes_asset_classes_component__ = __webpack_require__("../../../../../src/app/pages/asset-classes/asset-classes.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_country_country_component__ = __webpack_require__("../../../../../src/app/pages/country/country.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_countries_countries_component__ = __webpack_require__("../../../../../src/app/pages/countries/countries.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/pages/firm/firm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/pages/firms/firms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_issuer_issuer_component__ = __webpack_require__("../../../../../src/app/pages/issuer/issuer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_issuers_issuers_component__ = __webpack_require__("../../../../../src/app/pages/issuers/issuers.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_product_product_component__ = __webpack_require__("../../../../../src/app/pages/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_product_firms_table_product_firms_table_component__ = __webpack_require__("../../../../../src/app/components/product-firms-table/product-firms-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/pages/fp-combo/fp-combo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/pages/search-results/search-results.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_search_results_table_search_results_table_component__ = __webpack_require__("../../../../../src/app/components/search-results-table/search-results-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_material_module__ = __webpack_require__("../../../../../src/app/material/material.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_hammerjs__ = __webpack_require__("../../../../hammerjs/hammer.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_hammerjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_search_get_search_results_service__ = __webpack_require__("../../../../../src/app/services/search/get-search-results.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_firms_get_firm_info_by_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-firm-info-by-id.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_products_get_product_info_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-product-info-by-ticker.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/auth/auth-guard.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_page_title_page_title_component__ = __webpack_require__("../../../../../src/app/components/page-title/page-title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__ = __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__ = __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_product_actions_table_product_actions_table_component__ = __webpack_require__("../../../../../src/app/components/product-actions-table/product-actions-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_firm_actions_table_firm_actions_table_component__ = __webpack_require__("../../../../../src/app/components/firm-actions-table/firm-actions-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_firm_views_table_firm_views_table_component__ = __webpack_require__("../../../../../src/app/components/firm-views-table/firm-views-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_fp_combo_table_fp_combo_table_component__ = __webpack_require__("../../../../../src/app/components/fp-combo-table/fp-combo-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_landing_landing_component__ = __webpack_require__("../../../../../src/app/pages/landing/landing.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/pages/firm/firm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/pages/firms/firms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_product_product_component__ = __webpack_require__("../../../../../src/app/pages/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_products_products_component__ = __webpack_require__("../../../../../src/app/pages/products/products.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_product_firms_table_product_firms_table_component__ = __webpack_require__("../../../../../src/app/components/product-firms-table/product-firms-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/pages/fp-combo/fp-combo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/pages/search-results/search-results.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_search_results_table_search_results_table_component__ = __webpack_require__("../../../../../src/app/components/search-results-table/search-results-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_products_table_products_table_component__ = __webpack_require__("../../../../../src/app/components/products-table/products-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_firms_table_firms_table_component__ = __webpack_require__("../../../../../src/app/components/firms-table/firms-table.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -240,25 +203,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-//api services
-//firms
 
 
+//services
 
 
-//products
-
-
-
-
-
-//issuers
-
-//asset classes
-
-//countries
-
-//search
 
 //auth services
 
@@ -270,14 +219,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //tables
-
-
-
-
-
-
-
-
 
 
 
@@ -297,78 +238,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__components_navbar_navbar_component__["a" /* NavBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_landing_landing_component__["a" /* LandingComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__pages_dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__components_dashboard_tables_dashboard_my_products_table_dashboard_my_products_table_component__["a" /* DashboardMyProductsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__components_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__["a" /* DashboardViewsByFirmTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_firm_firm_component__["a" /* FirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_firms_firms_component__["a" /* FirmsComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__components_firm_actions_table_firm_actions_table_component__["a" /* FirmActionsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__components_firm_views_table_firm_views_table_component__["a" /* FirmViewsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__components_firms_table_firms_table_component__["a" /* FirmsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_50__pages_product_product_component__["a" /* ProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__pages_products_products_component__["a" /* ProductsComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__components_products_table_products_table_component__["a" /* ProductsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__components_product_actions_table_product_actions_table_component__["a" /* ProductActionsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__callback_callback_component__["a" /* CallbackComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__components_page_title_page_title_component__["a" /* PageTitleComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_issuer_issuer_component__["a" /* IssuerComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__pages_issuers_issuers_component__["a" /* IssuersComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__components_issuer_table_issuer_table_component__["a" /* IssuerTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__components_issuers_table_issuers_table_component__["a" /* IssuersTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_asset_class_asset_class_component__["a" /* AssetClassComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_asset_classes_asset_classes_component__["a" /* AssetClassesComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__components_asset_classes_table_asset_classes_table_component__["a" /* AssetClassesTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__components_asset_class_table_asset_class_table_component__["a" /* AssetClassTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__pages_country_country_component__["a" /* CountryComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__pages_countries_countries_component__["a" /* CountriesComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__components_countries_table_countries_table_component__["a" /* CountriesTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__components_country_table_country_table_component__["a" /* CountryTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__components_product_firms_table_product_firms_table_component__["a" /* ProductFirmsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__components_fp_combo_table_fp_combo_table_component__["a" /* FpComboTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__pages_search_results_search_results_component__["a" /* SearchResultsComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__components_search_results_table_search_results_table_component__["a" /* SearchResultsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_navbar_navbar_component__["a" /* NavBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_landing_landing_component__["a" /* LandingComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__["a" /* DashboardTopProductsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__["a" /* DashboardViewsByFirmTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_firm_firm_component__["a" /* FirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_firms_firms_component__["a" /* FirmsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_firm_actions_table_firm_actions_table_component__["a" /* FirmActionsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_firm_views_table_firm_views_table_component__["a" /* FirmViewsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_product_product_component__["a" /* ProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_products_products_component__["a" /* ProductsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_product_actions_table_product_actions_table_component__["a" /* ProductActionsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__callback_callback_component__["a" /* CallbackComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_page_title_page_title_component__["a" /* PageTitleComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__components_product_firms_table_product_firms_table_component__["a" /* ProductFirmsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__components_fp_combo_table_fp_combo_table_component__["a" /* FpComboTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_search_results_search_results_component__["a" /* SearchResultsComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__components_search_results_table_search_results_table_component__["a" /* SearchResultsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__components_products_table_products_table_component__["a" /* ProductsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__components_firms_table_firms_table_component__["a" /* FirmsTableComponent */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser_animations__["a" /* NoopAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__["a" /* NoopAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["i" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_5__material_material_module__["a" /* MaterialModule */]
+                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_6__material_material_module__["a" /* MaterialModule */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_15__services_fp_combo_fp_combo_service__["a" /* FpComboService */],
-                __WEBPACK_IMPORTED_MODULE_7__services_firms_get_actions_by_firm_id_service__["a" /* GetActionsByFirmIdService */],
-                __WEBPACK_IMPORTED_MODULE_8__services_firms_get_all_firms_service__["a" /* GetAllFirmsService */],
-                __WEBPACK_IMPORTED_MODULE_9__services_firms_get_firm_info_by_id_service__["a" /* GetFirmInfoByIdService */],
-                __WEBPACK_IMPORTED_MODULE_10__services_firms_get_views_by_firm_id_service__["a" /* GetViewsByFirmIdService */],
-                __WEBPACK_IMPORTED_MODULE_11__services_products_get_all_products_service__["a" /* GetAllProductsService */],
-                __WEBPACK_IMPORTED_MODULE_12__services_products_get_product_info_by_ticker_service__["a" /* GetProductInfoByTickerService */],
-                __WEBPACK_IMPORTED_MODULE_14__services_products_get_firms_by_ticker_service__["a" /* GetFirmsByTickerService */],
-                __WEBPACK_IMPORTED_MODULE_13__services_products_get_actions_by_ticker_service__["a" /* GetActionsByTickerService */],
-                __WEBPACK_IMPORTED_MODULE_19__services_search_get_search_results_service__["a" /* GetSearchResultsService */],
-                __WEBPACK_IMPORTED_MODULE_17__services_asset_classes_asset_classes_service__["a" /* AssetClassesService */],
-                __WEBPACK_IMPORTED_MODULE_18__services_countries_countries_service__["a" /* CountriesService */],
-                __WEBPACK_IMPORTED_MODULE_16__services_issuers_issuers_service__["a" /* IssuersService */],
-                __WEBPACK_IMPORTED_MODULE_20__auth_auth_service__["a" /* AuthService */],
-                __WEBPACK_IMPORTED_MODULE_21__auth_auth_guard_service__["a" /* AuthGuardService */],
+                __WEBPACK_IMPORTED_MODULE_9__services_search_get_search_results_service__["a" /* GetSearchResultsService */],
+                __WEBPACK_IMPORTED_MODULE_11__services_products_get_product_info_by_ticker_service__["a" /* GetProductInfoByTickerService */],
+                __WEBPACK_IMPORTED_MODULE_10__services_firms_get_firm_info_by_id_service__["a" /* GetFirmInfoByIdService */],
+                __WEBPACK_IMPORTED_MODULE_12__auth_auth_service__["a" /* AuthService */],
+                __WEBPACK_IMPORTED_MODULE_13__auth_auth_guard_service__["a" /* AuthGuardService */],
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_23__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -672,14 +588,14 @@ var CallbackComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/asset-class-table/asset-class-table.component.html":
+/***/ "../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  asset-class-table works!\n</p>\n"
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Top Products</h6>   \n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Ticker Column -->\n        <ng-container matColumnDef=\"ticker\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n        </ng-container>\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!-- Issuer Column -->\n        <ng-container matColumnDef=\"issuer\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">{{row.issuer}}</mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.views}} </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>     \n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/asset-class-table/asset-class-table.component.scss":
+/***/ "../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -687,7 +603,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -697,148 +613,22 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/asset-class-table/asset-class-table.component.ts":
+/***/ "../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetClassTableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardTopProductsTableComponent; });
+/* unused harmony export ProductsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AssetClassTableComponent = (function () {
-    function AssetClassTableComponent() {
-    }
-    AssetClassTableComponent.prototype.ngOnInit = function () {
-    };
-    AssetClassTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'asset-class-table',
-            template: __webpack_require__("../../../../../src/app/components/asset-class-table/asset-class-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/asset-class-table/asset-class-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AssetClassTableComponent);
-    return AssetClassTableComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/asset-classes-table/asset-classes-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"mat-elevation-z4\">\n  <div class=\"header\">\n      <h6>Asset Classes</h6>   \n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">{{row.rowNumber}}</mat-cell>\n    </ng-container>\n\n    <!-- Ticker Column -->\n    <ng-container matColumnDef=\"ticker\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Issuer Column -->\n    <ng-container matColumnDef=\"issuer\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a href=\"\">{{row.issuer_id}}</a></mat-cell>\n    </ng-container>\n\n    <!-- ViewCount Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/asset-classes-table/asset-classes-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/asset-classes-table/asset-classes-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetClassesTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AssetClassesTableComponent = (function () {
-    function AssetClassesTableComponent() {
-    }
-    AssetClassesTableComponent.prototype.ngOnInit = function () { };
-    AssetClassesTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'asset-classes-table',
-            template: __webpack_require__("../../../../../src/app/components/asset-classes-table/asset-classes-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/asset-classes-table/asset-classes-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AssetClassesTableComponent);
-    return AssetClassesTableComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/countries-table/countries-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"mat-elevation-z4\">\n  <div class=\"header\">\n      <h6>Countries</h6>   \n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">{{row.rowNumber}}</mat-cell>\n    </ng-container>\n\n    <!-- Ticker Column -->\n    <ng-container matColumnDef=\"ticker\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Issuer Column -->\n    <ng-container matColumnDef=\"issuer\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a href=\"\">{{row.issuer_id}}</a></mat-cell>\n    </ng-container>\n\n    <!-- ViewCount Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/countries-table/countries-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/countries-table/countries-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountriesTableComponent; });
-/* unused harmony export CountriesDataSource */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_countries_countries_service__ = __webpack_require__("../../../../../src/app/services/countries/countries.service.ts");
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -852,209 +642,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CountriesTableComponent = (function () {
-    function CountriesTableComponent(countriesService) {
-        this.countriesService = countriesService;
-        this.displayedColumns = ['id', 'name', 'views'];
-    }
-    CountriesTableComponent.prototype.ngOnInit = function () {
-        this.dataSource = new CountriesDataSource(this.countriesService);
-    };
-    CountriesTableComponent.prototype.filterChange = function (text) {
-        this.dataSource.changeFilter(text);
-    };
-    CountriesTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'countries-table',
-            template: __webpack_require__("../../../../../src/app/components/countries-table/countries-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/countries-table/countries-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_countries_countries_service__["a" /* CountriesService */]])
-    ], CountriesTableComponent);
-    return CountriesTableComponent;
-}());
 
-var CountriesDataSource = (function (_super) {
-    __extends(CountriesDataSource, _super);
-    function CountriesDataSource(countriesService) {
-        var _this = _super.call(this) || this;
-        _this.countriesService = countriesService;
-        _this.filterChange = new __WEBPACK_IMPORTED_MODULE_1_rxjs__["BehaviorSubject"]('');
-        return _this;
+
+
+
+
+
+var DashboardTopProductsTableComponent = (function () {
+    function DashboardTopProductsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['ticker', 'name', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    CountriesDataSource.prototype.changeFilter = function (text) {
-        this.filterChange.next(text.toUpperCase());
-    };
-    CountriesDataSource.prototype.connect = function () {
+    DashboardTopProductsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.countriesService.getCountries().subscribe(function (response) {
-                var data = response.json();
-                if (data && data.countries) {
-                    data = data.countries;
-                }
-                else if (data.data && data.data.countries) {
-                    data = data.data.countries;
-                }
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    return row;
-                });
-                subscriber.next(data);
-                _this.filterChange.debounceTime(500).distinctUntilChanged().subscribe(function (filter) {
-                    if (filter === '' || !filter) {
-                        return subscriber.next(data);
-                    }
-                    var copy = data.slice();
-                    copy = copy.filter(function (row) {
-                        if (!row.name)
-                            return false;
-                        var name = row.name.toUpperCase();
-                        return name.indexOf(filter) > -1;
-                    });
-                    subscriber.next(copy);
-                });
-            });
-        });
+        this.connection = new ProductsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getProducts(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
-    CountriesDataSource.prototype.disconnect = function () { };
-    return CountriesDataSource;
-}(__WEBPACK_IMPORTED_MODULE_2__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/country-table/country-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  country-table works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/country-table/country-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/country-table/country-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CountryTableComponent = (function () {
-    function CountryTableComponent() {
-    }
-    CountryTableComponent.prototype.ngOnInit = function () {
-    };
-    CountryTableComponent = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], DashboardTopProductsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], DashboardTopProductsTableComponent.prototype, "sort", void 0);
+    DashboardTopProductsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'country-table',
-            template: __webpack_require__("../../../../../src/app/components/country-table/country-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/country-table/country-table.component.scss")]
+            selector: 'dashboard-top-products-table',
+            template: __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
-    ], CountryTableComponent);
-    return CountryTableComponent;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], DashboardTopProductsTableComponent);
+    return DashboardTopProductsTableComponent;
 }());
 
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"header\">\n  <h6>Top Products</h6>\n  <a [routerLink]=\"['/products']\"><h6 class=\"float-right\">Show All</h6></a>\n</div>\n<mat-table [dataSource]=\"dataSource\">\n  <!-- ID Column -->\n  <ng-container matColumnDef=\"id\">\n    <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n    <mat-cell *matCellDef=\"let row\">{{row.rowNumber}}</mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"ticker\">\n    <mat-header-cell *matHeaderCellDef> Ticker </mat-header-cell>\n    <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n  </ng-container>\n\n  <!-- View Count Column -->\n  <ng-container matColumnDef=\"views\">\n    <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>\n    <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n</mat-table>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* Structure */\n.header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.col-md-6 {\n  margin-bottom: 5em; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardMyProductsTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_products__ = __webpack_require__("../../../../../src/app/data-sources/products.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_products_get_all_products_service__ = __webpack_require__("../../../../../src/app/services/products/get-all-products.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var DashboardMyProductsTableComponent = (function () {
-    //constructor(private service: GetAllProductsService, private onCompleted: any) {}
-    function DashboardMyProductsTableComponent(service) {
-        this.service = service;
-        this.displayedColumns = ['id', 'ticker', 'name', 'views'];
+var ProductsConnection = (function () {
+    function ProductsConnection(http) {
+        this.http = http;
     }
-    DashboardMyProductsTableComponent.prototype.ngOnInit = function () {
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_products__["a" /* ProductsSource */](this.service);
-        //this.dataSource = new ProductsSource(this.service, this.onCompleted);
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    ProductsConnection.prototype.getProducts = function (page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
     };
-    DashboardMyProductsTableComponent.prototype.filterChange = function (text) {
-        this.dataSource.changeFilter(text);
-    };
-    DashboardMyProductsTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'dashboard-my-products-table',
-            template: __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-my-products-table/dashboard-my-products-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_products_get_all_products_service__["a" /* GetAllProductsService */]])
-    ], DashboardMyProductsTableComponent);
-    return DashboardMyProductsTableComponent;
+    return ProductsConnection;
 }());
 
 
@@ -1064,7 +713,7 @@ var DashboardMyProductsTableComponent = (function () {
 /***/ "../../../../../src/app/components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"header\">\n    <h6>Views By Firm</h6>\n    <a [routerLink]=\"['/firms']\"><h6 class=\"float-right\">Show All</h6></a>   \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n  \n    <!-- Number Column -->\n    <ng-container matColumnDef=\"id\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n  \n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.id]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n  \n    <!-- Views Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n  \n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  \n  </mat-table>\n</div>\n\n"
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Views By Firm</h6>   \n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.id]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!-- Users Column -->\n        <ng-container matColumnDef=\"users\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Users </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">{{row.users}}</mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.views}} </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n"
 
 /***/ }),
 
@@ -1076,7 +725,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\n.header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.col-md-6 {\n  margin-bottom: 5em; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1091,9 +740,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardViewsByFirmTableComponent; });
+/* unused harmony export FirmsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_firms__ = __webpack_require__("../../../../../src/app/data-sources/firms.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_firms_get_all_firms_service__ = __webpack_require__("../../../../../src/app/services/firms/get-all-firms.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1106,26 +763,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var DashboardViewsByFirmTableComponent = (function () {
-    function DashboardViewsByFirmTableComponent(service) {
-        this.service = service;
-        this.isLoaded = false;
-        this.displayedColumns = ['id', 'name', 'views'];
+    function DashboardViewsByFirmTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['name', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    DashboardViewsByFirmTableComponent.prototype.ngOnInit = function () {
+    DashboardViewsByFirmTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_firms__["a" /* FirmsSource */](this.service);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new FirmsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getFirms(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], DashboardViewsByFirmTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], DashboardViewsByFirmTableComponent.prototype, "sort", void 0);
     DashboardViewsByFirmTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'dashboard-views-by-firm-table',
             template: __webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_firms_get_all_firms_service__["a" /* GetAllFirmsService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DashboardViewsByFirmTableComponent);
     return DashboardViewsByFirmTableComponent;
+}());
+
+var FirmsConnection = (function () {
+    function FirmsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FirmsConnection.prototype.getFirms = function (page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return FirmsConnection;
 }());
 
 
@@ -1135,7 +835,7 @@ var DashboardViewsByFirmTableComponent = (function () {
 /***/ "../../../../../src/app/components/firm-actions-table/firm-actions-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4\">\n  <div class=\"header\">\n    <h6>Views By Date</h6>   \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n    \n    <!-- Date Column -->\n    <ng-container matColumnDef=\"date\">\n      <mat-header-cell *matHeaderCellDef> Date/Time\t </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n    </ng-container>\n\n    <!-- Location Column -->\n    <ng-container matColumnDef=\"location\">\n      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <span *ngIf=\"row.address\">{{row.address}}</span><br>\n        <span *ngIf=\"row.city\">{{row.city}},</span><br>\n        <span *ngIf=\"row.state\">{{row.state}}</span>\n        <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n        <span *ngIf=\"row.country\">{{row.country}}<br></span>\n      </mat-cell>\n    </ng-container>\n\n    <!-- Type Column -->\n    <ng-container matColumnDef=\"type\">\n      <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n    </ng-container> -->\n\n    <!-- Portfolio Column -->\n    <ng-container matColumnDef=\"portfolio\">\n        <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n          <span *ngFor=\"let item of row.portfolio\">\n            <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n          </span>\n        </mat-cell>\n      </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n  \n    "
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Views By Date</h6>\n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"date\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Date Column -->\n        <ng-container matColumnDef=\"date\">\n            <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time\t </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n        </ng-container>\n        <!-- Location Column -->\n        <ng-container matColumnDef=\"location\">\n            <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\">\n                <span *ngIf=\"row.address\">{{row.address}}</span><br>\n                <span *ngIf=\"row.city\">{{row.city}},</span><br>\n                <span *ngIf=\"row.state\">{{row.state}}</span>\n                <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n                <span *ngIf=\"row.country\">{{row.country}}<br></span>\n            </mat-cell>\n        </ng-container>\n        <!-- Type Column -->\n        <ng-container matColumnDef=\"type\">\n            <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n        </ng-container> -->\n        <!-- Portfolio Column -->\n        <ng-container matColumnDef=\"portfolio\">\n            <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n            <span *ngFor=\"let item of row.portfolio\">\n                <span *ngIf='isNA(item)'>N/A</span>\n                <span *ngIf='!isNA(item)'>\n                    <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n                </span>\n            </span>\n            </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n  \n    "
 
 /***/ }),
 
@@ -1147,7 +847,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  height: 40px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  padding-left: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: 40px;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.portfolio-width {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 110px;\n          flex: 0 0 110px; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1162,9 +862,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmActionsTableComponent; });
+/* unused harmony export FirmActionsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_firm_actions__ = __webpack_require__("../../../../../src/app/data-sources/firm-actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_firms_get_actions_by_firm_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-actions-by-firm-id.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1177,30 +885,101 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var FirmActionsTableComponent = (function () {
-    function FirmActionsTableComponent(service) {
-        this.service = service;
-        this.isLoaded = false;
-        this.displayedColumns = ['num', 'date', 'location', 'type', 'portfolio'];
+    function FirmActionsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['date', 'location', 'type', 'portfolio'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    FirmActionsTableComponent.prototype.ngOnInit = function () {
+    FirmActionsTableComponent.prototype.isNA = function (pair) {
+        if (pair.ticker === "" || pair.percentage === "%") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    FirmActionsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_firm_actions__["a" /* FirmActionsSource */](this.firmId, this.service);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new FirmActionsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getActions(_this.firmId, _this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            //modify data here
+            console.log(data.items);
+            data.items.map(function (row) {
+                var arr = [];
+                var dict = JSON.parse(row.portfolio);
+                for (var key in dict) {
+                    var percentage = dict[key];
+                    percentage = percentage.toString();
+                    percentage = percentage.replace(/"/g, "");
+                    percentage = percentage.replace(/,/g, '.');
+                    percentage = percentage.concat('%');
+                    var pair = {
+                        ticker: key.toUpperCase(),
+                        percentage: percentage
+                    };
+                    arr.push(pair);
+                }
+                row.portfolio = arr;
+                return row;
+            });
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Number)
     ], FirmActionsTableComponent.prototype, "firmId", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], FirmActionsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], FirmActionsTableComponent.prototype, "sort", void 0);
     FirmActionsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'firm-actions-table',
             template: __webpack_require__("../../../../../src/app/components/firm-actions-table/firm-actions-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/firm-actions-table/firm-actions-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_firms_get_actions_by_firm_id_service__["a" /* GetActionsByFirmIdService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], FirmActionsTableComponent);
     return FirmActionsTableComponent;
+}());
+
+var FirmActionsConnection = (function () {
+    function FirmActionsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FirmActionsConnection.prototype.getActions = function (id, page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms/actions/" + id + "?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return FirmActionsConnection;
 }());
 
 
@@ -1210,7 +989,7 @@ var FirmActionsTableComponent = (function () {
 /***/ "../../../../../src/app/components/firm-views-table/firm-views-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4 raise\">\n    <div class=\"header\">\n        <h6> Viewed Products </h6>\n    </div>\n    <mat-table [dataSource]=\"dataSource\">\n\n        <!-- Row Number Column -->\n        <ng-container matColumnDef=\"num\">\n        <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n        </ng-container>\n\n        <!-- Ticker Column -->\n        <ng-container matColumnDef=\"ticker\">\n        <mat-header-cell *matHeaderCellDef> Ticker </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n        </ng-container>\n\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n\n        <!--Issuer Column -->\n        <ng-container matColumnDef=\"issuer\">\n        <mat-header-cell *matHeaderCellDef> Issuer </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.issuer_name}} </mat-cell>\n        </ng-container>\n\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['./products/', row.ticker]\">{{row.view_count}}</a></mat-cell>\n        </ng-container>\n\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n</div>\n      \n          "
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Viewed Products</h6>\n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Ticker Column -->\n        <ng-container matColumnDef=\"ticker\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n        </ng-container>\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!--Issuer Column -->\n        <ng-container matColumnDef=\"issuer\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.issuer}} </mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['./products/', row.ticker]\">{{row.views}}</a></mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>"
 
 /***/ }),
 
@@ -1222,7 +1001,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  height: 40px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  padding-left: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: 40px;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.mat-table {\n  overflow: auto; }\n\n.col-md-6 {\n  margin-bottom: 5em; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1237,9 +1016,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmViewsTableComponent; });
+/* unused harmony export FirmViewedProductsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_firms_get_views_by_firm_id_service__ = __webpack_require__("../../../../../src/app/services/firms/get-views-by-firm-id.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_sources_firm_views__ = __webpack_require__("../../../../../src/app/data-sources/firm-views.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1252,30 +1039,74 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var FirmViewsTableComponent = (function () {
-    function FirmViewsTableComponent(service) {
-        this.service = service;
-        this.isLoaded = false;
-        this.displayedColumns = ['num', 'ticker', 'name', 'issuer', 'views'];
+    function FirmViewsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['ticker', 'name', 'issuer', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    FirmViewsTableComponent.prototype.ngOnInit = function () {
+    FirmViewsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__data_sources_firm_views__["a" /* FirmViewsSource */](this.firmId, this.service);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new FirmViewedProductsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getProducts(_this.firmId, _this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            console.log(data);
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", Number)
     ], FirmViewsTableComponent.prototype, "firmId", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], FirmViewsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], FirmViewsTableComponent.prototype, "sort", void 0);
     FirmViewsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'firm-views-table',
             template: __webpack_require__("../../../../../src/app/components/firm-views-table/firm-views-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/firm-views-table/firm-views-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_firms_get_views_by_firm_id_service__["a" /* GetViewsByFirmIdService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], FirmViewsTableComponent);
     return FirmViewsTableComponent;
+}());
+
+var FirmViewedProductsConnection = (function () {
+    function FirmViewedProductsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FirmViewedProductsConnection.prototype.getProducts = function (id, page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms/views/" + id + "?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return FirmViewedProductsConnection;
 }());
 
 
@@ -1285,7 +1116,7 @@ var FirmViewsTableComponent = (function () {
 /***/ "../../../../../src/app/components/firms-table/firms-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!isLoaded\">\n  <div class=\"text-center\" style=\"position: absolute; top: 20vh; left: 50vw; margin-right: -50%;\n  transform: translate(-50%, -50%);\">\n    <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n  </div>\n</div>\n<div *ngIf=\"isLoaded\">\n  <div class=\"header\">\n    <h6>Firms</h6>   \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.id]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Users Column -->\n    <ng-container matColumnDef=\"users\">\n      <mat-header-cell *matHeaderCellDef> Users </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.users}} </mat-cell>\n    </ng-container>\n\n    <!-- Views Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n  \n"
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>All Firms</h6>   \n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.id]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!-- Users Column -->\n        <ng-container matColumnDef=\"users\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Users </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">{{row.users}}</mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.views}} </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>"
 
 /***/ }),
 
@@ -1297,7 +1128,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* Structure */\n.header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.col-md-6 {\n  margin-bottom: 5em; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1312,9 +1143,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmsTableComponent; });
+/* unused harmony export FirmsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_firms__ = __webpack_require__("../../../../../src/app/data-sources/firms.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_firms_get_all_firms_service__ = __webpack_require__("../../../../../src/app/services/firms/get-all-firms.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1327,26 +1166,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var FirmsTableComponent = (function () {
-    function FirmsTableComponent(service) {
-        this.service = service;
-        this.isLoaded = false;
-        this.displayedColumns = ['id', 'name', 'users', 'views'];
+    function FirmsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['name', 'users', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    FirmsTableComponent.prototype.ngOnInit = function () {
+    FirmsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_firms__["a" /* FirmsSource */](this.service);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new FirmsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getFirms(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], FirmsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], FirmsTableComponent.prototype, "sort", void 0);
     FirmsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'firms-table',
             template: __webpack_require__("../../../../../src/app/components/firms-table/firms-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/firms-table/firms-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_firms_get_all_firms_service__["a" /* GetAllFirmsService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], FirmsTableComponent);
     return FirmsTableComponent;
+}());
+
+var FirmsConnection = (function () {
+    function FirmsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FirmsConnection.prototype.getFirms = function (page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return FirmsConnection;
 }());
 
 
@@ -1356,7 +1238,7 @@ var FirmsTableComponent = (function () {
 /***/ "../../../../../src/app/components/fp-combo-table/fp-combo-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4\">\n  <div class=\"header\">\n    <h6>Views By Date</h6>   \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n    \n    <!-- Date Column -->\n    <ng-container matColumnDef=\"date\">\n      <mat-header-cell *matHeaderCellDef> Date/Time\t </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n    </ng-container>\n\n     <!-- Location Column -->\n    <ng-container matColumnDef=\"location\">\n      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <span *ngIf=\"row.address\">{{row.address}}</span><br>\n        <span *ngIf=\"row.city\">{{row.city}},</span><br>\n        <span *ngIf=\"row.state\">{{row.state}}</span>\n        <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n        <span *ngIf=\"row.country\">{{row.country}}<br></span>\n      </mat-cell>\n    </ng-container>\n\n    <!-- Type Column -->\n    <ng-container matColumnDef=\"type\">\n      <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n    </ng-container> -->\n\n    <!-- Portfolio Column -->\n    <ng-container matColumnDef=\"portfolio\">\n      <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n        <span *ngFor=\"let item of row.portfolio\">\n          <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n        </span>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n    "
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Views By Date</h6>\n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"date\" matSortDisableClear matSortDirection=\"desc\">         \n        <!-- Date Column -->\n        <ng-container matColumnDef=\"date\">\n            <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time\t </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n        </ng-container>\n        <!-- Location Column -->\n        <ng-container matColumnDef=\"location\">\n            <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\">\n            <span *ngIf=\"row.address\">{{row.address}}</span><br>\n            <span *ngIf=\"row.city\">{{row.city}},</span><br>\n            <span *ngIf=\"row.state\">{{row.state}}</span>\n            <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n            <span *ngIf=\"row.country\">{{row.country}}<br></span>\n            </mat-cell>\n        </ng-container>\n        <!-- Type Column -->\n        <ng-container matColumnDef=\"type\">\n            <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n        </ng-container>\n        <!-- Portfolio Column -->\n        <ng-container matColumnDef=\"portfolio\">\n            <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n            <span *ngFor=\"let item of row.portfolio\">\n                <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n            </span>\n            </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n"
 
 /***/ }),
 
@@ -1368,7 +1250,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  height: 40px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  padding-left: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: 40px;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.portfolio-width {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 110px;\n          flex: 0 0 110px; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1383,9 +1265,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FpComboTableComponent; });
+/* unused harmony export FPComboConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_fp_combo_fp_combo_service__ = __webpack_require__("../../../../../src/app/services/fp-combo/fp-combo.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_sources_fp_combo__ = __webpack_require__("../../../../../src/app/data-sources/fp-combo.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1398,16 +1288,58 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var FpComboTableComponent = (function () {
-    function FpComboTableComponent(service) {
-        this.service = service;
-        this.isLoaded = false;
-        this.displayedColumns = ['num', 'date', 'location', 'type', 'portfolio'];
+    function FpComboTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['date', 'location', 'type', 'portfolio'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    FpComboTableComponent.prototype.ngOnInit = function () {
+    FpComboTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__data_sources_fp_combo__["a" /* FpComboSource */](this.service, this.firmId, this.ticker);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new FPComboConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getActions(_this.ticker, _this.firmId, _this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            //modify data here
+            data.items.map(function (row) {
+                var arr = [];
+                var dict = JSON.parse(row.portfolio);
+                for (var key in dict) {
+                    var percentage = dict[key];
+                    percentage = percentage.toString();
+                    percentage = percentage.replace(/"/g, "");
+                    percentage = percentage.replace(/,/g, '.');
+                    percentage = percentage.concat('%');
+                    var pair = {
+                        ticker: key.toUpperCase(),
+                        percentage: percentage
+                    };
+                    arr.push(pair);
+                }
+                row.portfolio = arr;
+                return row;
+            });
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -1417,137 +1349,35 @@ var FpComboTableComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], FpComboTableComponent.prototype, "ticker", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], FpComboTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], FpComboTableComponent.prototype, "sort", void 0);
     FpComboTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'fp-combo-table',
             template: __webpack_require__("../../../../../src/app/components/fp-combo-table/fp-combo-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/fp-combo-table/fp-combo-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_fp_combo_fp_combo_service__["a" /* FpComboService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], FpComboTableComponent);
     return FpComboTableComponent;
 }());
 
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuer-table/issuer-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  issuer-table works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuer-table/issuer-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuer-table/issuer-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssuerTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var IssuerTableComponent = (function () {
-    function IssuerTableComponent() {
+var FPComboConnection = (function () {
+    function FPComboConnection(http) {
+        this.http = http;
     }
-    IssuerTableComponent.prototype.ngOnInit = function () {
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FPComboConnection.prototype.getActions = function (ticker, id, page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/" + ticker + "/firms/" + id + "?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
     };
-    IssuerTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'issuer-table',
-            template: __webpack_require__("../../../../../src/app/components/issuer-table/issuer-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/issuer-table/issuer-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], IssuerTableComponent);
-    return IssuerTableComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuers-table/issuers-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"mat-elevation-z4\">\n  <div class=\"header\">\n      <h6>Issuers</h6>   \n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">{{row.rowNumber}}</mat-cell>\n    </ng-container>\n\n    <!-- Ticker Column -->\n    <ng-container matColumnDef=\"ticker\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Issuer Column -->\n    <ng-container matColumnDef=\"issuer\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a href=\"\">{{row.issuer_id}}</a></mat-cell>\n    </ng-container>\n\n    <!-- ViewCount Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuers-table/issuers-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/issuers-table/issuers-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssuersTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var IssuersTableComponent = (function () {
-    function IssuersTableComponent() {
-    }
-    IssuersTableComponent.prototype.ngOnInit = function () {
-    };
-    IssuersTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'issuers-table',
-            template: __webpack_require__("../../../../../src/app/components/issuers-table/issuers-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/issuers-table/issuers-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], IssuersTableComponent);
-    return IssuersTableComponent;
+    return FPComboConnection;
 }());
 
 
@@ -1707,7 +1537,7 @@ var PageTitleComponent = (function () {
 /***/ "../../../../../src/app/components/product-actions-table/product-actions-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4 raise\">\n  <div class=\"header\">\n    <h6>Views By Date</h6>   \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n    \n    <!-- Date Column -->\n    <ng-container matColumnDef=\"date\">\n      <mat-header-cell *matHeaderCellDef> Date/Time\t </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n    </ng-container>\n\n    <!-- Firm Column -->\n    <ng-container matColumnDef=\"firm\">\n      <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.firmId]\">{{row.firm}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Location Column -->\n    <ng-container matColumnDef=\"location\">\n      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">\n        <span *ngIf=\"row.address\">{{row.address}}</span><br>\n        <span *ngIf=\"row.city\">{{row.city}},</span><br>\n        <span *ngIf=\"row.state\">{{row.state}}</span>\n        <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n        <span *ngIf=\"row.country\">{{row.country}}<br></span>\n      </mat-cell>\n    </ng-container>\n\n    <!-- Type Column -->\n    <ng-container matColumnDef=\"type\">\n      <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n    </ng-container> -->\n\n    <!-- Portfolio Column -->\n    <ng-container matColumnDef=\"portfolio\">\n      <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n        <span *ngFor=\"let item of row.portfolio\">\n          <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n        </span>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n\n  \n    "
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n    <h6>Views By Date</h6>\n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"date\" matSortDisableClear matSortDirection=\"desc\">            \n        <!-- Date Column -->\n        <ng-container matColumnDef=\"date\">\n            <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.date}} </mat-cell>\n        </ng-container>\n        <!-- Location Column -->\n        <ng-container matColumnDef=\"location\">\n            <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\">\n                <span *ngIf=\"row.address\">{{row.address}}</span><br>\n                <span *ngIf=\"row.city\">{{row.city}},</span><br>\n                <span *ngIf=\"row.state\">{{row.state}}</span>\n                <span *ngIf=\"row.zip\">{{row.zip}}</span><br>\n                <span *ngIf=\"row.country\">{{row.country}}<br></span>\n            </mat-cell>\n        </ng-container>\n        <!-- Type Column -->\n        <ng-container matColumnDef=\"type\">\n            <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\"> {{row.type}} </mat-cell>\n        </ng-container> -->\n        <!-- Portfolio Column -->\n        <ng-container matColumnDef=\"portfolio\">\n            <mat-header-cell *matHeaderCellDef class=\"portfolio-width\"> Portfolio </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\" class=\"portfolio-width\">\n            <span *ngFor=\"let item of row.portfolio\">\n                <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>\n            </span>\n            </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n    \n  \n    "
 
 /***/ }),
 
@@ -1719,7 +1549,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  height: 40px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  padding-left: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: 40px;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.portfolio-width {\n  -webkit-box-flex: 0;\n      -ms-flex: 0 0 110px;\n          flex: 0 0 110px; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1734,9 +1564,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductActionsTableComponent; });
+/* unused harmony export ProductActionsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_product_actions__ = __webpack_require__("../../../../../src/app/data-sources/product-actions.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_products_get_actions_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-actions-by-ticker.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1749,27 +1587,92 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var ProductActionsTableComponent = (function () {
-    function ProductActionsTableComponent(service) {
-        this.service = service;
-        this.displayedColumns = ['num', 'date', 'firm', 'location', 'type', 'portfolio'];
+    function ProductActionsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['date', 'location', 'type', 'portfolio'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    ProductActionsTableComponent.prototype.ngOnInit = function () {
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_product_actions__["a" /* ProductActionsSource */](this.ticker, this.service);
+    ProductActionsTableComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.connection = new ProductActionsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getActions(_this.ticker, _this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            //modify data here
+            data.items.map(function (row) {
+                var arr = [];
+                var dict = JSON.parse(row.portfolio);
+                for (var key in dict) {
+                    var percentage = dict[key];
+                    percentage = percentage.toString();
+                    percentage = percentage.replace(/"/g, "");
+                    percentage = percentage.replace(/,/g, '.');
+                    percentage = percentage.concat('%');
+                    var pair = {
+                        ticker: key.toUpperCase(),
+                        percentage: percentage
+                    };
+                    arr.push(pair);
+                }
+                row.portfolio = arr;
+                return row;
+            });
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], ProductActionsTableComponent.prototype, "ticker", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], ProductActionsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], ProductActionsTableComponent.prototype, "sort", void 0);
     ProductActionsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'product-actions-table',
             template: __webpack_require__("../../../../../src/app/components/product-actions-table/product-actions-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/product-actions-table/product-actions-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_products_get_actions_by_ticker_service__["a" /* GetActionsByTickerService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], ProductActionsTableComponent);
     return ProductActionsTableComponent;
+}());
+
+var ProductActionsConnection = (function () {
+    function ProductActionsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    ProductActionsConnection.prototype.getActions = function (ticker, page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/actions/" + ticker + "?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return ProductActionsConnection;
 }());
 
 
@@ -1779,7 +1682,7 @@ var ProductActionsTableComponent = (function () {
 /***/ "../../../../../src/app/components/product-firms-table/product-firms-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"mat-elevation-z4 raise\">\n  <div class=\"header\">\n    <h6>Views By Firm</h6> \n  </div>\n  <mat-table [dataSource]=\"dataSource\">\n      \n    <!-- Row Number Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.rowNumber}} </mat-cell>\n    </ng-container>\n\n    <!-- Firm Column -->\n    <ng-container matColumnDef=\"firm\">\n      <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.firmId]\">{{row.firm}}</a></mat-cell>\n    </ng-container>\n\n    <!-- Users Column -->\n    <ng-container matColumnDef=\"users\">\n        <mat-header-cell *matHeaderCellDef class=\"fixed-width\"> Users </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\" class=\"fixed-width\"> {{row.users}} </mat-cell>\n    </ng-container>\n\n    <!-- Views Column -->\n    <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef class=\"fixed-width\"> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\" class=\"fixed-width\"><a [routerLink]=\"['./firms/', row.firmId]\">{{row.view_count}}</a></mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n  </mat-table>\n</div>\n\n      "
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>Views By Firm</h6> \n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Firm Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/firms/', row.firmId]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!-- Users Column -->\n        <ng-container matColumnDef=\"users\">\n            <mat-header-cell *matHeaderCellDef  mat-sort-header class=\"fixed-width\"> Users </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\" class=\"fixed-width\"> {{row.users}} </mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n            <mat-header-cell *matHeaderCellDef  mat-sort-header class=\"fixed-width\"> Views </mat-header-cell>\n            <mat-cell *matCellDef=\"let row\" class=\"fixed-width\"><a [routerLink]=\"['./firms/', row.firmId]\">{{row.views}}</a></mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n      "
 
 /***/ }),
 
@@ -1791,7 +1694,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  height: 40px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: baseline;\n      -ms-flex-align: baseline;\n          align-items: baseline;\n  padding-left: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: 40px;\n    margin: 0px; }\n\n.mat-form-field {\n  font-size: 14px;\n  -webkit-box-flex: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  margin-left: 32px; }\n\n.mat-table {\n  overflow: auto; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1806,9 +1709,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductFirmsTableComponent; });
+/* unused harmony export FirmsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_product_firms__ = __webpack_require__("../../../../../src/app/data-sources/product-firms.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_products_get_firms_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-firms-by-ticker.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1821,27 +1732,73 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var ProductFirmsTableComponent = (function () {
-    function ProductFirmsTableComponent(service) {
-        this.service = service;
-        this.displayedColumns = ['num', 'firm', 'users', 'views'];
+    function ProductFirmsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['name', 'users', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    ProductFirmsTableComponent.prototype.ngOnInit = function () {
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_product_firms__["a" /* ProductFirmsSource */](this.ticker, this.service);
+    ProductFirmsTableComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.connection = new FirmsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getFirms(_this.ticker, _this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
         __metadata("design:type", String)
     ], ProductFirmsTableComponent.prototype, "ticker", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], ProductFirmsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], ProductFirmsTableComponent.prototype, "sort", void 0);
     ProductFirmsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'product-firms-table',
             template: __webpack_require__("../../../../../src/app/components/product-firms-table/product-firms-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/product-firms-table/product-firms-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_products_get_firms_by_ticker_service__["a" /* GetFirmsByTickerService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], ProductFirmsTableComponent);
     return ProductFirmsTableComponent;
+}());
+
+var FirmsConnection = (function () {
+    function FirmsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    FirmsConnection.prototype.getFirms = function (ticker, page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/firms/" + ticker + "?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return FirmsConnection;
 }());
 
 
@@ -1851,7 +1808,7 @@ var ProductFirmsTableComponent = (function () {
 /***/ "../../../../../src/app/components/products-table/products-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Spinner -->\n<div *ngIf=\"!isLoaded\">\n  <div class=\"text-center\" style=\"position: absolute; top: 20vh; left: 50vw; margin-right: -50%;\n  transform: translate(-50%, -50%);\">\n    <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n  </div>\n</div>\n<!-- Elevation -->\n<div *ngIf=\"isLoaded\" class=\"mat-elevation-z4\">\n  <!-- Header -->\n  <div class=\"header\">\n      <h6>Products</h6>   \n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"num\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">{{row.rowNumber}}</mat-cell>\n    </ng-container>\n    <!-- Ticker Column -->\n    <ng-container matColumnDef=\"ticker\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n    </ng-container>\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n    </ng-container>\n    <!-- Issuer Column -->\n    <ng-container matColumnDef=\"issuer\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\">{{row.issuer_name}}</mat-cell>\n    </ng-container>\n    <!-- ViewCount Column -->\n    <ng-container matColumnDef=\"views\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n      <mat-cell *matCellDef=\"let row\"> {{row.view_count}} </mat-cell>\n    </ng-container>\n    <!-- Header Row -->\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n  </mat-table>\n</div>\n"
+module.exports = "<div class=\"table-container mat-elevation-z4\">\n    <!-- Header -->\n    <div class=\"header\">\n        <h6>All Products</h6>   \n    </div>\n    <!-- Loading Shade -->\n    <div class=\"loading-shade\" *ngIf=\"isLoadingResults\"></div>\n    <mat-table #table [dataSource]=\"dataSource\" matSort matSortActive=\"views\" matSortDisableClear matSortDirection=\"desc\">\n        <!-- Ticker Column -->\n        <ng-container matColumnDef=\"ticker\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Ticker </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.ticker}}</a></mat-cell>\n        </ng-container>\n        <!-- Name Column -->\n        <ng-container matColumnDef=\"name\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"><a [routerLink]=\"['/products/', row.ticker]\">{{row.name}}</a></mat-cell>\n        </ng-container>\n        <!-- Issuer Column -->\n        <ng-container matColumnDef=\"issuer\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Issuer </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\">{{row.issuer}}</mat-cell>\n        </ng-container>\n        <!-- Views Column -->\n        <ng-container matColumnDef=\"views\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header> Views </mat-header-cell>\n        <mat-cell *matCellDef=\"let row\"> {{row.views}} </mat-cell>\n        </ng-container>\n        <!-- Row Headers -->\n        <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n        <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n    </mat-table>\n    <!-- Paginator -->\n    <mat-paginator [length]=\"resultsLength\" [pageSize]=\"20\"></mat-paginator>\n</div>\n"
 
 /***/ }),
 
@@ -1863,7 +1820,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n", ""]);
+exports.push([module.i, ".header {\n  min-height: 2em;\n  line-height: 2em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-left: 24px;\n  padding-right: 24px;\n  font-size: 20px;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  .header h6 {\n    height: inherit;\n    line-height: inherit;\n    margin: 0px; }\n\n.table-container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  min-width: 300px;\n  position: relative; }\n\n.mat-table {\n  overflow: auto; }\n\n.mat-header-cell .mat-sort-header-sorted {\n  color: black; }\n\n.loading-shade {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.mat-column-views {\n  min-width: 64px; }\n", ""]);
 
 // exports
 
@@ -1878,9 +1835,17 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsTableComponent; });
+/* unused harmony export ProductsConnection */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_get_all_products_service__ = __webpack_require__("../../../../../src/app/services/products/get-all-products.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_sources_products__ = __webpack_require__("../../../../../src/app/data-sources/products.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__ = __webpack_require__("../../../../rxjs/_esm5/observable/merge.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__ = __webpack_require__("../../../../rxjs/_esm5/operators/catchError.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__ = __webpack_require__("../../../../rxjs/_esm5/operators/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__ = __webpack_require__("../../../../rxjs/_esm5/operators/startWith.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__ = __webpack_require__("../../../../rxjs/_esm5/operators/switchMap.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1893,27 +1858,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
+
+
 var ProductsTableComponent = (function () {
-    function ProductsTableComponent(service) {
-        this.service = service;
-        /*   Functional   */
-        this.isLoaded = false;
-        this.displayedColumns = ['num', 'ticker', 'name', 'issuer', 'views'];
+    function ProductsTableComponent(http) {
+        this.http = http;
+        this.displayedColumns = ['ticker', 'name', 'issuer', 'views'];
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatTableDataSource */]();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
     }
-    ProductsTableComponent.prototype.ngOnInit = function () {
+    ProductsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__data_sources_products__["a" /* ProductsSource */](this.service);
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
+        this.connection = new ProductsConnection(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
+            setTimeout(function () { return _this.isLoadingResults = true; });
+            return _this.connection.getProducts(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+        }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.resultsLength = data.total;
+            return data.items;
+        }), Object(__WEBPACK_IMPORTED_MODULE_5_rxjs_operators_catchError__["a" /* catchError */])(function () {
+            _this.isLoadingResults = false;
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */])
+    ], ProductsTableComponent.prototype, "paginator", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSort */])
+    ], ProductsTableComponent.prototype, "sort", void 0);
     ProductsTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'products-table',
             template: __webpack_require__("../../../../../src/app/components/products-table/products-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/products-table/products-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_products_get_all_products_service__["a" /* GetAllProductsService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], ProductsTableComponent);
     return ProductsTableComponent;
+}());
+
+var ProductsConnection = (function () {
+    function ProductsConnection(http) {
+        this.http = http;
+    }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    ProductsConnection.prototype.getProducts = function (page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products?page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
+    };
+    return ProductsConnection;
 }());
 
 
@@ -1950,9 +1957,22 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchResultsTableComponent; });
+/* unused harmony export SearchResultsSource */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_sources_search_results__ = __webpack_require__("../../../../../src/app/data-sources/search-results.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__ = __webpack_require__("../../../../../src/app/services/search/get-search-results.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_search_get_search_results_service__ = __webpack_require__("../../../../../src/app/services/search/get-search-results.service.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1965,13 +1985,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SearchResultsTableComponent = (function () {
     function SearchResultsTableComponent(service) {
         this.service = service;
         this.displayedColumns = ['num', 'link', 'type'];
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__data_sources_search_results__["a" /* SearchResultsSource */](this.service, this.term);
+        this.dataSource = new SearchResultsSource(this.service, this.term);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -1987,487 +2008,10 @@ var SearchResultsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/search-results-table/search-results-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/search-results-table/search-results-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_search_get_search_results_service__["a" /* GetSearchResultsService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_search_get_search_results_service__["a" /* GetSearchResultsService */]])
     ], SearchResultsTableComponent);
     return SearchResultsTableComponent;
 }());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/firm-actions.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmActionsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var FirmActionsSource = (function (_super) {
-    __extends(FirmActionsSource, _super);
-    function FirmActionsSource(firmId, service) {
-        var _this = _super.call(this) || this;
-        _this.firmId = firmId;
-        _this.service = service;
-        return _this;
-    }
-    FirmActionsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getActionsById(_this.firmId).subscribe(function (response) {
-                var data = response.json();
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    //portfolio
-                    var arr = [];
-                    var dict = JSON.parse(row.portfolio);
-                    for (var key in dict) {
-                        var percentage = dict[key];
-                        percentage = percentage.toString();
-                        percentage = percentage.replace(/"/g, "");
-                        percentage = percentage.replace(/,/g, '.');
-                        percentage = percentage.concat('%');
-                        var pair = {
-                            ticker: key.toUpperCase(),
-                            percentage: percentage
-                        };
-                        arr.push(pair);
-                    }
-                    row.portfolio = arr;
-                    return row;
-                });
-                subscriber.next(data);
-            });
-        });
-    };
-    FirmActionsSource.prototype.disconnect = function () { };
-    return FirmActionsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/firm-views.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmViewsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var FirmViewsSource = (function (_super) {
-    __extends(FirmViewsSource, _super);
-    function FirmViewsSource(firmId, service) {
-        var _this = _super.call(this) || this;
-        _this.firmId = firmId;
-        _this.service = service;
-        return _this;
-    }
-    FirmViewsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getViewsById(_this.firmId).subscribe(function (response) {
-                var data = response.json();
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    return row;
-                });
-                subscriber.next(data);
-            });
-        });
-    };
-    FirmViewsSource.prototype.disconnect = function () { };
-    return FirmViewsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/firms.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var FirmsSource = (function (_super) {
-    __extends(FirmsSource, _super);
-    function FirmsSource(service) {
-        var _this = _super.call(this) || this;
-        _this.service = service;
-        return _this;
-    }
-    FirmsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getAll().subscribe(function (data) {
-                var firmsData = JSON.parse(data.text());
-                if (firmsData.data) {
-                    firmsData = firmsData.data.firms;
-                }
-                var count = 1;
-                firmsData = firmsData.map(function (el) {
-                    el.rowNumber = (count + '.');
-                    count++;
-                    return el;
-                });
-                subscriber.next(firmsData);
-            });
-        });
-    };
-    FirmsSource.prototype.disconnect = function () { };
-    return FirmsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/fp-combo.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FpComboSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var FpComboSource = (function (_super) {
-    __extends(FpComboSource, _super);
-    function FpComboSource(service, id, ticker) {
-        var _this = _super.call(this) || this;
-        _this.service = service;
-        _this.id = id;
-        _this.ticker = ticker;
-        return _this;
-    }
-    FpComboSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getFpCombo(_this.id, _this.ticker).subscribe(function (response) {
-                var data = response.json();
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    //portfolio
-                    var arr = [];
-                    var dict = JSON.parse(row.portfolio);
-                    for (var key in dict) {
-                        var percentage = dict[key];
-                        percentage = percentage.toString();
-                        percentage = percentage.replace(/"/g, "");
-                        percentage = percentage.replace(/,/g, '.');
-                        percentage = percentage.concat('%');
-                        var pair = {
-                            ticker: key.toUpperCase(),
-                            percentage: percentage
-                        };
-                        arr.push(pair);
-                    }
-                    row.portfolio = arr;
-                    return row;
-                });
-                subscriber.next(data);
-            });
-        });
-    };
-    FpComboSource.prototype.disconnect = function () { };
-    return FpComboSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/product-actions.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductActionsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var ProductActionsSource = (function (_super) {
-    __extends(ProductActionsSource, _super);
-    // @Output() 
-    // complete: EventEmitter<boolean> = new EventEmitter<boolean>();
-    function ProductActionsSource(ticker, service) {
-        var _this = _super.call(this) || this;
-        _this.ticker = ticker;
-        _this.service = service;
-        return _this;
-    }
-    ProductActionsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getActionsByTicker(_this.ticker).subscribe(function (response) {
-                var data = response.json();
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    var arr = [];
-                    var dict = JSON.parse(row.portfolio);
-                    for (var key in dict) {
-                        var percentage = dict[key];
-                        percentage = percentage.toString();
-                        percentage = percentage.replace(/"/g, "");
-                        percentage = percentage.replace(/,/g, '.');
-                        percentage = percentage.concat('%');
-                        var pair = {
-                            ticker: key.toUpperCase(),
-                            percentage: percentage
-                        };
-                        arr.push(pair);
-                    }
-                    row.portfolio = arr;
-                    var location = {
-                        address: row.address
-                    };
-                    return row;
-                });
-                subscriber.next(data);
-            });
-        });
-    };
-    ProductActionsSource.prototype.disconnect = function () { };
-    return ProductActionsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/product-firms.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductFirmsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var ProductFirmsSource = (function (_super) {
-    __extends(ProductFirmsSource, _super);
-    function ProductFirmsSource(ticker, service) {
-        var _this = _super.call(this) || this;
-        _this.ticker = ticker;
-        _this.service = service;
-        _this.complete = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
-        return _this;
-    }
-    ProductFirmsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getFirmsByTicker(_this.ticker).subscribe(function (response) {
-                var data = response.json();
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    return row;
-                });
-                _this.complete.emit(true);
-                subscriber.next(data);
-            });
-        });
-    };
-    ProductFirmsSource.prototype.disconnect = function () { };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
-    ], ProductFirmsSource.prototype, "complete", void 0);
-    return ProductFirmsSource;
-}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/products.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var ProductsSource = (function (_super) {
-    __extends(ProductsSource, _super);
-    function ProductsSource(service) {
-        var _this = _super.call(this) || this;
-        _this.service = service;
-        _this.filterChange = new __WEBPACK_IMPORTED_MODULE_1_rxjs__["BehaviorSubject"]('');
-        return _this;
-    }
-    ProductsSource.prototype.changeFilter = function (text) {
-        this.filterChange.next(text.toUpperCase());
-    };
-    ProductsSource.prototype.connect = function () {
-        var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
-            _this.service.getAll().subscribe(function (response) {
-                var data = response.json();
-                if (data && data.products) {
-                    data = data.products;
-                }
-                else if (data.data && data.data.products) {
-                    data = data.data.products;
-                }
-                var count = 1;
-                data.map(function (row) {
-                    row.rowNumber = (count + '.');
-                    count++;
-                    row.ticker = row.ticker.toUpperCase();
-                    return row;
-                });
-                subscriber.next(data);
-                //filter
-                _this.filterChange.debounceTime(500).distinctUntilChanged().subscribe(function (filter) {
-                    if (filter === '' || !filter) {
-                        return subscriber.next(data);
-                    }
-                    var copy = data.slice();
-                    copy = copy.filter(function (row) {
-                        if (!row.name)
-                            return false;
-                        var name = row.name.toUpperCase();
-                        return name.indexOf(filter) > -1;
-                    });
-                    subscriber.next(copy);
-                });
-            });
-        });
-    };
-    ProductsSource.prototype.disconnect = function () { };
-    return ProductsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/data-sources/search-results.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchResultsSource; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__ = __webpack_require__("../../../cdk/esm5/collections.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
 
 var SearchResultsSource = (function (_super) {
     __extends(SearchResultsSource, _super);
@@ -2479,7 +2023,7 @@ var SearchResultsSource = (function (_super) {
     }
     SearchResultsSource.prototype.connect = function () {
         var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_1_rxjs__["Observable"].create(function (subscriber) {
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs__["Observable"].create(function (subscriber) {
             _this.service.getSearchResults(_this.term).subscribe(function (response) {
                 var data = response.json();
                 var count = 1;
@@ -2500,7 +2044,7 @@ var SearchResultsSource = (function (_super) {
     };
     SearchResultsSource.prototype.disconnect = function () { };
     return SearchResultsSource;
-}(__WEBPACK_IMPORTED_MODULE_0__angular_cdk_collections__["a" /* DataSource */]));
+}(__WEBPACK_IMPORTED_MODULE_1__angular_cdk_collections__["a" /* DataSource */]));
 
 
 
@@ -2539,25 +2083,25 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatListModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatMenuModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["c" /* MatButtonToggleModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["d" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatStepperModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatStepperModule */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MatAutocompleteModule */],
@@ -2575,22 +2119,22 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatListModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["n" /* MatMenuModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["o" /* MatNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatTooltipModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["A" /* MatStepperModule */]
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["q" /* MatPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["r" /* MatProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["s" /* MatProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["u" /* MatRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["v" /* MatSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["w" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["x" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatStepperModule */]
             ],
         })
     ], MaterialModule);
@@ -2601,246 +2145,10 @@ var MaterialModule = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/asset-class/asset-class.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  asset-class works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/asset-class/asset-class.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/asset-class/asset-class.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetClassComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AssetClassComponent = (function () {
-    function AssetClassComponent() {
-    }
-    AssetClassComponent.prototype.ngOnInit = function () {
-    };
-    AssetClassComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'asset-class',
-            template: __webpack_require__("../../../../../src/app/pages/asset-class/asset-class.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/asset-class/asset-class.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AssetClassComponent);
-    return AssetClassComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/asset-classes/asset-classes.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".row.bg-primary {\n  margin-bottom: 3.125em; }\n\n.text-center.title {\n  color: #fff;\n  padding-top: 1.2em;\n  padding-bottom: 1.2em;\n  width: 100vw; }\n\n/*\n// Tables\ntable.table {\n  border-radius: .5em !important;\n}\n// Graphs\n.graph {\n  margin-bottom: 3.5em;\n}\n.col-md-10.graph.card {\n  padding: 0;\n}\n*/\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/asset-classes/asset-classes.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetClassesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var AssetClassesComponent = (function () {
-    function AssetClassesComponent() {
-    }
-    AssetClassesComponent.prototype.ngOnInit = function () {
-    };
-    AssetClassesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'asset-classes',
-            template: "<div class=\"container-fluid\">\n              <page-title title=\"Asset Classes\"></page-title>\n              <div class=\"row justify-content-around\">\n                  <div class=\"col-md-12\">\n                  <div class=\"mat-elevation-z4\">\n                      <asset-classes-table></asset-classes-table>\n                  </div>\n                  </div>\n              </div>\n            </div>",
-            styles: [__webpack_require__("../../../../../src/app/pages/asset-classes/asset-classes.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], AssetClassesComponent);
-    return AssetClassesComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/countries/countries.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container-fluid\">\n    <page-title title=\"Countries\"></page-title>\n    <div class=\"row justify-content-around\">\n        <div class=\"col-md-12\">\n        <div class=\"mat-elevation-z4\">\n            <countries-table></countries-table>\n        </div>\n        </div>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/countries/countries.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".row.bg-primary {\n  margin-bottom: 3.125em; }\n\n.text-center.title {\n  color: #fff;\n  padding-top: 1.2em;\n  padding-bottom: 1.2em;\n  width: 100vw; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/countries/countries.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountriesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CountriesComponent = (function () {
-    function CountriesComponent() {
-    }
-    CountriesComponent.prototype.ngOnInit = function () { };
-    CountriesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'countries',
-            template: __webpack_require__("../../../../../src/app/pages/countries/countries.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/countries/countries.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], CountriesComponent);
-    return CountriesComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/country/country.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  country works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/country/country.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/country/country.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var CountryComponent = (function () {
-    function CountryComponent() {
-    }
-    CountryComponent.prototype.ngOnInit = function () {
-    };
-    CountryComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'country',
-            template: __webpack_require__("../../../../../src/app/pages/country/country.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/country/country.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], CountryComponent);
-    return CountryComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "../../../../../src/app/pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <page-title title=\"Dashboard\"></page-title>\n  \n  <!-- First Row ( Line Graph & Data Table ) -->\n  <div *ngIf=\"!isLoaded\">\n    <div class=\"text-center\" style=\"position: absolute; top: 48vh; left: 50vw; margin-right: -50%;\n    transform: translate(-50%, -50%);\">\n      <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n    </div>\n  </div>\n  <div *ngIf=\"isLoaded\" class=\"row justify-content-around\">\n      <div class=\"col-md-6\">\n        <div class=\"mat-elevation-z4\">\n          <dashboard-my-products-table></dashboard-my-products-table>\n        </div>\n      </div>\n\n      <div class=\"col-md-6\">\n        <div class=\"mat-elevation-z4\">\n          <dashboard-views-by-firm-table></dashboard-views-by-firm-table>\n        </div>\n      </div>\n  </div>\n  <!-- End of First Row  ( Line Graph & Data Table )    -->\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <page-title title=\"Dashboard\"></page-title>\n  <div *ngIf=\"!isLoaded\">\n    <div class=\"text-center\" style=\"position: absolute; top: 48vh; left: 50vw; margin-right: -50%;\n    transform: translate(-50%, -50%);\">\n      <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n    </div>\n  </div>\n  <div *ngIf=\"isLoaded\" class=\"row justify-content-around\">\n      <div class=\"col-md-6\">\n        <div class=\"mat-elevation-z4\">\n          <dashboard-top-products-table></dashboard-top-products-table>\n        </div>\n      </div>\n      <div class=\"col-md-6\">\n        <div class=\"mat-elevation-z4\">\n          <dashboard-views-by-firm-table></dashboard-views-by-firm-table>\n        </div>\n      </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2912,7 +2220,7 @@ var DashboardComponent = (function () {
 /***/ "../../../../../src/app/pages/firm/firm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div *ngIf=\"!isLoaded\">\n    <div class=\"text-center\" style=\"position: absolute; top: 48vh; left: 50vw; margin-right: -50%;\n    transform: translate(-50%, -50%);\">\n      <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n    </div>\n  </div>\n  <div *ngIf=\"isLoaded\" class=\"row justify-content-around tables-container\">\n    <!--<div class=\"col-md-12\">\n      <div class=\"mat-elevation-z4 info\">\n        <div>\n            <h6>Issuer: <span>{{data.issuer}}</span></h6>\n            <h6>Asset Class: <span>{{data.asset_class}}</span></h6>\n            <h6>Development Class: <span>{{data.development_class}}</span></h6>\n            <h6>Category: <span>{{data.category}}</span></h6>\n        </div> \n        <div>\n            <h6>Region: <span>{{data.region}}</span></h6>              \n            <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>\n            <h6>Total Views: <span>{{data.view_count}}</span></h6>\n            <h6>Last updated: <span>{{data.updated_at}}</span></h6>\n        </div>\n      </div>\n    </div>-->\n    <div class=\"col-md-12\">\n      <firm-views-table [firmId]=\"firmId\"></firm-views-table>\n    </div>\n    <div class=\"col-md-12\">\n        <firm-actions-table [firmId]=\"firmId\"></firm-actions-table>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div class=\"row justify-content-around tables-container\">\n    <!--<div class=\"col-md-12\">\n      <div class=\"mat-elevation-z4 info\">\n        <div>\n            <h6>Issuer: <span>{{data.issuer}}</span></h6>\n            <h6>Asset Class: <span>{{data.asset_class}}</span></h6>\n            <h6>Development Class: <span>{{data.development_class}}</span></h6>\n            <h6>Category: <span>{{data.category}}</span></h6>\n        </div> \n        <div>\n            <h6>Region: <span>{{data.region}}</span></h6>              \n            <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>\n            <h6>Total Views: <span>{{data.view_count}}</span></h6>\n            <h6>Last updated: <span>{{data.updated_at}}</span></h6>\n        </div>\n      </div>\n    </div>-->\n    <div class=\"col-md-12\">\n        <firm-views-table [firmId]=\"firmId\"></firm-views-table>\n    </div>\n    <div class=\"col-md-12\">\n        <firm-actions-table [firmId]=\"firmId\"></firm-actions-table>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2959,7 +2267,6 @@ var FirmComponent = (function () {
         var _this = this;
         this.route = route;
         this.service = service;
-        this.isLoaded = false;
         document.title = 'ETFG';
         this.route.params.subscribe(function (params) { return _this.firmId = params.id; });
         this.subscription = this.service.getInfoById(this.firmId).subscribe(function (response) {
@@ -2969,10 +2276,6 @@ var FirmComponent = (function () {
             document.title = "ETFG | " + data.name;
         });
     }
-    FirmComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
-    };
     FirmComponent.prototype.ngOnDestroy = function () {
         this.subscription.unsubscribe();
     };
@@ -3021,21 +2324,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var FirmsComponent = (function () {
     function FirmsComponent() {
     }
-    FirmsComponent.prototype.ngOnInit = function () { };
     FirmsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'firms',
-            template: "<div class=\"container-fluid\">\n              <page-title title=\"Firms\"></page-title>\n              <div class=\"row justify-content-around\">\n                <div class=\"col-md-12\">\n                  <div class=\"mat-elevation-z4\">\n                    <firms-table></firms-table>\n                  </div>\n                </div>\n              </div>\n            </div>",
+            selector: 'firms-page',
+            template: "\n    <div class=\"container-fluid\">\n        <page-title title=\"Firms\"></page-title>\n        <div class=\"row justify-content-around\">\n            <div class=\"col-md-12\">\n                <firms-table></firms-table>\n            </div>\n        </div>\n        </div>",
             styles: [__webpack_require__("../../../../../src/app/pages/firms/firms.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], FirmsComponent);
     return FirmsComponent;
 }());
@@ -3047,7 +2345,7 @@ var FirmsComponent = (function () {
 /***/ "../../../../../src/app/pages/fp-combo/fp-combo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div *ngIf=\"!isLoaded\">\n    <div class=\"text-center\" style=\"position: absolute; top: 48vh; left: 50vw; margin-right: -50%;\n    transform: translate(-50%, -50%);\">\n      <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n    </div>\n  </div>\n  <div *ngIf=\"isLoaded\" class=\"row justify-content-around tables-container\">\n    <div class=\"col-md-12\">\n      <div class=\"mat-elevation-z4 info\">\n        <div>\n            <h6>Issuer: <span>{{productData.issuer}}</span></h6>\n            <h6>Asset Class: <span>{{productData.asset_class}}</span></h6>\n            <h6>Development Class: <span>{{productData.development_class}}</span></h6>\n            <h6>Category: <span>{{productData.category}}</span></h6>\n        </div> \n        <div>\n            <h6>Region: <span>{{productData.region}}</span></h6>              \n            <h6>Sub-Region: <span>{{productData.sub_region}}</span></h6>\n            <h6>Total Views: <span>{{productData.view_count}}</span></h6>\n            <h6>Last Updated: <span>{{productData.updated_at}}</span></h6>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-12\">\n      <fp-combo-table [firmId]=\"firmId\" [ticker]=\"ticker\"></fp-combo-table>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div *ngIf=\"productData\" class=\"row justify-content-around tables-container\">\n    <div class=\"col-md-12\">\n      <div class=\"mat-elevation-z4 info\">\n        <div>\n            <h6>Issuer: <span>{{productData.issuer}}</span></h6>\n            <h6>Asset Class: <span>{{productData.asset_class}}</span></h6>\n            <h6>Development Class: <span>{{productData.development_class}}</span></h6>\n            <h6>Category: <span>{{productData.category}}</span></h6>\n        </div> \n        <div>\n            <h6>Region: <span>{{productData.region}}</span></h6>              \n            <h6>Sub-Region: <span>{{productData.sub_region}}</span></h6>\n            <h6>Total Views: <span>{{productData.view_count}}</span></h6>\n            <h6>Last Updated: <span>{{productData.updated_at}}</span></h6>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-12\">\n      <fp-combo-table [firmId]=\"firmId\" [ticker]=\"ticker\"></fp-combo-table>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3097,7 +2395,6 @@ var FpComboComponent = (function () {
         this.route = route;
         this.productService = productService;
         this.firmService = firmService;
-        this.isLoaded = false;
         document.title = 'ETFG';
         this.route.params.subscribe(function (params) {
             _this.firmId = params.id;
@@ -3125,10 +2422,6 @@ var FpComboComponent = (function () {
             document.title = "ETFG | " + data.name;
         });
     }
-    FpComboComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
-    };
     FpComboComponent.prototype.ngOnDestroy = function () {
         this.firmSubscription.unsubscribe();
         this.productSubscription.unsubscribe();
@@ -3142,128 +2435,6 @@ var FpComboComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__services_products_get_product_info_by_ticker_service__["a" /* GetProductInfoByTickerService */], __WEBPACK_IMPORTED_MODULE_2__services_firms_get_firm_info_by_id_service__["a" /* GetFirmInfoByIdService */]])
     ], FpComboComponent);
     return FpComboComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuer/issuer.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  issuer works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuer/issuer.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuer/issuer.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssuerComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var IssuerComponent = (function () {
-    function IssuerComponent() {
-    }
-    IssuerComponent.prototype.ngOnInit = function () {
-    };
-    IssuerComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'issuer',
-            template: __webpack_require__("../../../../../src/app/pages/issuer/issuer.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/issuer/issuer.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], IssuerComponent);
-    return IssuerComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuers/issuers.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container-fluid\">\n    <page-title title=\"Issuers\"></page-title>\n    <div class=\"row justify-content-around\">\n        <div class=\"col-md-12\">\n        <div class=\"mat-elevation-z4\">\n            <issuers-table></issuers-table>\n        </div>\n        </div>\n    </div>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuers/issuers.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".row.bg-primary {\n  margin-bottom: 3.125em; }\n\n.text-center.title {\n  color: #fff;\n  padding-top: 1.2em;\n  padding-bottom: 1.2em;\n  width: 100vw; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/issuers/issuers.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssuersComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var IssuersComponent = (function () {
-    function IssuersComponent() {
-    }
-    IssuersComponent.prototype.ngOnInit = function () {
-    };
-    IssuersComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'issuers',
-            template: __webpack_require__("../../../../../src/app/pages/issuers/issuers.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/issuers/issuers.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], IssuersComponent);
-    return IssuersComponent;
 }());
 
 
@@ -3343,7 +2514,7 @@ var LandingComponent = (function () {
 /***/ "../../../../../src/app/pages/product/product.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div *ngIf=\"!isLoaded\">\n      <div class=\"text-center\" style=\"position: absolute; top: 48vh; left: 50vw; margin-right: -50%;\n      transform: translate(-50%, -50%);\">\n          <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i>\n      </div>\n  </div>\n  <div *ngIf=\"isLoaded\" class=\"row justify-content-around tables-container\">\n      <div class=\"col-md-12\">\n        <div class=\"mat-elevation-z4 info\">\n          <div>\n              <h6>Issuer: <span>{{data.issuer}}</span></h6>\n              <h6>Asset Class: <span>{{data.asset_class}}</span></h6>\n              <h6>Development Class: <span>{{data.development_class}}</span></h6>\n              <h6>Category: <span>{{data.category}}</span></h6>\n          </div> \n          <div>\n              <h6>Region: <span>{{data.region}}</span></h6>              \n              <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>\n              <h6>Total Views: <span>{{data.view_count}}</span></h6>\n              <h6>Last Updated: <span>{{data.updated_at}}</span></h6>\n          </div>\n        </div>\n      </div>\n      <!--\n      <div class=\"col-md-6\">\n            <angular-d3-pie [id]=\"pieChartId\" [data]=\"pieChartData\"></angular-d3-pie>               \n      </div>\n      <div class=\"col-md-6\">\n            <angular-d3-pie [id]=\"pieChartId\" [data]=\"pieChartData\"></angular-d3-pie>               \n      </div>-->\n      <div class=\"col-md-12\">\n          <product-firms-table [ticker]=\"ticker\"></product-firms-table>\n      </div>\n      <div class=\"col-md-12\">\n          <product-actions-table [ticker]=\"ticker\"></product-actions-table>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container-fluid\">\n  <page-title [title]=\"pageTitle\"></page-title>\n  <div class=\"row justify-content-around tables-container\">\n      <div class=\"col-md-12\">\n        <div class=\"mat-elevation-z4 info\" *ngIf=\"data\">\n          <div>\n              <h6>Issuer: <span>{{data.issuer}}</span></h6>\n              <h6>Asset Class: <span>{{data.asset_class}}</span></h6>\n              <h6>Development Class: <span>{{data.development_class}}</span></h6>\n              <h6>Category: <span>{{data.category}}</span></h6>\n          </div> \n          <div>\n              <h6>Region: <span>{{data.region}}</span></h6>              \n              <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>\n              <h6>Total Views: <span>{{data.view_count}}</span></h6>\n              <h6>Last Updated: <span>{{data.updated_at}}</span></h6>\n          </div>\n        </div>\n      </div>\n      <!--\n      <div class=\"col-md-6\">\n            <angular-d3-pie [id]=\"pieChartId\" [data]=\"pieChartData\"></angular-d3-pie>               \n      </div>\n      <div class=\"col-md-6\">\n            <angular-d3-pie [id]=\"pieChartId\" [data]=\"pieChartData\"></angular-d3-pie>               \n      </div>-->\n      <div class=\"col-md-12\">\n          <product-firms-table [ticker]=\"ticker\"></product-firms-table>\n      </div>\n      <div class=\"col-md-12\">\n          <product-actions-table [ticker]=\"ticker\"></product-actions-table>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3390,7 +2561,6 @@ var ProductComponent = (function () {
         var _this = this;
         this.route = route;
         this.service = service;
-        this.isLoaded = false;
         document.title = 'ETFG';
         this.route.params.subscribe(function (params) { return _this.ticker = params.ticker; });
         this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(function (response) {
@@ -3400,10 +2570,6 @@ var ProductComponent = (function () {
             document.title = "ETFG | " + data.ticker;
         });
     }
-    ProductComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        setTimeout(function () { _this.isLoaded = true; }, 1000);
-    };
     ProductComponent.prototype.ngOnDestroy = function () {
         this.subscription.unsubscribe();
     };
@@ -3430,7 +2596,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".row.bg-primary {\n  margin-bottom: 3.125em; }\n\n.text-center.title {\n  color: #fff;\n  padding-top: 1.2em;\n  padding-bottom: 1.2em;\n  width: 100vw; }\n\n/*\nh1 {\n  text-align: center;\n}\n// Tables\ntable.table {\n  border-radius: .5em !important;\n}\n// Graphs\n.graph {\n  margin-bottom: 3.5em;\n}\n.col-md-7.graph.card {\n  padding: 0;\n}\n*/\n", ""]);
+exports.push([module.i, ".row.bg-primary {\n  margin-bottom: 3.125em; }\n\n.text-center.title {\n  color: #fff;\n  padding-top: 1.2em;\n  padding-bottom: 1.2em;\n  width: 100vw; }\n", ""]);
 
 // exports
 
@@ -3452,21 +2618,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var ProductsComponent = (function () {
     function ProductsComponent() {
     }
-    ProductsComponent.prototype.ngOnInit = function () { };
     ProductsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'products',
-            template: "<div class=\"container-fluid\">\n              <page-title title=\"Products\"></page-title>\n              <div class=\"row justify-content-around\">\n                <div class=\"col-md-12\">\n                  <products-table></products-table>\n                </div>\n              </div>\n            </div>",
+            selector: 'products-page',
+            template: "\n    <div class=\"container-fluid\">\n        <page-title title=\"Products\"></page-title>\n        <div class=\"row justify-content-around\">\n            <div class=\"col-md-12\">\n                <products-table></products-table>     \n            </div>\n        </div>\n    </div>",
             styles: [__webpack_require__("../../../../../src/app/pages/products/products.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
+        })
     ], ProductsComponent);
     return ProductsComponent;
 }());
@@ -3574,158 +2735,6 @@ var SearchResultsComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/asset-classes/asset-classes.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AssetClassesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var AssetClassesService = (function () {
-    function AssetClassesService(http) {
-        this.http = http;
-    }
-    AssetClassesService.prototype.getFirms = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/assetclasses");
-    };
-    AssetClassesService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], AssetClassesService);
-    return AssetClassesService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/countries/countries.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountriesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var CountriesService = (function () {
-    function CountriesService(http) {
-        this.http = http;
-    }
-    CountriesService.prototype.getCountries = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/ip-countries");
-    };
-    CountriesService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], CountriesService);
-    return CountriesService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/firms/get-actions-by-firm-id.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetActionsByFirmIdService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetActionsByFirmIdService = (function () {
-    function GetActionsByFirmIdService(http) {
-        this.http = http;
-    }
-    GetActionsByFirmIdService.prototype.getActionsById = function (id) {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms/actions/" + id);
-    };
-    GetActionsByFirmIdService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetActionsByFirmIdService);
-    return GetActionsByFirmIdService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/firms/get-all-firms.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetAllFirmsService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetAllFirmsService = (function () {
-    function GetAllFirmsService(http) {
-        this.http = http;
-    }
-    GetAllFirmsService.prototype.getAll = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms");
-    };
-    GetAllFirmsService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetAllFirmsService);
-    return GetAllFirmsService;
-}());
-
-
-
-/***/ }),
-
 /***/ "../../../../../src/app/services/firms/get-firm-info-by-id.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3758,234 +2767,6 @@ var GetFirmInfoByIdService = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], GetFirmInfoByIdService);
     return GetFirmInfoByIdService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/firms/get-views-by-firm-id.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetViewsByFirmIdService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetViewsByFirmIdService = (function () {
-    function GetViewsByFirmIdService(http) {
-        this.http = http;
-    }
-    GetViewsByFirmIdService.prototype.getViewsById = function (id) {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms/views/" + id);
-    };
-    GetViewsByFirmIdService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetViewsByFirmIdService);
-    return GetViewsByFirmIdService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/fp-combo/fp-combo.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FpComboService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var FpComboService = (function () {
-    function FpComboService(http) {
-        this.http = http;
-    }
-    FpComboService.prototype.getFpCombo = function (id, ticker) {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/" + ticker + "/firms/" + id);
-    };
-    FpComboService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], FpComboService);
-    return FpComboService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/issuers/issuers.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IssuersService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var IssuersService = (function () {
-    function IssuersService(http) {
-        this.http = http;
-    }
-    IssuersService.prototype.getFirms = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/issuers");
-    };
-    IssuersService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], IssuersService);
-    return IssuersService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/products/get-actions-by-ticker.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetActionsByTickerService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetActionsByTickerService = (function () {
-    function GetActionsByTickerService(http) {
-        this.http = http;
-    }
-    GetActionsByTickerService.prototype.getActionsByTicker = function (ticker) {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/actions/" + ticker);
-    };
-    GetActionsByTickerService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetActionsByTickerService);
-    return GetActionsByTickerService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/products/get-all-products.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetAllProductsService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetAllProductsService = (function () {
-    function GetAllProductsService(http) {
-        this.http = http;
-    }
-    GetAllProductsService.prototype.getAll = function () {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products");
-    };
-    GetAllProductsService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetAllProductsService);
-    return GetAllProductsService;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/products/get-firms-by-ticker.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GetFirmsByTickerService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var GetFirmsByTickerService = (function () {
-    function GetFirmsByTickerService(http) {
-        this.http = http;
-    }
-    GetFirmsByTickerService.prototype.getFirmsByTicker = function (ticker) {
-        return this.http.get(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiBaseUrl + "/api/products/firms/" + ticker);
-    };
-    GetFirmsByTickerService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-    ], GetFirmsByTickerService);
-    return GetFirmsByTickerService;
 }());
 
 

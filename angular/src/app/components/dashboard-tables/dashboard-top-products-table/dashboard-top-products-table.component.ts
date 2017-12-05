@@ -38,8 +38,8 @@ export class DashboardTopProductsTableComponent {
       .pipe(
         startWith({}),
         switchMap(() => {
-          this.isLoadingResults = true;
-          return this.connection!.getProducts(this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            setTimeout(()=>this.isLoadingResults = true);
+            return this.connection!.getProducts(this.paginator.pageIndex, this.sort.active, this.sort.direction);
         }),
         map(data => {
           // Flip flag to show that loading has finished.

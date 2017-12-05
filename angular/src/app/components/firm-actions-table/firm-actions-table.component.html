@@ -8,7 +8,7 @@
     <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDisableClear matSortDirection="desc">
         <!-- Date Column -->
         <ng-container matColumnDef="date">
-            <mat-header-cell *matHeaderCellDef> Date/Time	 </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time	 </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
         </ng-container>
         <!-- Location Column -->
@@ -32,7 +32,10 @@
             <mat-header-cell *matHeaderCellDef class="portfolio-width"> Portfolio </mat-header-cell>
             <mat-cell *matCellDef="let row" class="portfolio-width">
             <span *ngFor="let item of row.portfolio">
-                <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
+                <span *ngIf='isNA(item)'>N/A</span>
+                <span *ngIf='!isNA(item)'>
+                    <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
+                </span>
             </span>
             </mat-cell>
         </ng-container>

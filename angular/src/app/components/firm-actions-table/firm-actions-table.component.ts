@@ -24,6 +24,14 @@ export class FirmActionsTableComponent implements AfterViewInit {
   
     resultsLength = 0;
     isLoadingResults = false;
+
+    isNA(pair) {
+        if(pair.ticker==="" || pair.percentage==="%") {
+            return true;
+        } else {
+            return false;
+        }
+    }
   
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -38,67 +46,70 @@ export class FirmActionsTableComponent implements AfterViewInit {
   
       merge(this.sort.sortChange, this.paginator.page)
         .pipe(
-          startWith({}),
-          switchMap(() => {
-              this.isLoadingResults = true;
-              return this.connection!.getActions(this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
-          }),
-          map(data => {
-              // Flip flag to show that loading has finished.
-              this.isLoadingResults = false;
-              this.resultsLength = data.total;
-              //modify data here
-              data.items.map(row => {
-                  let arr = [];
-                  let dict = JSON.parse(row.portfolio);
-                  for (let key in dict) {
-                      let percentage = dict[key];
-                      percentage = percentage.toString();
-                      percentage = percentage.replace(/"/g,"");
-                      percentage = percentage.replace(/,/g,'.')
-                      percentage = percentage.concat('%');
-                      let pair = {
-                          ticker: key.toUpperCase(),
-                          percentage: percentage
-                      }
-                      arr.push(pair);
-                  }
-                  row.portfolio = arr;
-                  return row;
-              });
-              return data.items;
-          }),
-          catchError(() => {
-            this.isLoadingResults = false;
-            return observableOf([]);
-          })
+            startWith({}),
+            switchMap(() => {
+                setTimeout(()=>this.isLoadingResults = true);
+                return this.connection!.getActions(this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            }),
+            map(data => {
+                // Flip flag to show that loading has finished.
+                this.isLoadingResults = false;
+                this.resultsLength = data.total;
+                //modify data here
+
+                console.log(data.items);
+
+                data.items.map(row => {
+                    let arr = [];
+                    let dict = JSON.parse(row.portfolio);
+                    for (let key in dict) {
+                        let percentage = dict[key];
+                        percentage = percentage.toString();
+                        percentage = percentage.replace(/"/g,"");
+                        percentage = percentage.replace(/,/g,'.');
+                        percentage = percentage.concat('%');
+                        let pair = {
+                            ticker: key.toUpperCase(),
+                            percentage: percentage
+                        }
+                        arr.push(pair);
+                    }
+                    row.portfolio = arr;
+                    return row;
+                });
+                return data.items;
+            }),
+            catchError(() => {
+                this.isLoadingResults = false;
+                return observableOf([]);
+            })
         ).subscribe(data => this.dataSource.data = data);
     }
-  }
+}
   
-  export interface ActionsApi {
+export interface ActionsApi {
     items: Action[];
     total: number;
-  }
+}
+
+export interface Action {
+    date: string;
+    address: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+    type: string;
+    portfolio: any;
+}
   
-  export interface Action {
-      date: string;
-      address: string;
-      city: string;
-      state: string;
-      zip: string;
-      country: string;
-      type: string;
-      portfolio: any;
-  }
-  
-  export class FirmActionsConnection {
+export class FirmActionsConnection {
     constructor(private http: HttpClient) {}
   
     //call the api with a page number, sort field, and sort order(asc/desc)
     getActions(id: number, page: number, sort: string, order: string): Observable<ActionsApi> {
-      const requestUrl = `${environment.apiBaseUrl}/api/firms/actions/${id}?page=${page+1}&sort=${sort}&order=${order}`;
-      return this.http.get<ActionsApi>(requestUrl);
+        const requestUrl = `${environment.apiBaseUrl}/api/firms/actions/${id}?page=${page+1}&sort=${sort}&order=${order}`;
+        return this.http.get<ActionsApi>(requestUrl);
     }
-  }
+}
   

@@ -211,36 +211,41 @@ class ProductsController extends Controller {
     }
 }
 
-//input should be sanitized for sql injections - it currently isn't
 class SearchProductsFirmsController extends Controller {
-    //needs update for pagination
+    //could be updated for pagination
     public function getProductsFirmsSearchResults($terms) {
-        //$termArray = explode(" ",$terms);
+        $terms = preg_replace('/[^a-z\d ]/i', '', $terms);
+        $terms = trim($terms);
+        $termArray = preg_split('/\s+/', $terms);
 
         $productResults = [];
         $firmResults = [];
         
-        //foreach($termArray as &$value) {
-            $productResultsForTerm = DB::table('products')
+        foreach($termArray as &$value) {
+            $productResultsForTerms = DB::table('products')
             //raw here may need to be protected against injections, although input is exploded
-                ->select(DB::raw("products.ticker, products.name, MATCH (products.ticker,products.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
-                ->where('products.name','LIKE',"%$terms%")
-                ->orWhere('products.ticker','LIKE',"%$terms%")
+                ->select(DB::raw("products.ticker, products.name, MATCH (products.ticker,products.name) AGAINST (" 
+                    . DB::getPdo()->quote($value) 
+                    . " IN BOOLEAN MODE) as relevance"))
+                ->where('products.name','LIKE',"%$value%")
+                ->orWhere('products.ticker','LIKE',"%$value%")
                 ->orderBy('relevance','DESC')
                 ->get()
                 ->toArray();
-            $productResults = array_merge($productResults, $productResultsForTerm);
-        //}
-        //foreach($termArray as &$value) {
-            $firmResultsForTerm = DB::table('firms')
-                ->select(DB::raw("firms.name,firms.id, MATCH (firms.name) AGAINST ('$value' IN BOOLEAN MODE) as relevance"))
-                ->where('firms.name','LIKE',"%$terms%")
+            $productResults = array_merge($productResults, $productResultsForTerms);
+        }
+        foreach($termArray as &$value) {
+            $firmResultsForTerms = DB::table('firms')
+                ->select(DB::raw("firms.name,firms.id, MATCH (firms.name) AGAINST ("
+                    . DB::getPdo()->quote($value) 
+                    . " IN BOOLEAN MODE) as relevance"))
+                ->where('firms.name','LIKE',"%$value%")
                 ->orderBy('relevance','DESC')
                 ->limit(20)
                 ->get()
                 ->toArray();
-            $firmResults = array_merge($firmResults, $firmResultsForTerm);
-        //}
+            $firmResults = array_merge($firmResults, $firmResultsForTerms);
+        }
 
         $results = array_merge($productResults,$firmResults);
 

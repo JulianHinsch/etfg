@@ -39,7 +39,7 @@ export class FirmViewsTableComponent implements AfterViewInit {
         .pipe(
         startWith({}),
         switchMap(() => {
-            this.isLoadingResults = true;
+            setTimeout(()=>this.isLoadingResults = true);
             return this.connection!.getProducts(this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
         }),
         map(data => {

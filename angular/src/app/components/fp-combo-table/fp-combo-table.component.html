@@ -5,10 +5,10 @@
     </div>
     <!-- Loading Shade -->
     <div class="loading-shade" *ngIf="isLoadingResults"></div>
-    <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDisableClear matSortDirection="desc">            
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDisableClear matSortDirection="desc">         
         <!-- Date Column -->
         <ng-container matColumnDef="date">
-            <mat-header-cell *matHeaderCellDef> Date/Time	 </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time	 </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
         </ng-container>
         <!-- Location Column -->
@@ -26,7 +26,7 @@
         <ng-container matColumnDef="type">
             <mat-header-cell *matHeaderCellDef> Action Type </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.type}} </mat-cell>
-        </ng-container> -->
+        </ng-container>
         <!-- Portfolio Column -->
         <ng-container matColumnDef="portfolio">
             <mat-header-cell *matHeaderCellDef class="portfolio-width"> Portfolio </mat-header-cell>

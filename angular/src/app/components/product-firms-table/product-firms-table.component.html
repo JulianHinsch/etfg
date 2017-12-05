@@ -8,17 +8,17 @@
     <mat-table #table [dataSource]="dataSource" matSort matSortActive="views" matSortDisableClear matSortDirection="desc">
         <!-- Firm Column -->
         <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
         <mat-cell *matCellDef="let row"><a [routerLink]="['/firms/', row.firmId]">{{row.name}}</a></mat-cell>
         </ng-container>
         <!-- Users Column -->
         <ng-container matColumnDef="users">
-            <mat-header-cell *matHeaderCellDef class="fixed-width"> Users </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef  mat-sort-header class="fixed-width"> Users </mat-header-cell>
             <mat-cell *matCellDef="let row" class="fixed-width"> {{row.users}} </mat-cell>
         </ng-container>
         <!-- Views Column -->
         <ng-container matColumnDef="views">
-            <mat-header-cell *matHeaderCellDef class="fixed-width"> Views </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef  mat-sort-header class="fixed-width"> Views </mat-header-cell>
             <mat-cell *matCellDef="let row" class="fixed-width"><a [routerLink]="['./firms/', row.firmId]">{{row.views}}</a></mat-cell>
         </ng-container>
         <!-- Row Headers -->

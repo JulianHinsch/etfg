@@ -16,70 +16,70 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./fp-combo-table.component.scss']
 })
 export class FpComboTableComponent implements AfterViewInit {
-  @Input() firmId: number;
-  @Input() ticker: string;
+    @Input() firmId: number;
+    @Input() ticker: string;
 
-  displayedColumns = ['date','location','type','portfolio'];
-  connection: FPComboConnection | null;
-  dataSource = new MatTableDataSource();
+    displayedColumns = ['date','location','type','portfolio'];
+    connection: FPComboConnection | null;
+    dataSource = new MatTableDataSource();
 
-  resultsLength = 0;
-  isLoadingResults = false;
+    resultsLength = 0;
+    isLoadingResults = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
-  ngAfterViewInit() {
-    this.connection = new FPComboConnection(this.http);
+    ngAfterViewInit() {
+        this.connection = new FPComboConnection(this.http);
 
-    // If the user changes the sort order, reset back to the first page.
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-    merge(this.sort.sortChange, this.paginator.page)
-      .pipe(
-        startWith({}),
-        switchMap(() => {
-            this.isLoadingResults = true;
-            return this.connection!.getActions(this.ticker, this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
-        }),
-        map(data => {
-            // Flip flag to show that loading has finished.
-            this.isLoadingResults = false;
-            this.resultsLength = data.total;
-            //modify data here
-            data.items.map(row => {
-                let arr = [];
-                let dict = JSON.parse(row.portfolio);
-                for (let key in dict) {
-                    let percentage = dict[key];
-                    percentage = percentage.toString();
-                    percentage = percentage.replace(/"/g,"");
-                    percentage = percentage.replace(/,/g,'.')
-                    percentage = percentage.concat('%');
-                    let pair = {
-                        ticker: key.toUpperCase(),
-                        percentage: percentage
+        merge(this.sort.sortChange, this.paginator.page)
+        .pipe(
+            startWith({}),
+            switchMap(() => {
+                setTimeout(()=>this.isLoadingResults = true);
+                return this.connection!.getActions(this.ticker, this.firmId, this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            }),
+            map(data => {
+                // Flip flag to show that loading has finished.
+                this.isLoadingResults = false;
+                this.resultsLength = data.total;
+                //modify data here
+                data.items.map(row => {
+                    let arr = [];
+                    let dict = JSON.parse(row.portfolio);
+                    for (let key in dict) {
+                        let percentage = dict[key];
+                        percentage = percentage.toString();
+                        percentage = percentage.replace(/"/g,"");
+                        percentage = percentage.replace(/,/g,'.')
+                        percentage = percentage.concat('%');
+                        let pair = {
+                            ticker: key.toUpperCase(),
+                            percentage: percentage
+                        }
+                        arr.push(pair);
                     }
-                    arr.push(pair);
-                }
-                row.portfolio = arr;
-                return row;
-            });
-            return data.items;
-        }),
-        catchError(() => {
-          this.isLoadingResults = false;
-          return observableOf([]);
-        })
-      ).subscribe(data => this.dataSource.data = data);
-  }
+                    row.portfolio = arr;
+                    return row;
+                });
+                return data.items;
+            }),
+            catchError(() => {
+            this.isLoadingResults = false;
+            return observableOf([]);
+            })
+        ).subscribe(data => this.dataSource.data = data);
+    }
 }
 
 export interface ActionsApi {
-  items: Action[];
-  total: number;
+    items: Action[];
+    total: number;
 }
 
 export interface Action {
@@ -94,11 +94,11 @@ export interface Action {
 }
 
 export class FPComboConnection {
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
-  //call the api with a page number, sort field, and sort order(asc/desc)
-  getActions(ticker: string, id: number, page: number, sort: string, order: string): Observable<ActionsApi> {
-    const requestUrl = `${environment.apiBaseUrl}/api/products/${ticker}/firms/${id}?page=${page+1}&sort=${sort}&order=${order}`;
-    return this.http.get<ActionsApi>(requestUrl);
-  }
+    //call the api with a page number, sort field, and sort order(asc/desc)
+    getActions(ticker: string, id: number, page: number, sort: string, order: string): Observable<ActionsApi> {
+        const requestUrl = `${environment.apiBaseUrl}/api/products/${ticker}/firms/${id}?page=${page+1}&sort=${sort}&order=${order}`;
+        return this.http.get<ActionsApi>(requestUrl);
+    }
 }

@@ -39,7 +39,7 @@ export class ProductActionsTableComponent implements AfterViewInit {
         .pipe(
         startWith({}),
         switchMap(() => {
-            this.isLoadingResults = true;
+            setTimeout(()=>this.isLoadingResults = true);
             return this.connection!.getActions(this.ticker, this.paginator.pageIndex, this.sort.active, this.sort.direction);
         }),
         map(data => {

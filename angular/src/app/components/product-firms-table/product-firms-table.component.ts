@@ -40,11 +40,10 @@ export class ProductFirmsTableComponent implements AfterViewInit {
       .pipe(
         startWith({}),
         switchMap(() => {
-          this.isLoadingResults = true;
-          return this.connection!.getFirms(this.ticker, this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            setTimeout(()=>this.isLoadingResults = true);
+            return this.connection!.getFirms(this.ticker, this.paginator.pageIndex, this.sort.active, this.sort.direction);
         }),
         map(data => {
-            console.log(data);
           // Flip flag to show that loading has finished.
           this.isLoadingResults = false;
           this.resultsLength = data.total;
