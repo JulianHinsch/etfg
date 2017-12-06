@@ -29,3 +29,7 @@ Route::get('/products/{ticker}/firms/{id}', array('uses' => 'ProductsController@
 
 //search
 Route::get('/search/{term}', array('uses' => 'SearchProductsFirmsController@getProductsFirmsSearchResults'));
+
+//charts
+Route::get('/viewtypes', array('uses' => 'ChartsController@getViewTypes'));
+Route::get('/viewcountries', array('uses' => 'ChartsController@getViewCountries'));

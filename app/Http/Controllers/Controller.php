@@ -257,6 +257,41 @@ class SearchProductsFirmsController extends Controller {
     }
 }
 
+class ChartsController extends Controller {
+    
+    public function getViewTypes() {
+        $results = DB::table('actions')
+            ->select(DB::raw('type as label, count(*) as value'))
+            ->groupBy('type')
+            ->where('type','!=','n/a')
+            ->get();
+        return response()->json($results);
+    }
+
+    public function getViewCountries() {
+        $results = DB::table('actions')
+            ->select(DB::raw('countries.name as label, count(*) as value'))
+            ->join('ip_addresses','actions.ip','=','ip_addresses.ip_address')
+            ->join('ip_countries','ip_addresses.country_id','=','ip_countries.id')
+            ->join('countries','countries.code','=','ip_countries.code')
+            ->groupBy('countries.name')
+            ->get();
+        return response()->json($results);
+    }
+    public function getTotalViews() {
+
+    }
+    public function getProductViewsByFirm() {
+
+    }
+    public function getProductViewsByAction() {
+
+    }
+    public function getProductViewsByCountry() {
+
+    }
+}
+
 
     /*
     public function edit($user_id) {

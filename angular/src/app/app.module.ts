@@ -34,6 +34,10 @@ import { ProductActionsTableComponent } from './components/product-actions-table
 import { FirmActionsTableComponent } from './components/firm-actions-table/firm-actions-table.component';
 import { FirmViewsTableComponent } from './components/firm-views-table/firm-views-table.component';
 import { FpComboTableComponent } from './components/fp-combo-table/fp-combo-table.component';
+import { SearchResultsTableComponent } from './components/search-results-table/search-results-table.component';
+import { ProductsTableComponent } from './components/products-table/products-table.component';
+import { FirmsTableComponent } from './components/firms-table/firms-table.component';
+import { ProductFirmsTableComponent } from './components/product-firms-table/product-firms-table.component';
 
 //page layouts
 import { LandingComponent } from './pages/landing/landing.component';
@@ -42,12 +46,17 @@ import { FirmComponent } from './pages/firm/firm.component';
 import { FirmsComponent } from './pages/firms/firms.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { ProductFirmsTableComponent } from './components/product-firms-table/product-firms-table.component';
 import { FpComboComponent } from './pages/fp-combo/fp-combo.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
-import { SearchResultsTableComponent } from './components/search-results-table/search-results-table.component';
-import { ProductsTableComponent } from './components/products-table/products-table.component';
-import { FirmsTableComponent } from './components/firms-table/firms-table.component';
+
+//charts
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { TypesOfViewsPieComponent } from './components/charts/types-of-views-pie/types-of-views-pie.component';
+import { ViewsByCountryPieComponent } from './components/charts/views-by-country-pie/views-by-country-pie.component';
+import { ProductViewsByActionPieComponent } from './components/charts/product-views-by-action-pie/product-views-by-action-pie.component';
+import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
+import { ProductViewsByFirmPieComponent } from './components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component';
+import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
 
 @NgModule({
   declarations: [
@@ -78,8 +87,16 @@ import { FirmsTableComponent } from './components/firms-table/firms-table.compon
     SearchResultsTableComponent,
     ProductsTableComponent,
     FirmsTableComponent,
+    
+    TypesOfViewsPieComponent, 
+    ViewsByCountryPieComponent, 
+    ProductViewsByActionPieComponent, 
+    ProductViewsByCountryPieComponent, 
+    ProductViewsByFirmPieComponent, 
+    TotalViewsBarComponent
   ],
   imports: [
+    Ng2GoogleChartsModule,
     NoopAnimationsModule,
     BrowserModule,
     AppRoutingModule,

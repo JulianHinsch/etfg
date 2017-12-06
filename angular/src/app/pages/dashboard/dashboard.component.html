@@ -1,21 +1,33 @@
 <div class="container-fluid">
-  <page-title title="Dashboard"></page-title>
-  <div *ngIf="!isLoaded">
-    <div class="text-center" style="position: absolute; top: 48vh; left: 50vw; margin-right: -50%;
-    transform: translate(-50%, -50%);">
-      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    <page-title title="Dashboard"></page-title>
+    <div class="row justify-content-around">
+        <div class="col-md-6">
+            <div class="mat-elevation-z4">
+                <types-of-views-pie></types-of-views-pie>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mat-elevation-z4">
+                <views-by-country-pie></views-by-country-pie>
+            </div>
+        </div>
+        <!--
+        <div class="col-md-4">
+            <div class="mat-elevation-z4">
+                <total-views-bar></total-views-bar>
+            </div>
+        </div>-->
     </div>
-  </div>
-  <div *ngIf="isLoaded" class="row justify-content-around">
-      <div class="col-md-6">
-        <div class="mat-elevation-z4">
-          <dashboard-top-products-table></dashboard-top-products-table>
+    <div class="row justify-content-around">
+        <div class="col-md-6">
+            <div class="mat-elevation-z4">
+                <dashboard-top-products-table></dashboard-top-products-table>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="mat-elevation-z4">
-          <dashboard-views-by-firm-table></dashboard-views-by-firm-table>
+        <div class="col-md-6">
+            <div class="mat-elevation-z4">
+                <dashboard-views-by-firm-table></dashboard-views-by-firm-table>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
 </div>

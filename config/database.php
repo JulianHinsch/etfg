@@ -3,10 +3,10 @@
 
 //these are AWS server environment variables
 
-define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
-define('RDS_DB_USERNAME', $_SERVER['RDS_USERNAME']);
-define('RDS_DB_PASSWORD', $_SERVER['RDS_DB_PASSWORD']);
-define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
+// define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
+// define('RDS_DB_USERNAME', $_SERVER['RDS_USERNAME']);
+// define('RDS_DB_PASSWORD', $_SERVER['RDS_DB_PASSWORD']);
+// define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
 
 
 return [
@@ -17,15 +17,15 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            //'host' => env('DB_HOST', 'localhost'),
-            'host' => RDS_HOSTNAME,
+            'host' => env('DB_HOST', 'localhost'),
+            //'host' => RDS_HOSTNAME,
             'port' => env('DB_PORT', '3306'),
-            //'database' => env('DB_DATABASE', 'etfg'),
-            'database' => RDS_DB_NAME,
-            //'username' => env('DB_USERNAME', 'root@localhost'),
-            'username' => RDS_DB_USERNAME,
-            //'password' => env('DB_PASSWORD', '27271301hG'),
-            'password' => RDS_DB_PASSWORD,
+            'database' => env('DB_DATABASE', 'etfg'),
+            //'database' => RDS_DB_NAME,
+            'username' => env('DB_USERNAME', 'root@localhost'),
+            //'username' => RDS_DB_USERNAME,
+            'password' => env('DB_PASSWORD', '27271301hG'),
+            //'password' => RDS_DB_PASSWORD,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
