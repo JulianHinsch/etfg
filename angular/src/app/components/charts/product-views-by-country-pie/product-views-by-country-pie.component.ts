@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-views-by-country-pie.component.scss']
 })
 export class ProductViewsByCountryPieComponent implements OnInit {
-
+    
   constructor() { }
 
   ngOnInit() {

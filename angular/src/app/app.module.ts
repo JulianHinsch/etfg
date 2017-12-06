@@ -28,32 +28,32 @@ import { PageTitleComponent } from './components/page-title/page-title.component
 import { NavBarComponent } from './components/navbar/navbar.component';
 
 //tables
-import { DashboardTopProductsTableComponent } from './components/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component';
-import { DashboardViewsByFirmTableComponent } from './components/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component';
-import { ProductActionsTableComponent } from './components/product-actions-table/product-actions-table.component';
-import { FirmActionsTableComponent } from './components/firm-actions-table/firm-actions-table.component';
-import { FirmViewsTableComponent } from './components/firm-views-table/firm-views-table.component';
-import { FpComboTableComponent } from './components/fp-combo-table/fp-combo-table.component';
-import { SearchResultsTableComponent } from './components/search-results-table/search-results-table.component';
-import { ProductsTableComponent } from './components/products-table/products-table.component';
-import { FirmsTableComponent } from './components/firms-table/firms-table.component';
-import { ProductFirmsTableComponent } from './components/product-firms-table/product-firms-table.component';
+import { DashboardTopProductsTableComponent } from './components/tables/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component';
+import { DashboardViewsByFirmTableComponent } from './components/tables/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component';
+import { ProductActionsTableComponent } from './components/tables/product-actions-table/product-actions-table.component';
+import { FirmActionsTableComponent } from './components/tables/firm-actions-table/firm-actions-table.component';
+import { FirmViewsTableComponent } from './components/tables/firm-views-table/firm-views-table.component';
+import { FpComboTableComponent } from './components/tables/fp-combo-table/fp-combo-table.component';
+import { SearchResultsTableComponent } from './components/tables/search-results-table/search-results-table.component';
+import { ProductsTableComponent } from './components/tables/products-table/products-table.component';
+import { FirmsTableComponent } from './components/tables/firms-table/firms-table.component';
+import { ProductFirmsTableComponent } from './components/tables/product-firms-table/product-firms-table.component';
 
 //page layouts
-import { LandingComponent } from './pages/landing/landing.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FirmComponent } from './pages/firm/firm.component';
-import { FirmsComponent } from './pages/firms/firms.component';
-import { ProductComponent } from './pages/product/product.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { FpComboComponent } from './pages/fp-combo/fp-combo.component';
-import { SearchResultsComponent } from './pages/search-results/search-results.component';
+import { LandingComponent } from './components/pages/landing/landing.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { FirmComponent } from './components/pages/firm/firm.component';
+import { FirmsComponent } from './components/pages/firms/firms.component';
+import { ProductComponent } from './components/pages/product/product.component';
+import { ProductsComponent } from './components/pages/products/products.component';
+import { FpComboComponent } from './components/pages/fp-combo/fp-combo.component';
+import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
 
 //charts
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
-import { TypesOfViewsPieComponent } from './components/charts/types-of-views-pie/types-of-views-pie.component';
+import { ViewsByTypePieComponent } from './components/charts/views-by-type-pie/views-by-type-pie.component';
 import { ViewsByCountryPieComponent } from './components/charts/views-by-country-pie/views-by-country-pie.component';
-import { ProductViewsByActionPieComponent } from './components/charts/product-views-by-action-pie/product-views-by-action-pie.component';
+import { ProductViewsByTypePieComponent } from './components/charts/product-views-by-type-pie/product-views-by-type-pie.component';
 import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
 import { ProductViewsByFirmPieComponent } from './components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component';
 import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
@@ -88,9 +88,9 @@ import { TotalViewsBarComponent } from './components/charts/total-views-bar/tota
     ProductsTableComponent,
     FirmsTableComponent,
     
-    TypesOfViewsPieComponent, 
+    ViewsByTypePieComponent, 
     ViewsByCountryPieComponent, 
-    ProductViewsByActionPieComponent, 
+    ProductViewsByTypePieComponent, 
     ProductViewsByCountryPieComponent, 
     ProductViewsByFirmPieComponent, 
     TotalViewsBarComponent

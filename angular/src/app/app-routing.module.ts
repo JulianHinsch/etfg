@@ -1,14 +1,14 @@
 import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { LandingComponent } from './pages/landing/landing.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FirmComponent } from './pages/firm/firm.component';
-import { FirmsComponent } from './pages/firms/firms.component';
-import { ProductComponent } from './pages/product/product.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { FpComboComponent } from './pages/fp-combo/fp-combo.component';
-import { SearchResultsComponent } from './pages/search-results/search-results.component';
+import { LandingComponent } from './components/pages/landing/landing.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { FirmComponent } from './components/pages/firm/firm.component';
+import { FirmsComponent } from './components/pages/firms/firms.component';
+import { ProductComponent } from './components/pages/product/product.component';
+import { ProductsComponent } from './components/pages/products/products.component';
+import { FpComboComponent } from './components/pages/fp-combo/fp-combo.component';
+import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
 import { CallbackComponent } from './callback/callback.component';
 
 import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';

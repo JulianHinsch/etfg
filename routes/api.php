@@ -31,5 +31,7 @@ Route::get('/products/{ticker}/firms/{id}', array('uses' => 'ProductsController@
 Route::get('/search/{term}', array('uses' => 'SearchProductsFirmsController@getProductsFirmsSearchResults'));
 
 //charts
-Route::get('/viewtypes', array('uses' => 'ChartsController@getViewTypes'));
-Route::get('/viewcountries', array('uses' => 'ChartsController@getViewCountries'));
+Route::get('/viewsbytype', array('uses' => 'ChartsController@getViewsByType'));
+Route::get('/viewsbytype/{ticker}', array('uses' => 'ChartsController@getProductViewsByType'));
+Route::get('/viewsbycountry', array('uses' => 'ChartsController@getViewsByCountry'));
+Route::get('/viewsbyfirm/{ticker}', array('uses' => 'ChartsController@getProductViewsByFirm'));

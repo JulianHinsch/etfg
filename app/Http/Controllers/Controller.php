@@ -259,7 +259,7 @@ class SearchProductsFirmsController extends Controller {
 
 class ChartsController extends Controller {
     
-    public function getViewTypes() {
+    public function getViewsByType() {
         $results = DB::table('actions')
             ->select(DB::raw('type as label, count(*) as value'))
             ->groupBy('type')
@@ -268,7 +268,7 @@ class ChartsController extends Controller {
         return response()->json($results);
     }
 
-    public function getViewCountries() {
+    public function getViewsByCountry() {
         $results = DB::table('actions')
             ->select(DB::raw('countries.name as label, count(*) as value'))
             ->join('ip_addresses','actions.ip','=','ip_addresses.ip_address')
@@ -278,20 +278,37 @@ class ChartsController extends Controller {
             ->get();
         return response()->json($results);
     }
-    public function getTotalViews() {
 
+    public function getProductViewsByFirm($ticker) {
+        $results = DB::table('actions')
+            ->select(DB::raw('firms.name as label, count(*) as value'))
+            ->where('portfolio','like',"%$ticker%")
+            ->join('users', 'users.email', '=', 'actions.email')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->where('firms.name','!=','ETF Global')
+            ->where('firms.name','!=', 'Track One Capital')
+            ->groupBy('firms.name')
+            ->orderBy('value','desc')
+            ->limit(20)
+            ->get();
+        return response()->json($results);
     }
-    public function getProductViewsByFirm() {
 
+    public function getProductViewsByType($ticker) {
+        $results = DB::table('actions')
+            ->select(DB::raw('type as label, count(*) as value'))
+            ->groupBy('type')
+            ->where('type','!=','n/a')
+            ->where('portfolio','like',"%$ticker%")
+            ->orderBy('value','desc')            
+            ->get();
+        return response()->json($results);
     }
-    public function getProductViewsByAction() {
 
-    }
-    public function getProductViewsByCountry() {
-
-    }
+    //discuss if these are needed with ETFG
+    public function getProductViewsByCountry() {}
+    public function getTotalViews() {}
 }
-
 
     /*
     public function edit($user_id) {

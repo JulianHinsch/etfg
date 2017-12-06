@@ -13,7 +13,7 @@ export class ViewCountriesConnection {
     
     //call the api
     getData(): Observable<Slice[]> {
-      const requestUrl = `${environment.apiBaseUrl}/api/viewcountries`;
+      const requestUrl = `${environment.apiBaseUrl}/api/viewsbycountry`;
       return this.http.get<Slice[]>(requestUrl);
     }
 }
