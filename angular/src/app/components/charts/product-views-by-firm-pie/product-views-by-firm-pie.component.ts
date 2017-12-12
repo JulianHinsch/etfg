@@ -2,20 +2,11 @@ import { Component, Input, AfterViewInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import { environment } from '../../../../environments/environment';
+import { AuthService } from '../../../auth/auth.service';
 
 export interface Slice {
     label: string,
     value: number
-}
-
-export class ProductViewsByFirmConnection {
-    constructor(private http: HttpClient) {}
-    
-    //call the api
-    getData(ticker): Observable<Slice[]> {
-      const requestUrl = `${environment.apiBaseUrl}/api/viewsbyfirm/${ticker}`;
-      return this.http.get<Slice[]>(requestUrl);
-    }
 }
 
 @Component({
@@ -27,13 +18,11 @@ export class ProductViewsByFirmPieComponent implements AfterViewInit {
     @Input() ticker: string;
   
     pieChartData: object; 
-    connection: ProductViewsByFirmConnection | null;
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private auth: AuthService) {}
     
     ngAfterViewInit() {
-        this.connection = new ProductViewsByFirmConnection(this.http);        
-        this.connection.getData(this.ticker).subscribe(data => {
+        this.getData(this.ticker).subscribe(data => {
             let dataTable = [];
             dataTable.push(['Type','Views'])
             data.forEach(element => {
@@ -56,5 +45,10 @@ export class ProductViewsByFirmPieComponent implements AfterViewInit {
                 },
             };
         });
+    }
+
+    getData(ticker): Observable<Slice[]> {
+        const requestUrl = `${environment.apiBaseUrl}/api/viewsbyfirm/${ticker}?datafilter=${this.auth.getDataFilter()}`;
+        return this.http.get<Slice[]>(requestUrl);
     }
 }

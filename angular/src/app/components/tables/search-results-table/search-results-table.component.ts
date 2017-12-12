@@ -1,8 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { DataSource } from '@angular/cdk/collections';
-import { Observable, BehaviorSubject } from 'rxjs';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {Observable} from 'rxjs/Observable';
+import {merge} from 'rxjs/observable/merge';
+import {of as observableOf} from 'rxjs/observable/of';
+import {catchError} from 'rxjs/operators/catchError';
+import {map} from 'rxjs/operators/map';
+import {startWith} from 'rxjs/operators/startWith';
+import {switchMap} from 'rxjs/operators/switchMap';
+import { environment } from '../../../../environments/environment';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../../auth/auth.service';
 
-import { GetSearchResultsService } from '../../../services/search/get-search-results.service';
+export interface ResultsApi {
+    items: any[];
+    total: number;
+}
 
 @Component({
   selector: 'search-results-table',
@@ -10,44 +23,63 @@ import { GetSearchResultsService } from '../../../services/search/get-search-res
   styleUrls: ['./search-results-table.component.scss']
 })
 export class SearchResultsTableComponent implements OnInit {
-  @Input() term: string;
-  @Input() header: string;
-  private dataSource: SearchResultsSource;
+  
+    term: string;
+    header: string;
+    dataSource = new MatTableDataSource();
+    resultsLength = 0;
+    isLoadingResults = false;
+    displayedColumns = ['link','type'];
 
-  displayedColumns = ['num','link','type'];
+    constructor(private auth: AuthService, private http: HttpClient, public route: ActivatedRoute) {}
 
-  constructor(private service: GetSearchResultsService) {}
-
-  ngOnInit() {
-    this.dataSource = new SearchResultsSource(this.service, this.term);
-  }
-}
-
-export class SearchResultsSource extends DataSource<any> {
-        
-    constructor(private service: GetSearchResultsService, private term: string) {
-        super();
-    }
-    
-    connect(): Observable<any[]> {
-        return Observable.create(subscriber => {
-            this.service.getSearchResults(this.term).subscribe(response => {
-                let data = response.json();
-                let count = 1;
-                data.map(row => {
-                    row.rowNumber = (count+'.');
-                    if(row.ticker) {
-                        row.link = `${row.ticker} | ${row.name}`
-                    } else {
-                        row.link = `${row.name}`
-                    }
-                    count++;
-                    return row;
-                });
-                subscriber.next(data);
-            });
+    ngOnInit() {
+        this.route.params.subscribe(params => {
+            this.term = params.term;
+            this.loadData();
         });
     }
-    
-    disconnect() {}
+
+    loadData() {
+        merge()
+            .pipe(
+                startWith({}),
+                switchMap(() => {
+                    setTimeout(()=>this.isLoadingResults = true);
+                    return this.getResults(this.term);
+                }),
+                map(data => {
+                    // Flip flag to show that loading has finished.
+                    this.isLoadingResults = false;
+                    this.resultsLength = data.total;
+                    //set header
+                    if (this.resultsLength === 0) {
+                        this.header = `No results found for "${this.term}".`
+                    } else if (this.resultsLength === 1) {
+                        this.header = `1 result for "${this.term}".`;
+                    } else {
+                        this.header = `${this.resultsLength} results for "${this.term}".`;
+                    }
+                    //format data
+                    data.items.map(row => {
+                        if(row.ticker) {
+                            row.link = `${row.ticker} | ${row.name}`
+                        } else {
+                            row.link = `${row.name}`
+                        }
+                        return row;
+                    });
+                    return data.items;
+                }),
+                catchError(() => {
+                    this.isLoadingResults = false;
+                    return observableOf([]);
+                })
+            ).subscribe(data => this.dataSource.data = data);
+    }
+
+    getResults( term: string): Observable<ResultsApi> {
+        const requestUrl = `${environment.apiBaseUrl}/api/search/${term}?datafilter=${this.auth.getDataFilter()}`;
+        return this.http.get<ResultsApi>(requestUrl);
+    }
 }

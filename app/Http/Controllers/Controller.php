@@ -14,9 +14,6 @@ use App\Http\Controllers\Controller;
 use App\User; /* User model */
 use Illuminate\Database\Eloquent\ModelNotFoundException; 
 
-//TODO: test all controllers
-//TODO: prepare front end for different data format
-
 class Controller extends BaseController {
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -32,6 +29,17 @@ class Controller extends BaseController {
             "status_code" => $status
         ];
     }
+
+    protected function getFilter($dataFilter) {
+        switch($dataFilter) {
+            case 'student':
+                return 0;
+            case 'professional':
+                return 1;
+            default:
+                return 2;
+        }
+    }
 }
 
 class FirmsController extends Controller {
@@ -40,6 +48,8 @@ class FirmsController extends Controller {
             ->select(DB::raw('firms.id as id, firms.name as name, count(users.id) as users, firms.view_count as views'))
             ->where('firms.name','!=','Guest')
             ->where('firms.name','!=','Demo User')
+            //auth role
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
             ->groupBy('firms.id','firms.name','firms.view_count')
             ->join('users','users.firm_id', '=', 'firms.id')
             ->orderBy(Input::get('sort'),Input::get('order'))
@@ -49,6 +59,8 @@ class FirmsController extends Controller {
             ->select(DB::raw('firms.id as id, firms.name as name, count(users.id) as users, firms.view_count as views'))
             ->where('firms.name','!=','Guest')
             ->where('firms.name','!=','Demo User')
+            //auth role
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
             ->groupBy('firms.id','firms.name','firms.view_count')
             ->join('users','users.firm_id', '=', 'firms.id')
             ->get());
@@ -56,11 +68,12 @@ class FirmsController extends Controller {
         return response()->json($response);
     }
 
-    public function getInfoById($id) {
-        $firmInfo = DB::table('firms')->where('id',$id)->first();
+    public function getInfoById($firmId) {
+        $firmInfo = DB::table('firms')->where('id',$firmId)->first();
         return response()->json($firmInfo);
     }
 
+    //needs no update for datafilter
     public function getViewsById($firmId) {
         $viewedProducts = DB::table('products')
             ->select(DB::raw('DISTINCT products.ticker as ticker, products.name as name, issuers.issuer_name as issuer, count(views.id) as views'))
@@ -84,6 +97,7 @@ class FirmsController extends Controller {
         return response()->json($response);
     }
 
+    //needs no update for datafilter
     public function getActionsById($firmId) {
         $actions = DB::table('actions')
             ->select('date','type','portfolio','users.address as address','users.city as city','users.state as state','users.zip as zip','countries.name as country')
@@ -111,14 +125,23 @@ class FirmsController extends Controller {
 class ProductsController extends Controller {
     public function getAll() {
         $products = DB::table('products')
-            ->select(DB::raw('DISTINCT products.ticker as ticker, products.name as name, issuers.issuer_name as issuer, products.view_count as views'))
+            ->select(DB::raw('DISTINCT products.ticker as ticker, products.name as name, issuers.issuer_name as issuer, count(views.id) as views'))
             ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
+            ->join('views','products.id', '=', 'views.product_id')
+            ->join('users','users.id','=','views.user_id')
+            ->join('firms','users.firm_id','=','firms.id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
+            ->groupBy('products.id')
             ->orderBy(Input::get('sort'),Input::get('order'))
             ->simplePaginate(20)
             ->all();
         $total = count(DB::table('products')
-            ->select(DB::raw('DISTINCT products.ticker as ticker, products.name as name, issuers.issuer_name as issuer, products.view_count as views'))
-            ->join('issuers', 'issuers.issuer_id', '=', 'products.issuer_id')
+            ->select(DB::raw('DISTINCT products.ticker as ticker, count(views.id) as views'))
+            ->join('views','products.id', '=', 'views.product_id')
+            ->join('users','users.id','=','views.user_id')
+            ->join('firms','users.firm_id','=','firms.id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
+            ->groupBy('products.id')
             ->get());
         $response = array('total'=>$total,'items'=>$products);
         return response()->json($response);
@@ -144,6 +167,7 @@ class ProductsController extends Controller {
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
             ->join('countries','countries.id', '=', 'users.country_id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))            
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
             ->orderBy(Input::get('sort'),Input::get('order'))
@@ -155,6 +179,7 @@ class ProductsController extends Controller {
             ->join('users', 'users.email', '=', 'actions.email')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
             ->join('countries','countries.id', '=', 'users.country_id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))            
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
             ->get());
@@ -168,10 +193,11 @@ class ProductsController extends Controller {
             ->join('views', 'views.product_id', '=', 'products.id')
             ->join('users', 'users.id', '=', 'views.user_id')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
-            ->groupBy('firms.id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))   
             ->where('firms.name','!=','ETF Global')
-            ->where('firms.name','!=', 'Track One Capital')
+            ->where('firms.name','!=', 'Track One Capital')   
             ->where('products.ticker',$ticker)
+            ->groupBy('firms.id')            
             ->orderBy(Input::get('sort'),Input::get('order'))
             ->simplePaginate(20)
             ->all();
@@ -181,6 +207,7 @@ class ProductsController extends Controller {
             ->join('users', 'users.id', '=', 'views.user_id')
             ->join('firms', 'users.firm_id', '=', 'firms.id')
             ->groupBy('firms.id')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))            
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
             ->where('products.ticker',$ticker)
@@ -211,9 +238,10 @@ class ProductsController extends Controller {
     }
 }
 
+//no pagination 
 class SearchProductsFirmsController extends Controller {
-    //could be updated for pagination
     public function getProductsFirmsSearchResults($terms) {
+        
         $terms = preg_replace('/[^a-z\d ]/i', '', $terms);
         $terms = trim($terms);
         $termArray = preg_split('/\s+/', $terms);
@@ -234,12 +262,14 @@ class SearchProductsFirmsController extends Controller {
                 ->toArray();
             $productResults = array_merge($productResults, $productResultsForTerms);
         }
+
         foreach($termArray as &$value) {
             $firmResultsForTerms = DB::table('firms')
                 ->select(DB::raw("firms.name,firms.id, MATCH (firms.name) AGAINST ("
-                    . DB::getPdo()->quote($value) 
+                    . DB::getPdo()->quote($value)
                     . " IN BOOLEAN MODE) as relevance"))
                 ->where('firms.name','LIKE',"%$value%")
+                ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
                 ->orderBy('relevance','DESC')
                 ->limit(20)
                 ->get()
@@ -252,33 +282,54 @@ class SearchProductsFirmsController extends Controller {
         usort($results, function($a, $b) {
             return ($b->relevance) - ($a->relevance);
         });
-        
-        return response()->json($results);
+
+        $total = count($results);
+
+        $response = array('total'=>$total,'items'=>$results);
+
+        return response()->json($response);
     }
 }
 
+//all updated for user type
 class ChartsController extends Controller {
     
+    //needs testing
     public function getViewsByType() {
         $results = DB::table('actions')
-            ->select(DB::raw('type as label, count(*) as value'))
-            ->groupBy('type')
-            ->where('type','!=','n/a')
+            ->select(DB::raw('actions.type as label, count(*) as value'))
+            ->join('users', 'users.email', '=', 'actions.email')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->where('actions.type','!=','n/a')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
+            ->groupBy('actions.type')
             ->get();
         return response()->json($results);
     }
 
+    //needs testing
     public function getViewsByCountry() {
         $results = DB::table('actions')
             ->select(DB::raw('countries.name as label, count(*) as value'))
             ->join('ip_addresses','actions.ip','=','ip_addresses.ip_address')
             ->join('ip_countries','ip_addresses.country_id','=','ip_countries.id')
             ->join('countries','countries.code','=','ip_countries.code')
+
+            //KNOWN BUG
+            //this one line crashes php for some reason
+            //->join('users',DB::raw('users.email'),'=',DB::raw('actions.email'))
+
+            //these seem to be fine
+            // ->join('firms', 'users.firm_id', '=', 'firms.id')
+            // ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
             ->groupBy('countries.name')
             ->get();
         return response()->json($results);
+        // $test = [];
+        // return response()->json($test);
     }
 
+    //needs testing
     public function getProductViewsByFirm($ticker) {
         $results = DB::table('actions')
             ->select(DB::raw('firms.name as label, count(*) as value'))
@@ -287,6 +338,7 @@ class ChartsController extends Controller {
             ->join('firms', 'users.firm_id', '=', 'firms.id')
             ->where('firms.name','!=','ETF Global')
             ->where('firms.name','!=', 'Track One Capital')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
             ->groupBy('firms.name')
             ->orderBy('value','desc')
             ->limit(20)
@@ -294,13 +346,17 @@ class ChartsController extends Controller {
         return response()->json($results);
     }
 
+    //needs testing
     public function getProductViewsByType($ticker) {
         $results = DB::table('actions')
-            ->select(DB::raw('type as label, count(*) as value'))
-            ->groupBy('type')
-            ->where('type','!=','n/a')
+            ->select(DB::raw('actions.type as label, count(*) as value'))
+            ->join('users', 'users.email', '=', 'actions.email')
+            ->join('firms', 'users.firm_id', '=', 'firms.id')
+            ->where('actions.type','!=','n/a')
+            ->where('firms.type','!=',parent::getFilter(Input::get('datafilter')))
             ->where('portfolio','like',"%$ticker%")
-            ->orderBy('value','desc')            
+            ->groupBy('actions.type')
+            ->orderBy('value','desc')
             ->get();
         return response()->json($results);
     }
@@ -344,3 +400,21 @@ class ChartsController extends Controller {
         }       
     }
     */ 
+
+    
+
+// Verify API Tokens 
+
+/*
+use Auth0\SDK\JWTVerifier;
+use Auth0\SDK\Helpers\Cache\FileSystemCacheHandler;
+
+$verifier = new JWTVerifier([
+    'valid_audiences' => ['https://etfg-api/'],
+    'authorized_iss' => ['https://etfg.auth0.com'],
+    'cache' => new FileSystemCacheHandler() // This parameter is optional. By default no cache is used to fetch the Json Web Keys.
+]);
+
+$decoded = $verifier->verifyAndDecode($token);
+
+*/

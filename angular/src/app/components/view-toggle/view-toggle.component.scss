@@ -1,0 +1,16 @@
+.radio-container {
+    height: 2em;
+    text-align: center;
+    & .mat-label-radio-content {
+        font-size: 12px !important;
+    }
+    & .radio-button {
+        width: 40%;
+        line-height: 2em;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+}

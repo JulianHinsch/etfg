@@ -5,11 +5,16 @@
     </div>
     <!-- Loading Shade -->
     <div class="loading-shade" *ngIf="isLoadingResults"></div>
-    <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDisableClear matSortDirection="desc">            
+    <mat-table #table [dataSource]="dataSource" matSort matSortActive="date" matSortDisableClear matSortDirection="desc">
         <!-- Date Column -->
         <ng-container matColumnDef="date">
             <mat-header-cell *matHeaderCellDef mat-sort-header> Date/Time </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
+        </ng-container>
+        <!-- Firm Column -->
+        <ng-container matColumnDef="firm">
+            <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>
+            <mat-cell *matCellDef="let row"><a href='/firms/{{row.firmId}}'>{{ row.firm }}</a></mat-cell>
         </ng-container>
         <!-- Location Column -->
         <ng-container matColumnDef="location">

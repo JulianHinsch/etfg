@@ -2,20 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import { environment } from '../../../../environments/environment';
+import { AuthService } from '../../../auth/auth.service';
 
 export interface Slice {
     label: string,
     value: number
-}
-
-export class ViewCountriesConnection {
-    constructor(private http: HttpClient) {}
-    
-    //call the api
-    getData(): Observable<Slice[]> {
-      const requestUrl = `${environment.apiBaseUrl}/api/viewsbycountry`;
-      return this.http.get<Slice[]>(requestUrl);
-    }
 }
 
 @Component({
@@ -26,13 +17,16 @@ export class ViewCountriesConnection {
 export class ViewsByCountryPieComponent implements AfterViewInit {
 
     pieChartData: object; 
-    connection: ViewCountriesConnection | null;
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private auth: AuthService) {}
+
+    getData(): Observable<Slice[]> {
+        const requestUrl = `${environment.apiBaseUrl}/api/viewsbycountry?datafilter=${this.auth.getDataFilter()}`;
+        return this.http.get<Slice[]>(requestUrl);
+      }
     
     ngAfterViewInit() {
-        this.connection = new ViewCountriesConnection(this.http);        
-        this.connection.getData().subscribe(data => {
+        this.getData().subscribe(data => {
             let dataTable = [];
             dataTable.push(['Country','Views'])
             data.forEach(element => {
@@ -51,7 +45,7 @@ export class ViewsByCountryPieComponent implements AfterViewInit {
                         height:'90%'
                     },
                     legend: {alignment: 'center'},
-                    sliceVisibilityThreshold: 0.02
+                    sliceVisibilityThreshold: 0.01
                 },
             };
         });

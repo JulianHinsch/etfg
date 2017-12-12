@@ -16,21 +16,22 @@
 }
 
 .info {
-  padding-top: 10px;
-  & div {
-    height: 120px;
-    font-family: inherit;
-    padding-left: 24px;
-    box-sizing: border-box;
-    & h6 {
-      height: 30px;
-      margin: 0px;
-      & span {
-        font-weight: normal;
-        color: #777;
-      }
+    margin-top: 3.25em;
+    padding-top: 10px;
+    & div {
+        height: 120px;
+        font-family: inherit;
+        padding-left: 24px;
+        box-sizing: border-box;
+        & h6 {
+            height: 30px;
+            margin: 0px;
+            & span {
+                font-weight: normal;
+                color: #777;
+            }
+        }
     }
-  }
 }
 
 @media(min-width: 768px) {

@@ -1,50 +1,30 @@
-.row.bg-primary {
-    margin-bottom: 3.125em;
-  
-  }
-  .text-center.title {
+.row.view-toggle-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.text-center.title {
     color:#fff;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     width: 100%;
-  }
-  // Table
-  // Structure
-  .header {
+}
+// Table
+// Structure
+.header {
     min-height: 64px;
     display: flex;
     align-items: baseline;
     padding: 8px 24px 0;
     font-size: 20px;
     justify-content: space-between;
-  }
-  .mat-form-field {
+}
+.mat-form-field {
     font-size: 14px;
     flex-grow: 1;
     margin-left: 32px;
-  }
-  
-  //
-  .col-md-6,.col-md-4 {
-    margin-bottom: 3em;
-  }
-  
-  // Tables
-  table.table {
-    border-radius: .5em !important;
-  }
-  // Graphs
-  .graph {
-    margin-bottom: 3.5em;
-  }
-  .col-md-10.graph.card {
-    padding: 0;
-  }
-  // Anchor tags
-  a {
-    color: #337ab7;
-  }
-  a:link:hover {
-    color: #365ab5;
-  }
-  
+}
+
+.col-md-6,.col-md-4 {
+    margin-bottom: 2em;
+}
+ 

@@ -1,14 +1,27 @@
-import {Component, AfterViewInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {Observable} from 'rxjs/Observable';
-import {merge} from 'rxjs/observable/merge';
-import {of as observableOf} from 'rxjs/observable/of';
-import {catchError} from 'rxjs/operators/catchError';
-import {map} from 'rxjs/operators/map';
-import {startWith} from 'rxjs/operators/startWith';
-import {switchMap} from 'rxjs/operators/switchMap';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { merge } from 'rxjs/observable/merge';
+import { of as observableOf } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { map } from 'rxjs/operators/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { switchMap } from 'rxjs/operators/switchMap';
 import { environment } from '../../../../../environments/environment';
+import { AuthService } from '../../../../auth/auth.service';
+
+export interface ProductsApi {
+    items: Product[];
+    total: number;
+}
+  
+export interface Product {
+    ticker: string;
+    name: string;
+    issuer: string;
+    views: number;
+}
 
 @Component({
   selector: 'dashboard-top-products-table',
@@ -16,64 +29,45 @@ import { environment } from '../../../../../environments/environment';
   styleUrls: ['./dashboard-top-products-table.component.scss']
 })
 export class DashboardTopProductsTableComponent {
-  displayedColumns = ['ticker', 'name', 'views'];
-  connection: ProductsConnection | null;
-  dataSource = new MatTableDataSource();
+    displayedColumns = ['ticker', 'name', 'views'];
+    dataSource = new MatTableDataSource();
 
-  resultsLength = 0;
-  isLoadingResults = false;
+    resultsLength = 0;
+    isLoadingResults = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private auth: AuthService) {}
 
-  ngAfterViewInit() {
-    this.connection = new ProductsConnection(this.http);
+    getProducts( page: number, sort: string, order: string): Observable<ProductsApi> {
+        const requestUrl = `${environment.apiBaseUrl}/api/products?datafilter=${this.auth.getDataFilter()}&page=${page+1}&sort=${sort}&order=${order}`;
+        return this.http.get<ProductsApi>(requestUrl);
+    }
 
-    // If the user changes the sort order, reset back to the first page.
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+    ngAfterViewInit() {
 
-    merge(this.sort.sortChange, this.paginator.page)
-      .pipe(
-        startWith({}),
-        switchMap(() => {
-            setTimeout(()=>this.isLoadingResults = true);
-            return this.connection!.getProducts(this.paginator.pageIndex, this.sort.active, this.sort.direction);
-        }),
-        map(data => {
-          // Flip flag to show that loading has finished.
-          this.isLoadingResults = false;
-          this.resultsLength = data.total;
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-          return data.items;
-        }),
-        catchError(() => {
-          this.isLoadingResults = false;
-          return observableOf([]);
-        })
-      ).subscribe(data => this.dataSource.data = data);
-  }
-}
+        merge(this.sort.sortChange, this.paginator.page)
+        .pipe(
+            startWith({}),
+            switchMap(() => {
+                setTimeout(()=>this.isLoadingResults = true);
+                return this.getProducts(this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            }),
+            map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.resultsLength = data.total;
 
-export interface ProductsApi {
-  items: Product[];
-  total: number;
-}
-
-export interface Product {
-  ticker: string;
-  name: string;
-  issuer: string;
-  views: number;
-}
-
-export class ProductsConnection {
-  constructor(private http: HttpClient) {}
-
-  //call the api with a page number, sort field, and sort order(asc/desc)
-  getProducts( page: number, sort: string, order: string): Observable<ProductsApi> {
-    const requestUrl = `${environment.apiBaseUrl}/api/products?page=${page+1}&sort=${sort}&order=${order}`;
-    return this.http.get<ProductsApi>(requestUrl);
-  }
+            return data.items;
+            }),
+            catchError(() => {
+            this.isLoadingResults = false;
+            return observableOf([]);
+            })
+        ).subscribe(data => this.dataSource.data = data);
+    }
 }

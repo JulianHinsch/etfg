@@ -3,6 +3,7 @@ import { ActivatedRoute} from '@angular/router';
 import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 
 import { GetProductInfoByTickerService } from '../../../services/products/get-product-info-by-ticker.service';
+import { AuthService } from '../../../auth/auth.service';
 
 @Component({
   selector: 'product',
@@ -11,23 +12,24 @@ import { GetProductInfoByTickerService } from '../../../services/products/get-pr
 })
 export class ProductComponent {
 
-  private subscription: Subscription;
-  private pageTitle: string;
-  private ticker: string;
-  private data: object;
+    private dataFilter: string = this.auth.getDataFilter();
+    private subscription: Subscription;
+    private pageTitle: string;
+    private ticker: string;
+    private data: object;
 
-  constructor(private route: ActivatedRoute, private service: GetProductInfoByTickerService) {
-    document.title = 'ETFG';
-    this.route.params.subscribe(params => this.ticker = params.ticker);
-    this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(response => {
-      const data = response.json();
-      this.data = data;
-      this.pageTitle = `${data.ticker} - ${data.name}`;
-      document.title = `ETFG | ${data.ticker}`;
-    });
-  }
+    constructor(private route: ActivatedRoute, private service: GetProductInfoByTickerService, private auth: AuthService) {
+        document.title = 'ETFG';
+        this.route.params.subscribe(params => this.ticker = params.ticker);
+        this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(response => {
+        const data = response.json();
+        this.data = data;
+        this.pageTitle = `${data.ticker} - ${data.name}`;
+        document.title = `ETFG | ${data.ticker}`;
+        });
+    }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
 }

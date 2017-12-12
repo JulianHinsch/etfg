@@ -3,39 +3,42 @@
     <div class="row justify-content-around tables-container">
         <div class="col-md-12">
             <div class="mat-elevation-z4 info" *ngIf="data">
-            <div>
-                <h6>Issuer: <span>{{data.issuer}}</span></h6>
-                <h6>Asset Class: <span>{{data.asset_class}}</span></h6>
-                <h6>Development Class: <span>{{data.development_class}}</span></h6>
-                <h6>Category: <span>{{data.category}}</span></h6>
-            </div> 
-            <div>
-                <h6>Region: <span>{{data.region}}</span></h6>              
-                <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>
-                <h6>Total Views: <span>{{data.view_count}}</span></h6>
-                <h6>Last Updated: <span>{{data.updated_at}}</span></h6>
+                <div>
+                    <h6>Issuer: <span>{{data.issuer}}</span></h6>
+                    <h6>Asset Class: <span>{{data.asset_class}}</span></h6>
+                    <h6>Development Class: <span>{{data.development_class}}</span></h6>
+                    <h6>Category: <span>{{data.category}}</span></h6>
+                </div> 
+                <div>
+                    <h6>Region: <span>{{data.region}}</span></h6>       
+                    <h6>Sub-Region: <span>{{data.sub_region}}</span></h6>
+                    <h6>Total Views: <span>{{data.view_count}}</span></h6>
+                    <h6>Last Updated: <span>{{data.updated_at}}</span></h6>
+                </div>
             </div>
+        </div>
+        <div class='col-md-12'>
+            <view-toggle [(dataFilter)]="dataFilter"></view-toggle>
+        </div>
+        <div class="col-md-6">
+            <div class="mat-elevation-z4">
+                <product-views-by-type-pie *ngIf="dataFilter === 'student'" [ticker]="ticker"></product-views-by-type-pie>
+                <product-views-by-type-pie *ngIf="dataFilter === 'professional'" [ticker]="ticker"></product-views-by-type-pie>
             </div>
         </div>
         <div class="col-md-6">
             <div class="mat-elevation-z4">
-                <product-views-by-type-pie [ticker]="ticker"></product-views-by-type-pie>
-            </div>       
-        </div>
-        <div class="col-md-6">
-            <div class="mat-elevation-z4">
-                <product-views-by-firm-pie [ticker]="ticker"></product-views-by-firm-pie>
+                <product-views-by-firm-pie *ngIf="dataFilter === 'student'" [ticker]="ticker"></product-views-by-firm-pie>
+                <product-views-by-firm-pie *ngIf="dataFilter === 'professional'" [ticker]="ticker"></product-views-by-firm-pie>
             </div>              
         </div>
         <div class="col-md-12">
-            <div class="mat-elevation-z4">
-                <product-firms-table [ticker]="ticker"></product-firms-table>
-            </div>
+            <product-firms-table *ngIf="dataFilter === 'student'" [ticker]="ticker"></product-firms-table>
+            <product-firms-table *ngIf="dataFilter === 'professional'" [ticker]="ticker"></product-firms-table>
         </div>
         <div class="col-md-12">
-            <div class="mat-elevation-z4">
-                <product-actions-table [ticker]="ticker"></product-actions-table>
-            </div>
+            <product-actions-table *ngIf="dataFilter === 'student'" [ticker]="ticker"></product-actions-table>
+            <product-actions-table *ngIf="dataFilter === 'professional'" [ticker]="ticker"></product-actions-table>
         </div>
     </div>
 </div>

@@ -1,21 +1,12 @@
-import { Component, AfterViewInit } from "@angular/core";
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { Input, Component, OnInit, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Observable, Subscription } from 'rxjs';
 import { environment } from '../../../../environments/environment';
+import { AuthService } from '../../../auth/auth.service';
 
 export interface Slice {
     label: string,
     value: number
-}
-
-export class ViewsByTypeConnection {
-    constructor(private http: HttpClient) {}
-    
-    //call the api
-    getData(): Observable<Slice[]> {
-      const requestUrl = `${environment.apiBaseUrl}/api/viewsbytype`;
-      return this.http.get<Slice[]>(requestUrl);
-    }
 }
 
 @Component({
@@ -24,16 +15,17 @@ export class ViewsByTypeConnection {
   styleUrls: ['./views-by-type-pie.component.scss']
 })
 export class ViewsByTypePieComponent implements AfterViewInit {
-    
-    pieChartData: object; 
-    connection: ViewsByTypeConnection | null;
 
-    constructor(private http: HttpClient) {}
-    
+    pieChartData: object;
+
+    constructor(private ref: ChangeDetectorRef, private http: HttpClient, private auth: AuthService) {}
+
     ngAfterViewInit() {
-        this.connection = new ViewsByTypeConnection(this.http);        
-        this.connection.getData().subscribe(data => {
-            console.log(data);
+        this.loadChartData();
+    }
+
+    loadChartData() {
+        this.getData().subscribe(data => {
             let dataTable = [];
             dataTable.push(['Type','Count'])
             data.forEach(element => {
@@ -55,6 +47,11 @@ export class ViewsByTypePieComponent implements AfterViewInit {
                 },
             };
         });
+    }
+
+    getData(): Observable<Slice[]> {
+        const requestUrl = `${environment.apiBaseUrl}/api/viewsbytype?datafilter=${this.auth.getDataFilter()}`;
+        return this.http.get<Slice[]>(requestUrl);
     }
 }
 

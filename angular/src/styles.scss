@@ -65,3 +65,18 @@ mat-header-cell.mat-header-cell.cdk-column-views.mat-column-views {flex: 0 0 50p
 .mat-table {
   overflow: auto;
 }
+
+//center
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: rgb(66, 134, 244);
+}
+
+//border
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: rgb(66, 134, 244);
+}
+
+//circle
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color:rgba(66, 134, 244,.26);
+}

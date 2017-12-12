@@ -9,6 +9,7 @@ import {map} from 'rxjs/operators/map';
 import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
 import { environment } from '../../../../../environments/environment';
+import { AuthService } from '../../../../auth/auth.service';
 
 @Component({
   selector: 'dashboard-views-by-firm-table',
@@ -17,44 +18,47 @@ import { environment } from '../../../../../environments/environment';
 })
 export class DashboardViewsByFirmTableComponent implements AfterViewInit {
 
-  displayedColumns = ['name','views'];
-  connection: FirmsConnection | null;
-  dataSource = new MatTableDataSource();
+    displayedColumns = ['name','views'];
+    dataSource = new MatTableDataSource();
 
-  resultsLength = 0;
-  isLoadingResults = false;
+    resultsLength = 0;
+    isLoadingResults = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private auth: AuthService) {}
 
-  ngAfterViewInit() {
-    this.connection = new FirmsConnection(this.http);
+    ngAfterViewInit() {
 
-    // If the user changes the sort order, reset back to the first page.
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
 
-    merge(this.sort.sortChange, this.paginator.page)
-      .pipe(
-        startWith({}),
-        switchMap(() => {
-            setTimeout(()=>this.isLoadingResults = true);
-            return this.connection!.getFirms(this.paginator.pageIndex, this.sort.active, this.sort.direction);
-        }),
-        map(data => {
-          // Flip flag to show that loading has finished.
-          this.isLoadingResults = false;
-          this.resultsLength = data.total;
+        merge(this.sort.sortChange, this.paginator.page)
+        .pipe(
+            startWith({}),
+            switchMap(() => {
+                setTimeout(()=>this.isLoadingResults = true);
+                return this.getFirms(this.paginator.pageIndex, this.sort.active, this.sort.direction);
+            }),
+            map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.resultsLength = data.total;
 
-          return data.items;
-        }),
-        catchError(() => {
-          this.isLoadingResults = false;
-          return observableOf([]);
-        })
-      ).subscribe(data => this.dataSource.data = data);
-  }
+            return data.items;
+            }),
+            catchError(() => {
+            this.isLoadingResults = false;
+            return observableOf([]);
+            })
+        ).subscribe(data => this.dataSource.data = data);
+    }
+
+    getFirms( page: number, sort: string, order: string): Observable<FirmsApi> {
+        const requestUrl = `${environment.apiBaseUrl}/api/firms/?datafilter=${this.auth.getDataFilter()}&page=${page+1}&sort=${sort}&order=${order}`;
+        return this.http.get<FirmsApi>(requestUrl);
+    }
 }
 
 export interface FirmsApi {
@@ -66,14 +70,4 @@ export interface Firm {
   name: string;
   users: string;
   views: number;
-}
-
-export class FirmsConnection {
-  constructor(private http: HttpClient) {}
-
-  //call the api with a page number, sort field, and sort order(asc/desc)
-  getFirms( page: number, sort: string, order: string): Observable<FirmsApi> {
-    const requestUrl = `${environment.apiBaseUrl}/api/firms?page=${page+1}&sort=${sort}&order=${order}`;
-    return this.http.get<FirmsApi>(requestUrl);
-  }
 }

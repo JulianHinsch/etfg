@@ -1,33 +1,32 @@
 <div class="container-fluid">
     <page-title title="Dashboard"></page-title>
-    <div class="row justify-content-around">
-        <div class="col-md-6">
-            <div class="mat-elevation-z4">
-                <views-by-type-pie></views-by-type-pie>
-            </div>
+    <div class="row justify-content-around view-toggle-container">
+        <div class="col-md-12">
+            <view-toggle [(dataFilter)]="dataFilter"></view-toggle>
         </div>
-        <div class="col-md-6">
-            <div class="mat-elevation-z4">
-                <views-by-country-pie></views-by-country-pie>
-            </div>
-        </div>
-        <!--
-        <div class="col-md-4">
-            <div class="mat-elevation-z4">
-                <total-views-bar></total-views-bar>
-            </div>
-        </div>-->
     </div>
     <div class="row justify-content-around">
         <div class="col-md-6">
             <div class="mat-elevation-z4">
-                <dashboard-top-products-table></dashboard-top-products-table>
+                <views-by-type-pie *ngIf="dataFilter==='student'"></views-by-type-pie>
+                <views-by-type-pie *ngIf="dataFilter==='professional'"></views-by-type-pie>
             </div>
         </div>
         <div class="col-md-6">
             <div class="mat-elevation-z4">
-                <dashboard-views-by-firm-table></dashboard-views-by-firm-table>
+                <views-by-country-pie *ngIf="dataFilter==='student'"></views-by-country-pie>
+                <views-by-country-pie *ngIf="dataFilter==='professional'" ></views-by-country-pie>
             </div>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-md-6">
+            <dashboard-top-products-table *ngIf="dataFilter==='student'"></dashboard-top-products-table>
+            <dashboard-top-products-table *ngIf="dataFilter==='professional'"></dashboard-top-products-table>
+        </div>
+        <div class="col-md-6">
+            <dashboard-views-by-firm-table  *ngIf="dataFilter==='student'"></dashboard-views-by-firm-table>
+            <dashboard-views-by-firm-table  *ngIf="dataFilter==='professional'"></dashboard-views-by-firm-table>
         </div>
     </div>
 </div>

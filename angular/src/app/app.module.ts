@@ -57,6 +57,8 @@ import { ProductViewsByTypePieComponent } from './components/charts/product-view
 import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
 import { ProductViewsByFirmPieComponent } from './components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component';
 import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ViewToggleComponent } from './components/view-toggle/view-toggle.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,7 @@ import { TotalViewsBarComponent } from './components/charts/total-views-bar/tota
     ProductViewsByTypePieComponent, 
     ProductViewsByCountryPieComponent, 
     ProductViewsByFirmPieComponent, 
-    TotalViewsBarComponent
+    TotalViewsBarComponent, FooterComponent, ViewToggleComponent
   ],
   imports: [
     Ng2GoogleChartsModule,
