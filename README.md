@@ -36,12 +36,6 @@ Then, add the angular dist folder's contents to the the php public folder.
 
 ##To-Do
 - Add API endpoint authentication with Access Tokens
-- Add Auth Roles - Student, Professional, SuperUser, Admin
-- Add Pie Charts
-- Fix Pagination/Sort on tables
-- Fix 'isLoading' system on tables so that the spinner shows until the data is ready.
+- Fix loading system on tables so that the spinner shows until the data is ready.
 - Configure HTTPS and a real domain name
-- Protect search against SQL injections (raw query is a bit vulnerable to experienced hacker/bot)
-- Discuss payment system
 
-- Improve ordering of search results
