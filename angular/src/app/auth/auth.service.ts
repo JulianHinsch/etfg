@@ -49,10 +49,11 @@ export class AuthService {
     public handleAuthentication(): void {
         this.lock.on('authenticated', (authResult) => {
             if (authResult && authResult.accessToken && authResult.idToken) {
-                //console.log(authResult);
+                console.log(authResult);
                 //get the role and assign permissions
+                /*
                 try {
-                    let role = authResult.idTokenPayload["https://etfg.auth0.com/app_metadata"].role;
+                    let role = authResult.idTokenPayload[`https://${AUTH_CONFIG.domain}/app_metadata`].role;
                     if (role === 'superuser') {
                         this.enableSuperUser();
                         this.setDataFilter('professional');
@@ -67,14 +68,25 @@ export class AuthService {
                         this.setSession(authResult);
                         this.router.navigate(['/dashboard']);
                     } else {
+                        this.enableSuperUser();
+                        this.setDataFilter('professional');
+                        this.setSession(authResult);
+                        //navigate to dash
+                        this.router.navigate(['/dashboard']);                        
                         // if no role is found, do not proceed with authentication
                         this.router.navigate(['/']);
                     }
                 } catch (err) {
                     console.log(err);
                     this.router.navigate(['/']);
-                }
-                
+                }*/
+
+                //for demo (no roles)
+                this.enableSuperUser();
+                this.setDataFilter('professional');
+                this.setSession(authResult);
+                //navigate to dash
+                this.router.navigate(['/dashboard']);
             }
         });
         this.lock.on('authorization_error', (err) => {
@@ -84,7 +96,8 @@ export class AuthService {
 
     private setSession(authResult): void {
         // Set the time that the access token will expire at
-        const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
+        const expiresAt = JSON.stringify((authResult.expiresIn * 2000) + new Date().getTime());
+        //const expiresAt = JSON.stringify(10) + new Date().getTime();
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);

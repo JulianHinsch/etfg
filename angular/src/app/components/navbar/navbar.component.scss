@@ -24,7 +24,7 @@ form {
   }
 }
 a.navbar-brand {
-  margin-left: 2em;
+  margin-left: none;
 }
 a.navbar-brand > img {
   height: 1.5em;
@@ -66,7 +66,6 @@ nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
     float: right;
     position: absolute;
     top: 1em;
-    right: 2em;
     color: white;
   }
   form.form-inline.my-2.my-lg-0.float-right.ng-untouched.ng-pristine.ng-valid {

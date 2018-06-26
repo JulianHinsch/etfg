@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,13 +11,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import 'hammerjs';
 
 //services
-import { GetSearchResultsService } from './services/search/get-search-results.service';
 import { GetFirmInfoByIdService } from './services/firms/get-firm-info-by-id.service';
 import { GetProductInfoByTickerService } from './services/products/get-product-info-by-ticker.service';
 
 //auth services
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { CallbackComponent } from './callback/callback.component';
 
 //components
@@ -54,9 +54,7 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { ViewsByTypePieComponent } from './components/charts/views-by-type-pie/views-by-type-pie.component';
 import { ViewsByCountryPieComponent } from './components/charts/views-by-country-pie/views-by-country-pie.component';
 import { ProductViewsByTypePieComponent } from './components/charts/product-views-by-type-pie/product-views-by-type-pie.component';
-import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
 import { ProductViewsByFirmPieComponent } from './components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component';
-import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ViewToggleComponent } from './components/view-toggle/view-toggle.component';
 
@@ -89,13 +87,12 @@ import { ViewToggleComponent } from './components/view-toggle/view-toggle.compon
     SearchResultsTableComponent,
     ProductsTableComponent,
     FirmsTableComponent,
-    
     ViewsByTypePieComponent, 
     ViewsByCountryPieComponent, 
     ProductViewsByTypePieComponent, 
-    ProductViewsByCountryPieComponent, 
     ProductViewsByFirmPieComponent, 
-    TotalViewsBarComponent, FooterComponent, ViewToggleComponent
+    FooterComponent,
+    ViewToggleComponent
   ],
   imports: [
     Ng2GoogleChartsModule,
@@ -109,11 +106,11 @@ import { ViewToggleComponent } from './components/view-toggle/view-toggle.compon
     MaterialModule
   ],
   providers: [
-    GetSearchResultsService,
     GetProductInfoByTickerService,
     GetFirmInfoByIdService,
     AuthService,
     AuthGuardService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -34,7 +34,7 @@
             <span *ngFor="let item of row.portfolio">
                 <span *ngIf='isNA(item)'>N/A</span>
                 <span *ngIf='!isNA(item)'>
-                    <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
+                    <a [routerLink]="['/products/', item.ticker]">{{ item.ticker }}</a>: {{ item.percentage }}<br>
                 </span>
             </span>
             </mat-cell>

@@ -5,16 +5,16 @@
     </button>
     <!-- Logo link to home -->
     <div *ngIf="!auth.isAuthenticated()">
-        <a class="navbar-brand" href="/">
-            <img src="../../../assets/logos/logo.png" alt="ETF Global logo">                  
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img src="../../../assets/logos/logo.png" alt="ETF Global Logo">                  
             <br>
             <span class="logoText">Business Intelligence</span>
         </a>
     </div>
     <!-- Logo link to dashboard -->
     <div *ngIf="auth.isAuthenticated()">
-        <a class="navbar-brand" href="/dashboard">
-            <img src="../../../assets/logos/logo.png" alt="ETF Global logo">
+        <a class="navbar-brand" [routerLink]="['/dashboard']">
+            <img src="../../../assets/logos/logo.png" alt="ETF Global Logo">
             <br>
             <span class="logoText">Business Intelligence</span>
         </a>

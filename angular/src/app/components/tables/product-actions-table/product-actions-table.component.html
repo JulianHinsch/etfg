@@ -14,7 +14,7 @@
         <!-- Firm Column -->
         <ng-container matColumnDef="firm">
             <mat-header-cell *matHeaderCellDef> Firm </mat-header-cell>
-            <mat-cell *matCellDef="let row"><a href='/firms/{{row.firmId}}'>{{ row.firm }}</a></mat-cell>
+            <mat-cell *matCellDef="let row"><a [routerLink]="['/firms/', row.firmId]">{{ row.firm }}</a></mat-cell>
         </ng-container>
         <!-- Location Column -->
         <ng-container matColumnDef="location">
@@ -37,7 +37,7 @@
             <mat-header-cell *matHeaderCellDef class="portfolio-width"> Portfolio </mat-header-cell>
             <mat-cell *matCellDef="let row" class="portfolio-width">
             <span *ngFor="let item of row.portfolio">
-                <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
+                <a [routerLink]="['/products/', item.ticker]">{{ item.ticker }}</a>: {{ item.percentage }}<br>
             </span>
             </mat-cell>
         </ng-container>

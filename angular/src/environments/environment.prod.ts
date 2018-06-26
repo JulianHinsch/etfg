@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://etfg-env-2.us-east-1.elasticbeanstalk.com',
-  apiBaseUrl: 'http://etfg-env-2.us-east-1.elasticbeanstalk.com'
+  baseUrl: 'https://etfg.herokuapp.com/',
+  apiBaseUrl: 'https://etfg.herokuapp.com/'
 };
