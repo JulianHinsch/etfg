@@ -8,14 +8,14 @@ export class AuthInterceptorService implements HttpInterceptor {
     constructor(){}
     
     /**
-     * Clone the request and add the authentication header.
+     * Clone the request and add the authorization header.
      */
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        req = req.clone({
-            setHeaders: {
-                Authorization: `Bearer ${localStorage.getItem('access_token')}`
-            }
-        });
+        // req = req.clone({
+        //     setHeaders: {
+        //         Authorization: `Bearer ${localStorage.getItem('access_token')}`
+        //     }
+        // });
 
         return next.handle(req);
     }

@@ -164,35 +164,36 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_products_get_product_info_by_ticker_service__ = __webpack_require__("../../../../../src/app/services/products/get-product-info-by-ticker.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__auth_auth_service__ = __webpack_require__("../../../../../src/app/auth/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__auth_auth_guard_service__ = __webpack_require__("../../../../../src/app/auth/auth-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_page_title_page_title_component__ = __webpack_require__("../../../../../src/app/components/page-title/page-title.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_tables_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__ = __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_tables_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__ = __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_tables_product_actions_table_product_actions_table_component__ = __webpack_require__("../../../../../src/app/components/tables/product-actions-table/product-actions-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_tables_firm_actions_table_firm_actions_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firm-actions-table/firm-actions-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_tables_firm_views_table_firm_views_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firm-views-table/firm-views-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_tables_fp_combo_table_fp_combo_table_component__ = __webpack_require__("../../../../../src/app/components/tables/fp-combo-table/fp-combo-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_tables_search_results_table_search_results_table_component__ = __webpack_require__("../../../../../src/app/components/tables/search-results-table/search-results-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_tables_products_table_products_table_component__ = __webpack_require__("../../../../../src/app/components/tables/products-table/products-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_tables_firms_table_firms_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firms-table/firms-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_tables_product_firms_table_product_firms_table_component__ = __webpack_require__("../../../../../src/app/components/tables/product-firms-table/product-firms-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_pages_landing_landing_component__ = __webpack_require__("../../../../../src/app/components/pages/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/pages/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/components/pages/firm/firm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/components/pages/firms/firms.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_pages_product_product_component__ = __webpack_require__("../../../../../src/app/components/pages/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_pages_products_products_component__ = __webpack_require__("../../../../../src/app/components/pages/products/products.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/components/pages/fp-combo/fp-combo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/components/pages/search-results/search-results.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ng2_google_charts__ = __webpack_require__("../../../../ng2-google-charts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_charts_views_by_type_pie_views_by_type_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/views-by-type-pie/views-by-type-pie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_charts_views_by_country_pie_views_by_country_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/views-by-country-pie/views-by-country-pie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_charts_product_views_by_type_pie_product_views_by_type_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/product-views-by-type-pie/product-views-by-type-pie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_charts_product_views_by_firm_pie_product_views_by_firm_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_view_toggle_view_toggle_component__ = __webpack_require__("../../../../../src/app/components/view-toggle/view-toggle.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__auth_auth_interceptor_service__ = __webpack_require__("../../../../../src/app/auth/auth-interceptor.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__callback_callback_component__ = __webpack_require__("../../../../../src/app/callback/callback.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_page_title_page_title_component__ = __webpack_require__("../../../../../src/app/components/page-title/page-title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_tables_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__ = __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_tables_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__ = __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_tables_product_actions_table_product_actions_table_component__ = __webpack_require__("../../../../../src/app/components/tables/product-actions-table/product-actions-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_tables_firm_actions_table_firm_actions_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firm-actions-table/firm-actions-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_tables_firm_views_table_firm_views_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firm-views-table/firm-views-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_tables_fp_combo_table_fp_combo_table_component__ = __webpack_require__("../../../../../src/app/components/tables/fp-combo-table/fp-combo-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_tables_search_results_table_search_results_table_component__ = __webpack_require__("../../../../../src/app/components/tables/search-results-table/search-results-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_tables_products_table_products_table_component__ = __webpack_require__("../../../../../src/app/components/tables/products-table/products-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_tables_firms_table_firms_table_component__ = __webpack_require__("../../../../../src/app/components/tables/firms-table/firms-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_tables_product_firms_table_product_firms_table_component__ = __webpack_require__("../../../../../src/app/components/tables/product-firms-table/product-firms-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_pages_landing_landing_component__ = __webpack_require__("../../../../../src/app/components/pages/landing/landing.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/pages/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_pages_firm_firm_component__ = __webpack_require__("../../../../../src/app/components/pages/firm/firm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_pages_firms_firms_component__ = __webpack_require__("../../../../../src/app/components/pages/firms/firms.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_pages_product_product_component__ = __webpack_require__("../../../../../src/app/components/pages/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_pages_products_products_component__ = __webpack_require__("../../../../../src/app/components/pages/products/products.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pages_fp_combo_fp_combo_component__ = __webpack_require__("../../../../../src/app/components/pages/fp-combo/fp-combo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_pages_search_results_search_results_component__ = __webpack_require__("../../../../../src/app/components/pages/search-results/search-results.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_ng2_google_charts__ = __webpack_require__("../../../../ng2-google-charts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_charts_views_by_type_pie_views_by_type_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/views-by-type-pie/views-by-type-pie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_charts_views_by_country_pie_views_by_country_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/views-by-country-pie/views-by-country-pie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_charts_product_views_by_type_pie_product_views_by_type_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/product-views-by-type-pie/product-views-by-type-pie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_charts_product_views_by_firm_pie_product_views_by_firm_pie_component__ = __webpack_require__("../../../../../src/app/components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_view_toggle_view_toggle_component__ = __webpack_require__("../../../../../src/app/components/view-toggle/view-toggle.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -213,6 +214,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //auth services
+
 
 
 
@@ -255,44 +257,44 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__components_navbar_navbar_component__["a" /* NavBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__components_pages_landing_landing_component__["a" /* LandingComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__components_pages_dashboard_dashboard_component__["a" /* DashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__components_tables_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__["a" /* DashboardTopProductsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_tables_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__["a" /* DashboardViewsByFirmTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__components_pages_firm_firm_component__["a" /* FirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__components_pages_firms_firms_component__["a" /* FirmsComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_tables_firm_actions_table_firm_actions_table_component__["a" /* FirmActionsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_tables_firm_views_table_firm_views_table_component__["a" /* FirmViewsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__components_pages_product_product_component__["a" /* ProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__components_pages_products_products_component__["a" /* ProductsComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_tables_product_actions_table_product_actions_table_component__["a" /* ProductActionsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__callback_callback_component__["a" /* CallbackComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__components_page_title_page_title_component__["a" /* PageTitleComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__components_tables_product_firms_table_product_firms_table_component__["a" /* ProductFirmsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__components_pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__components_tables_fp_combo_table_fp_combo_table_component__["a" /* FpComboTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__components_pages_search_results_search_results_component__["a" /* SearchResultsComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__components_tables_search_results_table_search_results_table_component__["a" /* SearchResultsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__components_tables_products_table_products_table_component__["a" /* ProductsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__components_tables_firms_table_firms_table_component__["a" /* FirmsTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__components_charts_views_by_type_pie_views_by_type_pie_component__["a" /* ViewsByTypePieComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__components_charts_views_by_country_pie_views_by_country_pie_component__["a" /* ViewsByCountryPieComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__components_charts_product_views_by_type_pie_product_views_by_type_pie_component__["a" /* ProductViewsByTypePieComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__components_charts_product_views_by_firm_pie_product_views_by_firm_pie_component__["a" /* ProductViewsByFirmPieComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__components_footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__components_view_toggle_view_toggle_component__["a" /* ViewToggleComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_navbar_navbar_component__["a" /* NavBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__components_pages_landing_landing_component__["a" /* LandingComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__components_pages_dashboard_dashboard_component__["a" /* DashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_tables_dashboard_tables_dashboard_top_products_table_dashboard_top_products_table_component__["a" /* DashboardTopProductsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_tables_dashboard_tables_dashboard_views_by_firm_table_dashboard_views_by_firm_table_component__["a" /* DashboardViewsByFirmTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__components_pages_firm_firm_component__["a" /* FirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__components_pages_firms_firms_component__["a" /* FirmsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_tables_firm_actions_table_firm_actions_table_component__["a" /* FirmActionsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_tables_firm_views_table_firm_views_table_component__["a" /* FirmViewsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__components_pages_product_product_component__["a" /* ProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__components_pages_products_products_component__["a" /* ProductsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_tables_product_actions_table_product_actions_table_component__["a" /* ProductActionsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__callback_callback_component__["a" /* CallbackComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_page_title_page_title_component__["a" /* PageTitleComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__components_tables_product_firms_table_product_firms_table_component__["a" /* ProductFirmsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__components_pages_fp_combo_fp_combo_component__["a" /* FpComboComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__components_tables_fp_combo_table_fp_combo_table_component__["a" /* FpComboTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__components_pages_search_results_search_results_component__["a" /* SearchResultsComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__components_tables_search_results_table_search_results_table_component__["a" /* SearchResultsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__components_tables_products_table_products_table_component__["a" /* ProductsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__components_tables_firms_table_firms_table_component__["a" /* FirmsTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_37__components_charts_views_by_type_pie_views_by_type_pie_component__["a" /* ViewsByTypePieComponent */],
+                __WEBPACK_IMPORTED_MODULE_38__components_charts_views_by_country_pie_views_by_country_pie_component__["a" /* ViewsByCountryPieComponent */],
+                __WEBPACK_IMPORTED_MODULE_39__components_charts_product_views_by_type_pie_product_views_by_type_pie_component__["a" /* ProductViewsByTypePieComponent */],
+                __WEBPACK_IMPORTED_MODULE_40__components_charts_product_views_by_firm_pie_product_views_by_firm_pie_component__["a" /* ProductViewsByFirmPieComponent */],
+                __WEBPACK_IMPORTED_MODULE_41__components_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_42__components_view_toggle_view_toggle_component__["a" /* ViewToggleComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_35_ng2_google_charts__["a" /* Ng2GoogleChartsModule */],
+                __WEBPACK_IMPORTED_MODULE_36_ng2_google_charts__["a" /* Ng2GoogleChartsModule */],
                 __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser_animations__["a" /* NoopAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["k" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__material_material_module__["a" /* MaterialModule */]
             ],
             providers: [
@@ -300,8 +302,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__services_firms_get_firm_info_by_id_service__["a" /* GetFirmInfoByIdService */],
                 __WEBPACK_IMPORTED_MODULE_11__auth_auth_service__["a" /* AuthService */],
                 __WEBPACK_IMPORTED_MODULE_12__auth_auth_guard_service__["a" /* AuthGuardService */],
+                { provide: __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HTTP_INTERCEPTORS */], useClass: __WEBPACK_IMPORTED_MODULE_13__auth_auth_interceptor_service__["a" /* AuthInterceptorService */], multi: true }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_14__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_15__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -348,6 +351,47 @@ var AuthGuardService = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
     ], AuthGuardService);
     return AuthGuardService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/auth-interceptor.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthInterceptorService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AuthInterceptorService = (function () {
+    function AuthInterceptorService() {
+    }
+    /**
+     * Clone the request and add the authorization header.
+     */
+    AuthInterceptorService.prototype.intercept = function (req, next) {
+        // req = req.clone({
+        //     setHeaders: {
+        //         Authorization: `Bearer ${localStorage.getItem('access_token')}`
+        //     }
+        // });
+        return next.handle(req);
+    };
+    AuthInterceptorService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], AuthInterceptorService);
+    return AuthInterceptorService;
 }());
 
 
@@ -419,38 +463,43 @@ var AuthService = (function () {
         var _this = this;
         this.lock.on('authenticated', function (authResult) {
             if (authResult && authResult.accessToken && authResult.idToken) {
-                //console.log(authResult);
+                console.log(authResult);
                 //get the role and assign permissions
+                /*
                 try {
-                    var role = authResult.idTokenPayload["https://" + __WEBPACK_IMPORTED_MODULE_1__auth0_variables__["a" /* AUTH_CONFIG */].domain + "/app_metadata"].role;
+                    let role = authResult.idTokenPayload[`https://${AUTH_CONFIG.domain}/app_metadata`].role;
                     if (role === 'superuser') {
-                        _this.enableSuperUser();
-                        _this.setDataFilter('professional');
-                        _this.setSession(authResult);
+                        this.enableSuperUser();
+                        this.setDataFilter('professional');
+                        this.setSession(authResult);
+                        this.router.navigate(['/dashboard']);
+                    } else if (role === 'professional') {
+                        this.setDataFilter('professional');
+                        this.setSession(authResult);
+                        this.router.navigate(['/dashboard']);
+                    } else if (role === 'student') {
+                        this.setDataFilter('student');
+                        this.setSession(authResult);
+                        this.router.navigate(['/dashboard']);
+                    } else {
+                        this.enableSuperUser();
+                        this.setDataFilter('professional');
+                        this.setSession(authResult);
                         //navigate to dash
-                        _this.router.navigate(['/dashboard']);
-                    }
-                    else if (role === 'professional') {
-                        _this.setDataFilter('professional');
-                        _this.setSession(authResult);
-                        //navigate to appropriate page
-                        _this.router.navigate(['/dashboard']);
-                    }
-                    else if (role === 'student') {
-                        _this.setDataFilter('student');
-                        _this.setSession(authResult);
-                        //navigate to appropriate page
-                        _this.router.navigate(['/dashboard']);
-                    }
-                    else {
+                        this.router.navigate(['/dashboard']);
                         // if no role is found, do not proceed with authentication
-                        _this.router.navigate(['/']);
+                        this.router.navigate(['/']);
                     }
-                }
-                catch (err) {
+                } catch (err) {
                     console.log(err);
-                    _this.router.navigate(['/']);
-                }
+                    this.router.navigate(['/']);
+                }*/
+                //for demo (no roles)
+                _this.enableSuperUser();
+                _this.setDataFilter('professional');
+                _this.setSession(authResult);
+                //navigate to dash
+                _this.router.navigate(['/dashboard']);
             }
         });
         this.lock.on('authorization_error', function (err) {
@@ -518,8 +567,8 @@ var AuthService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
 var AUTH_CONFIG = {
-    clientID: '0eR76M7leHOYspnKY7jPT5aXCJc7IQr0',
-    domain: 'etfglobal.auth0.com',
+    clientID: 'JVWTl27ibH780mxnd7atqxwqO3wQgei5',
+    domain: 'etfs.auth0.com',
     callbackURL: __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].baseUrl + "/callback"
 };
 
@@ -678,7 +727,7 @@ var ProductViewsByFirmPieComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
     ], ProductViewsByFirmPieComponent);
     return ProductViewsByFirmPieComponent;
 }());
@@ -778,7 +827,7 @@ var ProductViewsByTypePieComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/charts/product-views-by-type-pie/product-views-by-type-pie.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/charts/product-views-by-type-pie/product-views-by-type-pie.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
     ], ProductViewsByTypePieComponent);
     return ProductViewsByTypePieComponent;
 }());
@@ -875,7 +924,7 @@ var ViewsByCountryPieComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/charts/views-by-country-pie/views-by-country-pie.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/charts/views-by-country-pie/views-by-country-pie.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
     ], ViewsByCountryPieComponent);
     return ViewsByCountryPieComponent;
 }());
@@ -975,7 +1024,7 @@ var ViewsByTypePieComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/charts/views-by-type-pie/views-by-type-pie.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/charts/views-by-type-pie/views-by-type-pie.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */], __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */], __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__auth_auth_service__["a" /* AuthService */]])
     ], ViewsByTypePieComponent);
     return ViewsByTypePieComponent;
 }());
@@ -1047,7 +1096,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "button {\n  cursor: pointer;\n  border: none !important;\n  outline: none !important; }\n\nform input {\n  border-radius: 2px;\n  padding-left: 5px !important;\n  font-family: inherit;\n  font-weight: lighter; }\n  form input::-webkit-input-placeholder {\n    color: #aaa; }\n  form input:-ms-input-placeholder {\n    color: #aaa; }\n  form input::placeholder {\n    color: #aaa; }\n\nform button {\n  height: 36px;\n  margin-top: -2px;\n  border-radius: 2px;\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n  form button:hover {\n    box-shadow: 0px 0px 5px 1px #777 !important; }\n\na.navbar-brand {\n  margin-left: 2em; }\n\na.navbar-brand > img {\n  height: 1.5em; }\n\n.logoText {\n  font-size: .8em; }\n\nnav {\n  position: fixed;\n  width: 100vw;\n  z-index: 1000;\n  padding-right: 20px; }\n\n.button-row.float-right {\n  margin-left: auto !important; }\n\nnav.navbar.navbar-toggleable-md.navbar-light.bg-faded {\n  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75); }\n\n@media (min-width: 991px) {\n  form.form-inline.my-2.my-lg-0.ng-untouched.ng-pristine.ng-valid {\n    padding-right: 4em; } }\n\n@media (max-width: 991px) {\n  .navbar-toggleable-md .navbar-nav .dropdown-menu {\n    position: absolute;\n    float: none; }\n  div#navbarSupportedContent {\n    margin-top: 1.3em; }\n  a.navbar-brand {\n    width: 50%; }\n  button.navbar-toggler.navbar-toggler-right.float-right.mat-mini-fab.mat-warn {\n    float: right;\n    position: absolute;\n    top: 1em;\n    right: 2em;\n    color: white; }\n  form.form-inline.my-2.my-lg-0.float-right.ng-untouched.ng-pristine.ng-valid {\n    position: relative;\n    float: left !important;\n    -ms-flex-wrap: nowrap;\n        flex-wrap: nowrap; }\n  button.btn.btn-primary.fa.fa-search {\n    margin-left: .5em; } }\n", ""]);
+exports.push([module.i, "button {\n  cursor: pointer;\n  border: none !important;\n  outline: none !important; }\n\nform input {\n  border-radius: 2px;\n  padding-left: 5px !important;\n  font-family: inherit;\n  font-weight: lighter; }\n  form input::-webkit-input-placeholder {\n    color: #aaa; }\n  form input:-ms-input-placeholder {\n    color: #aaa; }\n  form input::placeholder {\n    color: #aaa; }\n\nform button {\n  height: 36px;\n  margin-top: -2px;\n  border-radius: 2px;\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n  form button:hover {\n    box-shadow: 0px 0px 5px 1px #777 !important; }\n\na.navbar-brand {\n  margin-left: none; }\n\na.navbar-brand > img {\n  height: 1.5em; }\n\n.logoText {\n  font-size: .8em; }\n\nnav {\n  position: fixed;\n  width: 100vw;\n  z-index: 1000;\n  padding-right: 20px; }\n\n.button-row.float-right {\n  margin-left: auto !important; }\n\nnav.navbar.navbar-toggleable-md.navbar-light.bg-faded {\n  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.75); }\n\n@media (min-width: 991px) {\n  form.form-inline.my-2.my-lg-0.ng-untouched.ng-pristine.ng-valid {\n    padding-right: 4em; } }\n\n@media (max-width: 991px) {\n  .navbar-toggleable-md .navbar-nav .dropdown-menu {\n    position: absolute;\n    float: none; }\n  div#navbarSupportedContent {\n    margin-top: 1.3em; }\n  a.navbar-brand {\n    width: 50%; }\n  button.navbar-toggler.navbar-toggler-right.float-right.mat-mini-fab.mat-warn {\n    float: right;\n    position: absolute;\n    top: 1em;\n    color: white; }\n  form.form-inline.my-2.my-lg-0.float-right.ng-untouched.ng-pristine.ng-valid {\n    position: relative;\n    float: left !important;\n    -ms-flex-wrap: nowrap;\n        flex-wrap: nowrap; }\n  button.btn.btn-primary.fa.fa-search {\n    margin-left: .5em; } }\n", ""]);
 
 // exports
 
@@ -1543,7 +1592,7 @@ var LandingComponent = (function () {
     LandingComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'landing',
-            template: "\n        <div *ngIf=\"!auth.isAuthenticated()\" class=\"text-center\">\n            <div class=\"jumbotron-container\">\n                <div class=\"jumbotron\">\n                    <h1 class=\"display-3\">Welcome</h1>\n                    <p class=\"lead\">Please log in or register to continue to the dashboard.</p>\n                    <hr class=\"my-4\">\n                    <button mat-raised-button (click)=\"auth.login()\" class=\"auth-button\">Log In</button>\n                    <!--<button mat-raised-button (click)=\"auth.signup()\" class=\"auth-button\">Sign Up</button>-->\n                </div>\n            </div>\n        </div>",
+            template: "\n        <div *ngIf=\"!auth.isAuthenticated()\" class=\"text-center\">\n            <div class=\"jumbotron-container\">\n                <div class=\"jumbotron\">\n                    <h1 class=\"display-3\">Welcome</h1>\n                    <p class=\"lead\">Please log in or register to continue to the dashboard.</p>\n                    <hr class=\"my-4\">\n                    <button mat-raised-button (click)=\"auth.login()\" class=\"auth-button\">Log In</button>\n                    <button mat-raised-button (click)=\"auth.signup()\" class=\"auth-button\">Sign Up</button>\n                </div>\n            </div>\n        </div>",
             styles: [__webpack_require__("../../../../../src/app/components/pages/landing/landing.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
@@ -1680,7 +1729,7 @@ var ProductsComponent = (function () {
     ProductsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'products-page',
-            template: "\n    <div class=\"container-fluid\">\n        <page-title title=\"Products\"></page-title>\n        <div class=\"row justify-content-around\">\n            <div class=\"col-md-12\">\n                <view-toggle [(dataFilter)]=\"dataFilter\"></view-toggle>\n            </div>\n            <div class=\"col-md-12\">\n                <products-table *ngIf=\"dataFilter === 'student'\"></products-table>\n                <products-table *ngIf=\"dataFilter === 'professional'\"></products-table>                     \n            </div>\n        </div>\n    </div>",
+            template: "\n    <div class=\"container-fluid\">\n        <page-title title=\"Products\"></page-title>\n        <div class=\"row justify-content-around\">\n            <!--<div class=\"col-md-12\">\n                <view-toggle [(dataFilter)]=\"dataFilter\"></view-toggle>\n            </div>-->\n            <div class=\"col-md-12\">\n                <products-table *ngIf=\"dataFilter === 'student'\"></products-table>\n                <products-table *ngIf=\"dataFilter === 'professional'\"></products-table>                     \n            </div>\n        </div>\n    </div>",
             styles: [__webpack_require__("../../../../../src/app/components/pages/products/products.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__auth_auth_service__["a" /* AuthService */]])
@@ -1863,7 +1912,7 @@ var DashboardTopProductsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-top-products-table/dashboard-top-products-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], DashboardTopProductsTableComponent);
     return DashboardTopProductsTableComponent;
 }());
@@ -1978,7 +2027,7 @@ var DashboardViewsByFirmTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/dashboard-tables/dashboard-views-by-firm-table/dashboard-views-by-firm-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], DashboardViewsByFirmTableComponent);
     return DashboardViewsByFirmTableComponent;
 }());
@@ -2120,7 +2169,7 @@ var FirmActionsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/firm-actions-table/firm-actions-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/firm-actions-table/firm-actions-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], FirmActionsTableComponent);
     return FirmActionsTableComponent;
 }());
@@ -2247,7 +2296,7 @@ var FirmViewsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/firm-views-table/firm-views-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/firm-views-table/firm-views-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], FirmViewsTableComponent);
     return FirmViewsTableComponent;
 }());
@@ -2297,7 +2346,6 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export FirmsConnection */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FirmsTableComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
@@ -2330,19 +2378,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var FirmsConnection = (function () {
-    function FirmsConnection(http, auth) {
-        this.http = http;
-        this.auth = auth;
-    }
-    //call the api with a page number, sort field, and sort order(asc/desc)
-    FirmsConnection.prototype.getFirms = function (page, sort, order) {
-        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms?datafilter=" + this.auth.getDataFilter() + "&page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
-        return this.http.get(requestUrl);
-    };
-    return FirmsConnection;
-}());
-
 var FirmsTableComponent = (function () {
     function FirmsTableComponent(http, auth) {
         this.http = http;
@@ -2354,13 +2389,12 @@ var FirmsTableComponent = (function () {
     }
     FirmsTableComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.connection = new FirmsConnection(this.http, this.auth);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
         Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_merge__["a" /* merge */])(this.sort.sortChange, this.paginator.page)
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_7_rxjs_operators_startWith__["a" /* startWith */])({}), Object(__WEBPACK_IMPORTED_MODULE_8_rxjs_operators_switchMap__["a" /* switchMap */])(function () {
             setTimeout(function () { return _this.isLoadingResults = true; });
-            return _this.connection.getFirms(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
+            return _this.getFirms(_this.paginator.pageIndex, _this.sort.active, _this.sort.direction);
         }), Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators_map__["a" /* map */])(function (data) {
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
@@ -2370,6 +2404,10 @@ var FirmsTableComponent = (function () {
             _this.isLoadingResults = false;
             return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
         })).subscribe(function (data) { return _this.dataSource.data = data; });
+    };
+    FirmsTableComponent.prototype.getFirms = function (page, sort, order) {
+        var requestUrl = __WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].apiBaseUrl + "/api/firms?datafilter=" + this.auth.getDataFilter() + "&page=" + (page + 1) + "&sort=" + sort + "&order=" + order;
+        return this.http.get(requestUrl);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatPaginator */]),
@@ -2385,7 +2423,7 @@ var FirmsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/firms-table/firms-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/firms-table/firms-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], FirmsTableComponent);
     return FirmsTableComponent;
 }());
@@ -2522,7 +2560,7 @@ var FpComboTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/fp-combo-table/fp-combo-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/fp-combo-table/fp-combo-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], FpComboTableComponent);
     return FpComboTableComponent;
 }());
@@ -2672,7 +2710,7 @@ var ProductActionsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/product-actions-table/product-actions-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/product-actions-table/product-actions-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], ProductActionsTableComponent);
     return ProductActionsTableComponent;
 }());
@@ -2789,7 +2827,7 @@ var ProductFirmsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/product-firms-table/product-firms-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/product-firms-table/product-firms-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], ProductFirmsTableComponent);
     return ProductFirmsTableComponent;
 }());
@@ -2917,7 +2955,7 @@ var ProductsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/products-table/products-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/products-table/products-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__auth_auth_service__["a" /* AuthService */]])
     ], ProductsTableComponent);
     return ProductsTableComponent;
 }());
@@ -3052,7 +3090,7 @@ var SearchResultsTableComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/tables/search-results-table/search-results-table.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/tables/search-results-table/search-results-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_11__auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__angular_router__["a" /* ActivatedRoute */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_11__auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_10__angular_router__["a" /* ActivatedRoute */]])
     ], SearchResultsTableComponent);
     return SearchResultsTableComponent;
 }());
@@ -3323,10 +3361,14 @@ var GetProductInfoByTickerService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: true,
-    baseUrl: 'http://etfg-env-2.us-east-1.elasticbeanstalk.com',
-    apiBaseUrl: 'http://etfg-env-2.us-east-1.elasticbeanstalk.com'
+    production: false,
+    baseUrl: 'http://localhost:4200',
+    apiBaseUrl: 'http://localhost:8000'
 };
 
 
