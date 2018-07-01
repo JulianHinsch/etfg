@@ -3363,8 +3363,8 @@ var GetProductInfoByTickerService = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 var environment = {
     production: true,
-    baseUrl: 'https://etfg.herokuapp.com/',
-    apiBaseUrl: 'https://etfg.herokuapp.com/'
+    baseUrl: 'https://etfg.herokuapp.com',
+    apiBaseUrl: 'https://etfg.herokuapp.com'
 };
 
 
