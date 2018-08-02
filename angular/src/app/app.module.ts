@@ -54,9 +54,9 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { ViewsByTypePieComponent } from './components/charts/views-by-type-pie/views-by-type-pie.component';
 import { ViewsByCountryPieComponent } from './components/charts/views-by-country-pie/views-by-country-pie.component';
 import { ProductViewsByTypePieComponent } from './components/charts/product-views-by-type-pie/product-views-by-type-pie.component';
-import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
+//import { ProductViewsByCountryPieComponent } from './components/charts/product-views-by-country-pie/product-views-by-country-pie.component';
 import { ProductViewsByFirmPieComponent } from './components/charts/product-views-by-firm-pie/product-views-by-firm-pie.component';
-import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
+//import { TotalViewsBarComponent } from './components/charts/total-views-bar/total-views-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ViewToggleComponent } from './components/view-toggle/view-toggle.component';
 

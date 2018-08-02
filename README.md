@@ -1,6 +1,6 @@
-# ETFG - Laravel - Angular
+# ETFG Business Intelligence
 
-## Steps to Setup:
+## Setup:
 ```
 git clone git@github.com/JulianHinsch/etfg.git
 cd etfg
@@ -9,18 +9,18 @@ cd angular
 npm install
 ```
 
-## To serve angular front-end in dev mode:
+## Serve angular front-end in dev mode:
 ```
 cd angular
 ng serve
 ```
 
-## To serve laravel back-end:
+## Serve laravel back-end:
 ```
 php artisan serve
 ```
 
-## To build angular front-end:
+## Build angular front-end:
 ```
 cd angular
 ng build
@@ -28,7 +28,7 @@ ng build
 
 Then, add the angular dist folder's contents to the the php public folder.
 
-## To host on AWS:
+## To host:
 1. Build the front-end with the --env=prod tag.
 2. Add the angular dist folder's contents to the php public folder
 2. Compress the root directory's contents.
