@@ -9,5 +9,5 @@ interface AuthConfig {
 export const AUTH_CONFIG: AuthConfig = {
   clientID: 'JVWTl27ibH780mxnd7atqxwqO3wQgei5',
   domain: 'etfs.auth0.com',
-  callbackURL: `${environment.baseUrl}/callback`
+  callbackURL: 'https://etfg.herokuapp.com/callback',
 };

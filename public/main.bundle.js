@@ -564,12 +564,10 @@ var AuthService = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AUTH_CONFIG; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-
 var AUTH_CONFIG = {
     clientID: 'JVWTl27ibH780mxnd7atqxwqO3wQgei5',
     domain: 'etfs.auth0.com',
-    callbackURL: __WEBPACK_IMPORTED_MODULE_0__environments_environment__["a" /* environment */].baseUrl + "/callback"
+    callbackURL: 'https://etfg.herokuapp.com/callback',
 };
 
 
