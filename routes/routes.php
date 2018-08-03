@@ -4,6 +4,7 @@
 use Illuminate\Http\Request;
 
 Route::group(['middleware' => 'addAuthResponseHeader'], function () {
+    Route::get('/test', array('uses' => function() {return 'hello world';}));
     // firms
     Route::get('/firms', array('uses' => 'FirmsController@getAll')); //broken
     Route::get('/firms/{id}', array('uses' => 'FirmsController@getInfoById'));
