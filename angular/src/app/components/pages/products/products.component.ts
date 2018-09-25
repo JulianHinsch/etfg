@@ -7,9 +7,9 @@ import { AuthService } from '../../../auth/auth.service';
     <div class="container-fluid">
         <page-title title="Products"></page-title>
         <div class="row justify-content-around">
-            <div class="col-md-12">
+            <!--<div class="col-md-12">
                 <view-toggle [(dataFilter)]="dataFilter"></view-toggle>
-            </div>
+            </div>-->
             <div class="col-md-12">
                 <products-table *ngIf="dataFilter === 'student'"></products-table>
                 <products-table *ngIf="dataFilter === 'professional'"></products-table>                     

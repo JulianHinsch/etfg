@@ -14,6 +14,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
+        //new
+        // \Auth0\SDK\JWTVerifier::class,
+        // \Auth0\SDK\Helpers\Cache\FileSystemCacheHandler::class,
+        //
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
@@ -56,6 +60,9 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'cors' => \App\Http\Middleware\Cors::class, 
+        'cors' => \App\Http\Middleware\Cors::class,
+        //custom
+        'addAuthResponseHeader' => \App\Http\Middleware\AddAuthResponseHeader::class
+        //'api' => '\App\Http\Middleware\AddAuthResponseHeader\AddAuthResponseHeader'?
     ];
 }

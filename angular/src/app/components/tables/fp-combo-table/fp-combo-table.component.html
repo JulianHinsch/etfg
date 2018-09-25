@@ -32,7 +32,7 @@
             <mat-header-cell *matHeaderCellDef class="portfolio-width"> Portfolio </mat-header-cell>
             <mat-cell *matCellDef="let row" class="portfolio-width">
             <span *ngFor="let item of row.portfolio">
-                <a href='/products/{{item.ticker}}'>{{ item.ticker }}</a>: {{ item.percentage }}<br>
+                <a [routerLink]="['/products/', item.ticker]">{{ item.ticker }}</a>: {{ item.percentage }}<br>
             </span>
             </mat-cell>
         </ng-container>

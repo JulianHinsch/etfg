@@ -17,10 +17,18 @@ export class NavBarComponent implements OnInit {
         auth.handleAuthentication();
     }
 
-  public handleSearch = (event) => {
-    this.router.navigateByUrl(`/search/${this.searchForm.controls.term.value}`);
-    this.searchForm.reset();
-  }
+    public handleSearch = (event) => {
+        this.router.navigateByUrl(`/search/${this.searchForm.controls.term.value}`);
+        this.searchForm.reset();
+    }
 
-  ngOnInit() {}
+    isLanding() {
+        return this.router.url.includes('home') || this.router.url === '/';
+    }
+
+    ngOnInit() {
+        if(this.auth.isAuthenticated() && !this.isLanding()) {
+            this.auth.login();
+        }
+    }
 }
