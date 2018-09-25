@@ -1,18 +1,18 @@
 .row.bg-primary {
-  margin-bottom: 3.125em;
+    margin-bottom: 3.125em;
 }
 .text-center.title {
-  color:#fff;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  width: 100%;
+    color:#fff;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    width: 100%;
 }
 .tables-container {
-  margin-top: -20px;
+    margin-top: -20px;
 }
 
 .col-md-6,.col-md-12 {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .info {
@@ -35,9 +35,9 @@
 }
 
 @media(min-width: 768px) {
-  .info div {
-    display: inline-block;
-    width: 49%;
-  }
+    .info div {
+        display: inline-block;
+        width: 49%;
+    }
 }
 

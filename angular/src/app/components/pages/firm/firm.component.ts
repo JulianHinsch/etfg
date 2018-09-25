@@ -9,7 +9,8 @@ import { Observable, BehaviorSubject, Subscription } from 'rxjs';
     templateUrl: './firm.component.html',
     styleUrls: ['./firm.component.scss']
 })
-export class FirmComponent {
+export class Firm {
+
     subscription: Subscription;
     pageTitle: string;
     firmId: number;
@@ -19,16 +20,16 @@ export class FirmComponent {
         document.title = 'ETFG';
         this.route.params.subscribe(params => this.firmId = params.id);
         this.subscription = this.service.getInfoById(this.firmId).subscribe(response => {
-        const data = response.json();
-        //reject users with wrong permissions
-        if (!this.auth.getIsSuperUser()) {
-            if ((this.auth.getDataFilter() === 'student' && data.type === 0) || (this.auth.getDataFilter() === 'professional' && data.type === 1)) {
-                this.router.navigate(['/dashboard']);
+            const data = response.json();
+            //reject users with bad permissions
+            if (!this.auth.getIsSuperUser()) {
+                if ((this.auth.getDataFilter() === 'student' && data.type === 0) || (this.auth.getDataFilter() === 'professional' && data.type === 1)) {
+                    this.router.navigate(['/dashboard']);
+                }
             }
-        }
-        this.data = data;
-        this.pageTitle = data.name;
-        document.title = `ETFG | ${data.name}`;
+            this.data = data;
+            this.pageTitle = data.name;
+            document.title = `ETFG | ${data.name}`;
         });
     
     }
@@ -36,4 +37,5 @@ export class FirmComponent {
     ngOnDestroy() {
         this.subscription.unsubscribe();
     }
+    
 }

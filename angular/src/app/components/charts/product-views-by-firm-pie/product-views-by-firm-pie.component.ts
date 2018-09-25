@@ -1,6 +1,6 @@
 import { Component, Input, AfterViewInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../../../auth/auth.service';
 
@@ -14,7 +14,7 @@ export interface Slice {
   templateUrl: './product-views-by-firm-pie.component.html',
   styleUrls: ['./product-views-by-firm-pie.component.scss']
 })
-export class ProductViewsByFirmPieComponent implements AfterViewInit {
+export class ProductViewsByFirmPie implements AfterViewInit {
     @Input() ticker: string;
   
     pieChartData: object; 

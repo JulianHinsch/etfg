@@ -16,7 +16,7 @@ import { AuthService } from '../../../auth/auth.service';
   templateUrl: './products-table.component.html',
   styleUrls: ['./products-table.component.scss']
 })
-export class ProductsTableComponent implements AfterViewInit {
+export class ProductsTable implements AfterViewInit {
 
     displayedColumns = ['ticker', 'name', 'issuer', 'views'];
     dataSource = new MatTableDataSource();
@@ -59,16 +59,17 @@ export class ProductsTableComponent implements AfterViewInit {
         const requestUrl = `${environment.apiBaseUrl}/api/products?datafilter=${this.auth.getDataFilter()}&page=${page+1}&sort=${sort}&order=${order}`;
         return this.http.get<ProductsApi>(requestUrl);
     }
+    
 }
 
 export interface ProductsApi {
-  items: Product[];
-  total: number;
+    items: Product[];
+    total: number;
 }
 
 export interface Product {
-  ticker: string;
-  name: string;
-  issuer: string;
-  views: number;
+    ticker: string;
+    name: string;
+    issuer: string;
+    views: number;
 }

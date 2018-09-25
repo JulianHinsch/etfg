@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardViewsByFirmTableComponent } from './dashboard-views-by-firm-table.component';
+import { DashboardViewsByFirmTable } from './dashboard-views-by-firm-table.component';
 
 describe('ViewsByFirmTableComponent', () => {
-  let component: DashboardViewsByFirmTableComponent;
-  let fixture: ComponentFixture<DashboardViewsByFirmTableComponent>;
+  let component: DashboardViewsByFirmTable;
+  let fixture: ComponentFixture<DashboardViewsByFirmTable>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardViewsByFirmTableComponent ]
+      declarations: [ DashboardViewsByFirmTable ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardViewsByFirmTableComponent);
+    fixture = TestBed.createComponent(DashboardViewsByFirmTable);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

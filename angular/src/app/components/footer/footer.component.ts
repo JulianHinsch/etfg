@@ -12,4 +12,4 @@ import { Component, OnInit } from '@angular/core';
     <div>`,
     styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {}
+export class Footer {}

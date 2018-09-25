@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../../../auth/auth.service';
 
@@ -14,7 +14,7 @@ export interface Slice {
   templateUrl: './views-by-country-pie.component.html',
   styleUrls: ['./views-by-country-pie.component.scss']
 })
-export class ViewsByCountryPieComponent implements AfterViewInit {
+export class ViewsByCountryPie implements AfterViewInit {
 
     pieChartData: object; 
 
@@ -23,7 +23,7 @@ export class ViewsByCountryPieComponent implements AfterViewInit {
     getData(): Observable<Slice[]> {
         const requestUrl = `${environment.apiBaseUrl}/api/viewsbycountry?datafilter=${this.auth.getDataFilter()}`;
         return this.http.get<Slice[]>(requestUrl);
-      }
+    }
     
     ngAfterViewInit() {
         this.getData().subscribe(data => {

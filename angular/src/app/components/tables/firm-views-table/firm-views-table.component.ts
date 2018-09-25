@@ -15,7 +15,7 @@ import { environment } from '../../../../environments/environment';
   templateUrl: './firm-views-table.component.html',
   styleUrls: ['./firm-views-table.component.scss']
 })
-export class FirmViewsTableComponent implements AfterViewInit {
+export class FirmViewsTable implements AfterViewInit {
     @Input() firmId: number;
 
     displayedColumns = ['ticker','name','issuer','views'];

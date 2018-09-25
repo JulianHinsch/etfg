@@ -5,9 +5,9 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class GetProductInfoByTickerService {
 
-  constructor(private http: Http) {}
+    constructor(private http: Http) {}
 
-  public getInfoByTicker(ticker) {
-    return this.http.get(`${environment.apiBaseUrl}/api/products/${ticker}`);
-  }
+    public getInfoByTicker(ticker) {
+        return this.http.get(`${environment.apiBaseUrl}/api/products/${ticker}`);
+    }
 }

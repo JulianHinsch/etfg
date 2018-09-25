@@ -1,13 +1,13 @@
-import {Component, AfterViewInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {Observable} from 'rxjs/Observable';
-import {merge} from 'rxjs/observable/merge';
-import {of as observableOf} from 'rxjs/observable/of';
-import {catchError} from 'rxjs/operators/catchError';
-import {map} from 'rxjs/operators/map';
-import {startWith} from 'rxjs/operators/startWith';
-import {switchMap} from 'rxjs/operators/switchMap';
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { merge } from 'rxjs/observable/merge';
+import { of as observableOf } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { map } from 'rxjs/operators/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { switchMap } from 'rxjs/operators/switchMap';
 import { environment } from '../../../../../environments/environment';
 import { AuthService } from '../../../../auth/auth.service';
 
@@ -16,7 +16,7 @@ import { AuthService } from '../../../../auth/auth.service';
   templateUrl: './dashboard-views-by-firm-table.component.html',
   styleUrls: ['./dashboard-views-by-firm-table.component.scss']
 })
-export class DashboardViewsByFirmTableComponent implements AfterViewInit {
+export class DashboardViewsByFirmTable implements AfterViewInit {
 
     displayedColumns = ['name','views'];
     dataSource = new MatTableDataSource();
@@ -62,12 +62,12 @@ export class DashboardViewsByFirmTableComponent implements AfterViewInit {
 }
 
 export interface FirmsApi {
-  items: Firm[];
-  total: number;
+    items: Firm[];
+    total: number;
 }
 
 export interface Firm {
-  name: string;
-  users: string;
-  views: number;
+    name: string;
+    users: string;
+    views: number;
 }

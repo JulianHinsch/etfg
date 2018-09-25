@@ -14,7 +14,7 @@ export interface Slice {
   templateUrl: './views-by-type-pie.component.html',
   styleUrls: ['./views-by-type-pie.component.scss']
 })
-export class ViewsByTypePieComponent implements AfterViewInit {
+export class ViewsByTypePie implements AfterViewInit {
 
     pieChartData: object;
 

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductViewsByFirmPieComponent } from './product-views-by-firm-pie.component';
+import { ProductViewsByFirmPie } from './product-views-by-firm-pie.component';
 
-describe('ProductViewsByFirmPieComponent', () => {
-  let component: ProductViewsByFirmPieComponent;
-  let fixture: ComponentFixture<ProductViewsByFirmPieComponent>;
+describe('ProductViewsByFirmPie', () => {
+  let component: ProductViewsByFirmPie;
+  let fixture: ComponentFixture<ProductViewsByFirmPie>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductViewsByFirmPieComponent ]
+      declarations: [ ProductViewsByFirmPie ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductViewsByFirmPieComponent);
+    fixture = TestBed.createComponent(ProductViewsByFirmPie);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

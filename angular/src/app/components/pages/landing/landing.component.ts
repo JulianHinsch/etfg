@@ -18,7 +18,7 @@ import { AuthService } from '../../../auth/auth.service';
         </div>`,
     styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent implements OnInit {
+export class Landing implements OnInit {
 
     constructor( public auth: AuthService, public router: Router) {}
 

@@ -2,10 +2,10 @@ import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { AuthService } from '../../auth/auth.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import {ViewsByTypePieComponent} from '../charts/views-by-type-pie/views-by-type-pie.component';
+import { ViewsByTypePie } from '../charts/views-by-type-pie/views-by-type-pie.component';
 
 @Component({
-    providers: [ViewsByTypePieComponent],
+    providers: [ ViewsByTypePie ],
     selector: 'view-toggle',
     template:`
         <div [formGroup] = "radioForm" class="col-md-12 radio-container mat-elevation-z4">
@@ -16,7 +16,7 @@ import {ViewsByTypePieComponent} from '../charts/views-by-type-pie/views-by-type
         </div>`,
     styleUrls: ['./view-toggle.component.scss']
 })
-export class ViewToggleComponent {
+export class ViewToggle {
     @Input() 
     dataFilter: string;
     @Output()
@@ -25,7 +25,7 @@ export class ViewToggleComponent {
     radioDisabled: boolean = true;
     radioForm: FormGroup;
     
-    constructor(public auth: AuthService, public pie: ViewsByTypePieComponent) {
+    constructor(public auth: AuthService, public pie: ViewsByTypePie) {
         if(this.auth.getIsSuperUser() === 'true') {
             this.radioDisabled = false;
         }

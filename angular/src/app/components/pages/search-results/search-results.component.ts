@@ -9,12 +9,13 @@ import { AuthService } from '../../../auth/auth.service';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.scss']
 })
-export class SearchResultsComponent {
+export class SearchResults {
   
-  private pageTitle = 'Search';
-  dataFilter: string = this.auth.getDataFilter();
-  
-  constructor(private auth: AuthService) {
-    document.title = 'ETFG | Search';
-  }
+    private pageTitle = 'Search';
+    dataFilter: string = this.auth.getDataFilter();
+    
+    constructor(private auth: AuthService) {
+        document.title = 'ETFG | Search';
+    }
+    
 }

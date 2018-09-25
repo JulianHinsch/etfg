@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FpComboComponent } from './fp-combo.component';
+import { FirmProductCombination } from './firm-product-combination.component';
 
-describe('FpComboComponent', () => {
-  let component: FpComboComponent;
-  let fixture: ComponentFixture<FpComboComponent>;
+describe('FirmProductCombination', () => {
+  let component: FirmProductCombination;
+  let fixture: ComponentFixture<FirmProductCombination>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FpComboComponent ]
+      declarations: [ FirmProductCombination ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FpComboComponent);
+    fixture = TestBed.createComponent(FirmProductCombination);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

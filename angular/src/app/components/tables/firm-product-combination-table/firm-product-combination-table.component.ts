@@ -1,13 +1,13 @@
-import {Component, Input, AfterViewInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {Observable} from 'rxjs/Observable';
-import {merge} from 'rxjs/observable/merge';
-import {of as observableOf} from 'rxjs/observable/of';
-import {catchError} from 'rxjs/operators/catchError';
-import {map} from 'rxjs/operators/map';
-import {startWith} from 'rxjs/operators/startWith';
-import {switchMap} from 'rxjs/operators/switchMap';
+import { Component, Input, AfterViewInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { merge } from 'rxjs/observable/merge';
+import { of as observableOf } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { map } from 'rxjs/operators/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { switchMap } from 'rxjs/operators/switchMap';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -15,7 +15,7 @@ import { environment } from '../../../../environments/environment';
   templateUrl: './fp-combo-table.component.html',
   styleUrls: ['./fp-combo-table.component.scss']
 })
-export class FpComboTableComponent implements AfterViewInit {
+export class FirmProductCombinationTable implements AfterViewInit {
     @Input() firmId: number;
     @Input() ticker: string;
 

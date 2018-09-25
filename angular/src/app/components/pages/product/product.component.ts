@@ -10,7 +10,7 @@ import { AuthService } from '../../../auth/auth.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class Product {
 
     private dataFilter: string = this.auth.getDataFilter();
     private subscription: Subscription;
@@ -22,10 +22,10 @@ export class ProductComponent {
         document.title = 'ETFG';
         this.route.params.subscribe(params => this.ticker = params.ticker);
         this.subscription = this.service.getInfoByTicker(this.ticker).subscribe(response => {
-        const data = response.json();
-        this.data = data;
-        this.pageTitle = `${data.ticker} - ${data.name}`;
-        document.title = `ETFG | ${data.ticker}`;
+            const data = response.json();
+            this.data = data;
+            this.pageTitle = `${data.ticker} - ${data.name}`;
+            document.title = `ETFG | ${data.ticker}`;
         });
     }
 

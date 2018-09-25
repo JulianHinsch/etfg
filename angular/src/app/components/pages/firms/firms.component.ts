@@ -18,8 +18,10 @@ import { AuthService } from '../../../auth/auth.service';
         </div>`,
     styleUrls: ['./firms.component.scss']
 })
-export class FirmsComponent {
+export class Firms {
+
     dataFilter: string = this.auth.getDataFilter();
 
     constructor(private auth: AuthService) {}
+    
 }

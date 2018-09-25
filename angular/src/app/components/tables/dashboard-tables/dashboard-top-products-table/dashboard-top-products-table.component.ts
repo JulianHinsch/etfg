@@ -28,7 +28,7 @@ export interface Product {
   templateUrl: './dashboard-top-products-table.component.html',
   styleUrls: ['./dashboard-top-products-table.component.scss']
 })
-export class DashboardTopProductsTableComponent {
+export class DashboardTopProductsTable {
     displayedColumns = ['ticker', 'name', 'views'];
     dataSource = new MatTableDataSource();
 

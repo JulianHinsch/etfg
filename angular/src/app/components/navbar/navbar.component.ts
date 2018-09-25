@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBar implements OnInit {
     public searchForm = this.fb.group({
         term: ["", Validators.required]
     });

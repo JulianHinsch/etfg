@@ -8,7 +8,10 @@ import { AuthService } from '../../../auth/auth.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class Dashboard {
+
     dataFilter: string = this.auth.getDataFilter();
+
     constructor(private auth: AuthService){}
+    
 }

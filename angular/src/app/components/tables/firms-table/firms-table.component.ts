@@ -16,7 +16,7 @@ import { AuthService } from '../../../auth/auth.service';
     templateUrl: './firms-table.component.html',
     styleUrls: ['./firms-table.component.scss']
 })
-export class FirmsTableComponent implements AfterViewInit {
+export class FirmsTable implements AfterViewInit {
     displayedColumns = ['name', 'users', 'views'];
     dataSource = new MatTableDataSource();
 

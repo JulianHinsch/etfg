@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewsByCountryPieComponent } from './views-by-country-pie.component';
+import { ViewsByCountryPie } from './views-by-country-pie.component';
 
-describe('ViewsByCountryPieComponent', () => {
-  let component: ViewsByCountryPieComponent;
-  let fixture: ComponentFixture<ViewsByCountryPieComponent>;
+describe('ViewsByCountryPie', () => {
+  let component: ViewsByCountryPie;
+  let fixture: ComponentFixture<ViewsByCountryPie>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewsByCountryPieComponent ]
+      declarations: [ ViewsByCountryPie ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewsByCountryPieComponent);
+    fixture = TestBed.createComponent(ViewsByCountryPie);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

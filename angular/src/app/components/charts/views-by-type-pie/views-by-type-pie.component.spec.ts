@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TypesOfViewsPieComponent } from './types-of-views-pie.component';
+import { ViewsByTypePie } from './views-by-type-pie.component';
 
-describe('TypesOfViewsPieComponent', () => {
-  let component: TypesOfViewsPieComponent;
-  let fixture: ComponentFixture<TypesOfViewsPieComponent>;
+describe('ViewsByTypePie', () => {
+  let component: ViewsByTypePie;
+  let fixture: ComponentFixture<ViewsByTypePie>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TypesOfViewsPieComponent ]
+      declarations: [ ViewsByTypePie ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypesOfViewsPieComponent);
+    fixture = TestBed.createComponent(ViewsByTypePie);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

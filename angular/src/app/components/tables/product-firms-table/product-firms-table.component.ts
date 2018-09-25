@@ -1,13 +1,13 @@
-import {Component, Input, AfterViewInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import {Observable} from 'rxjs/Observable';
-import {merge} from 'rxjs/observable/merge';
-import {of as observableOf} from 'rxjs/observable/of';
-import {catchError} from 'rxjs/operators/catchError';
-import {map} from 'rxjs/operators/map';
-import {startWith} from 'rxjs/operators/startWith';
-import {switchMap} from 'rxjs/operators/switchMap';
+import { Component, Input, AfterViewInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+import { merge } from 'rxjs/observable/merge';
+import { of as observableOf } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { map } from 'rxjs/operators/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { switchMap } from 'rxjs/operators/switchMap';
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../../../auth/auth.service';
 
@@ -16,7 +16,7 @@ import { AuthService } from '../../../auth/auth.service';
   templateUrl: './product-firms-table.component.html',
   styleUrls: ['./product-firms-table.component.scss']
 })
-export class ProductFirmsTableComponent implements AfterViewInit {
+export class ProductFirmsTable implements AfterViewInit {
     @Input() ticker: string;
 
     displayedColumns = ['name', 'users', 'views'];
@@ -71,6 +71,7 @@ export interface Firm {
 }
 
 export class FirmsConnection {
+
     constructor(private http: HttpClient, private auth: AuthService) {}
     
     //call the api with a page number, sort field, and sort order(asc/desc)
@@ -78,4 +79,5 @@ export class FirmsConnection {
         const requestUrl = `${environment.apiBaseUrl}/api/products/firms/${ticker}?datafilter=${this.auth.getDataFilter()}&page=${page+1}&sort=${sort}&order=${order}`;
         return this.http.get<FirmsApi>(requestUrl);
     }
+    
 }

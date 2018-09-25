@@ -10,7 +10,8 @@ import { Component, Input, OnInit } from '@angular/core';
     </div>`,
     styleUrls: ['./page-title.component.scss'],
 })
-export class PageTitleComponent implements OnInit {
+export class PageTitle implements OnInit {
+    
     @Input() title: string;
 
     ngOnInit() {
